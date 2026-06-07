@@ -32,6 +32,7 @@
   "202001": "Request accepted, mfa required",
   "202002": "This endpoint will soon require an active gateway connection",
   "202003": "This endpoint supports an active gateway connection",
+  "202004": "Request received, captcha required",
   "204001": "Request completed successfully with no content",
   "207000": "Multi-Status",
   "207001": "MultiStatus Response - Normal",
