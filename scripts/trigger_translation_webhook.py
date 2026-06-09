@@ -7,7 +7,7 @@ import urllib.request
 from pathlib import Path
 from typing import Any, Dict, List
 
-API_BASE_URL = os.getenv("API_BASE_URL", "https://api.clovord.com").rstrip("/")
+API_BASE_URL = "https://clovord.com/api".rstrip("/")
 TOKEN = os.getenv("BUILD_WEBHOOK_TOKEN", "").strip()
 BEFORE_SHA = os.getenv("BEFORE_SHA", "").strip()
 HEAD_SHA = os.getenv("HEAD_SHA", "").strip()
