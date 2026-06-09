@@ -598,7 +598,7 @@
   "423003": "The guild is locked",
   "423004": "The channel is locked",
   "423005": "The thread is locked",
-  "423006": "423006 (UNDEFINED_STRING)",
+  "423006": "The firewall have blocked your request due to a security violation",
   "423007": "423007 (UNDEFINED_STRING)",
   "423008": "This feature is locked for Staff",
   "423009": "This feature is locked for Staff with higher rank",
