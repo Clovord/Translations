@@ -1811,6 +1811,7 @@
     "LmNoPqRsTu": "Password must not exceed 512 characters.",
     "VwXyZaBcDe": "Passwords do not match.",
     "o7QmVx8Lp2": "This endpoint can only be used from Bots",
+    "yimwdzSiRj": "This endpoint can only be used from Bots with an active gateway connection",
     "Yq9LmV2RxA": "Default API Response Format",
     "mQ7vLp2Xn8Ta": "Multi-Status",
     "pR4xVn9Lm2Qd": "Used for API responses that return per-item statuses in items[]",
