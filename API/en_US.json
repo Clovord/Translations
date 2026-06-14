@@ -594,6 +594,8 @@
   "410001": "This Endpoint has been deprecated and will be removed in the future",
   "410002": "This EndpointBody contains deprecated fields and will be removed in the future",
   "410003": "This Feature has been deprecated and will be removed in the future",
+  "418000": "I'm a teapot",
+  "418001": "We detected that you are trying to harm our service, and have blocked you as a result",
   "423000": "The resource is locked",
   "423001": "User account is disabled",
   "423002": "User account is banned",
