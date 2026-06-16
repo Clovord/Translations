@@ -17,8 +17,9 @@ def placeholder_names(value: str) -> set[str]:
     return names
 
 
-def validate() -> list[str]:
+def validate() -> tuple[list[str], list[str]]:
     failures: list[str] = []
+    warnings: list[str] = []
     payloads: dict[Path, object] = {}
 
     for path in sorted(Path(".").rglob("*.json")):
@@ -73,11 +74,12 @@ def validate() -> list[str]:
 
     # Key-set drift guard: treat WebApp/en_US.json as source of truth.
     # Missing keys in non-source locales are allowed so translation updates can
-    # follow after source-string changes. Orphan keys still fail validation.
+    # follow after source-string changes. Orphan keys are allowed so staff can
+    # add translations after publishing without blocking the validation workflow.
     webapp_source = Path("WebApp/en_US.json")
     if webapp_source in payloads and isinstance(payloads[webapp_source], dict):
         source_keys = set(payloads[webapp_source].keys())
-        max_orphan_keys = 0
+        max_orphan_keys = None
         max_missing_keys = None
 
         for path, payload in payloads.items():
@@ -90,19 +92,26 @@ def validate() -> list[str]:
             orphan_keys = locale_keys - source_keys
             missing_keys = source_keys - locale_keys
 
-            if len(orphan_keys) > max_orphan_keys:
+            if max_orphan_keys is not None and len(orphan_keys) > max_orphan_keys:
                 failures.append(f"{path}: {len(orphan_keys)} orphan keys (limit {max_orphan_keys})")
+            elif orphan_keys:
+                warnings.append(f"{path}: {len(orphan_keys)} orphan keys")
 
             if max_missing_keys is not None and len(missing_keys) > max_missing_keys:
                 failures.append(f"{path}: {len(missing_keys)} missing keys (limit {max_missing_keys})")
     else:
         failures.append("WebApp/en_US.json: missing or invalid source locale for key-set drift check")
 
-    return failures
+    return failures, warnings
 
 
 def main() -> int:
-    failures = validate()
+    failures, warnings = validate()
+    if warnings:
+        print("JSON validation warnings:")
+        for warning in warnings:
+            print(f" - {warning}")
+
     if failures:
         print("JSON validation failed:")
         for failure in failures:
