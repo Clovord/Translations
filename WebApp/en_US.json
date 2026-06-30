@@ -1543,7 +1543,7 @@
     "txGiuomCfxahaqFu": "?integer",
     "LcSwSWibQnauJzhw": "json",
     "vpkKGqkeStdnMgpb": "?json",
-    "lTaOdSfssNOuDgQd": "The API response inherits either 'data', 'errors' or 'items' objects depending on the endpoint. The 'data' object is used for single resource responses, 'errors' for error responses, and 'items' for list/multistatus responses",
+    "lTaOdSfssNOuDgQd": "The API response inherits either 'data', 'errors' or 'items' objects depending on the endpoint. The 'data' object is used for single resource responses, 'errors' for error responses, and 'items' for list/multistatus responses<br><br>Note: The 'data' field is deprecated and is no longer used. Existing endpoints will be redesigned to use the 'items' field instead",
     "FHvZvSBVQBQiNTOm": "Inherits one or multiple <a href=\"/developers/docs/reference/#response-format--error-object\">Error</a> Objects",
     "ZZMFLWzmnlJGloLV": "Inherits the payload of the endpoint response",
     "eppktnMjkgUEfRgk": "Inherits one or multiple <a href=\"/developers/docs/reference/#response-format--items-object\">Items</a> Objects",
