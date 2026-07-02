@@ -491,7 +491,7 @@
   "403206": "Application is not a child application",
   "403207": "Role is too large to be displayed separately from online members",
   "403208": "Your message contains content blocked by our content filtering system",
-  "403209": "UNDEFINED STRING (403209)",
+  "403209": "Your invite contains content blocked by our content filtering system",
   "403210": "UNDEFINED STRING (403210)",
   "403211": "Missing access to age-gated content",
   "403212": "You do not have permission to send this sticker.",
