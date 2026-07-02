@@ -702,7 +702,7 @@
   "500109": "Ein DatenbankprogrammError aufgetreten",
   "500110": "Eine DatenbankDeadLockError aufgetreten",
   "500111": "Eine DatenbankSerialisationError aufgetreten",
-  "500112": "Fehlende Kanal-ID für Berechtigungen überprüfen",
+  "500067": "Fehlende Kanal-ID für Berechtigungen überprüfen",
   "500904": "Fehlende Streifensignatur",
   "500905": "Invalide Nutzlast",
   "500906": "Invalide Unterschrift",

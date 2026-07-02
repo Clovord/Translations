@@ -702,7 +702,7 @@
   "500109": "Er is een database-programmeerfout opgetreden",
   "500110": "Er is een DatabaseDeadLockError opgetreden",
   "500111": "Er is een database-serialisatiefout opgetreden",
-  "500112": "Ontbrekende kanaal-id voor machtigingscontrole",
+  "500067": "Ontbrekende kanaal-id voor machtigingscontrole",
   "500904": "Ontbrekende Stripe-handtekening",
   "500905": "Ongeldige payload",
   "500906": "Ongeldige handtekening",
