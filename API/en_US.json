@@ -37,6 +37,7 @@
   "202004": "Request received, captcha required",
   "202005": "Request accepted for processing, but not completed",
   "202006": "Request accepted, mfa required",
+  "202007": "Repeating this request will result in the same response",
   "204000": "No Content",
   "204001": "No Content - MultiStatus",
   "204002": "Request completed successfully with no content",
