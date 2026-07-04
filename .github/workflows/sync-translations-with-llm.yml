@@ -1,0 +1,121 @@
+name: Sync Translations with LLM Auto-Translation
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  validate-json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JSON files are non-empty and parseable
+        run: |
+          python scripts/validate_translations.py
+
+  detect:
+    needs: validate-json
+    runs-on: ubuntu-latest
+    outputs:
+      api: ${{ steps.filter.outputs.api }}
+      webapp: ${{ steps.filter.outputs.webapp }}
+      downloads: ${{ steps.filter.outputs.downloads }}
+      desktop: ${{ steps.filter.outputs.desktop }}
+      mobile: ${{ steps.filter.outputs.mobile }}
+      en_us_changed: ${{ steps.check-en-us.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@6852f92c20ea7fd3b0c25de3b5112db3a98da050
+        id: filter
+        with:
+          filters: |
+            api:
+              - "API/**"
+            webapp:
+              - "WebApp/**"
+            downloads:
+              - "DownloadPage/**"
+            desktop:
+              - "DesktopApp/**"
+              - "WebApp/**"
+            mobile:
+              - "MobileApp/**"
+              - "WebApp/**"
+      
+      - name: Check if en_US files changed
+        id: check-en-us
+        run: |
+          if git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E "^(WebApp|API|DesktopApp|DownloadPage)/en_US\.json"; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+  # NEW JOB: Auto-translate using LLM
+  auto-translate-with-llm:
+    needs: detect
+    if: needs.detect.outputs.en_us_changed == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+      
+      - name: Run LLM-based auto-translation
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          python scripts/translation_webhook_handler.py \
+            --before-sha "$BEFORE_SHA" \
+            --head-sha "$HEAD_SHA" \
+            --target-languages de_DE nl_NL \
+            --auto-commit
+      
+      - name: Create Pull Request for translations
+        if: always()
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: 'chore: auto-generated translations from en_US changes'
+          title: 'chore: auto-translated strings (de_DE, nl_NL)'
+          body: |
+            ## Auto-translated Strings
+            
+            This PR contains automatically generated translations using local LLM.
+            
+            **Languages**: German (de_DE), Dutch (nl_NL)
+            **Source**: English (en_US)
+            
+            Please review the translations for accuracy before merging.
+            
+            - [ ] German translations reviewed
+            - [ ] Dutch translations reviewed
+          branch: automation/llm-auto-translate
+          delete-branch: true
+
+  trigger-translation-webhook:
+    needs: [detect, auto-translate-with-llm]
+    if: needs.detect.outputs.api == 'true' || needs.detect.outputs.webapp == 'true' || needs.detect.outputs.desktop == 'true' || needs.detect.outputs.mobile == 'true' || needs.detect.outputs.downloads == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Trigger translation webhook
+        env:
+          API_BASE_URL: ${{ secrets.ORG_API_BASE_URL }}
+          BUILD_WEBHOOK_TOKEN: ${{ secrets.CLOVORD_BUILD_WEBHOOK_SECRET || secrets.ORG_API_BUILD_WEBHOOK_SECRET }}
+          BEFORE_SHA: ${{ github.event.before }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          python scripts/trigger_translation_webhook.py
