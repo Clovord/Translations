@@ -1,8 +1,4 @@
-# LLM Translator Dependencies
+# Translation Dependencies
 requests>=2.31.0
 urllib3>=2.0.0
-
-# Optional: For enhanced functionality
-aiohttp>=3.9.0  # Async HTTP requests for batch processing
-pydantic>=2.0.0  # Data validation
-python-dotenv>=1.0.0  # Environment variable management
+deep-translator>=1.11.4
