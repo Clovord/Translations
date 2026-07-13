@@ -1,8 +1,8 @@
 name: Sync Translations with LLM Auto-Translation
 
+# Manual-only variant. The main sync-translations.yml workflow handles auto-translation on push.
 on:
-  push:
-    branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: write
