@@ -614,6 +614,7 @@
   "409003": "No free discriminator available for this name. Try a different name.",
   "409004": "Channel category loop detected, a channel cannot be its own parent or an ancestor of its parent.",
   "409005": "This type of relationship already exists",
+  "409006": "Friend request already pending",
   "410000": "Gone",
   "410001": "Gone - MultiStatus",
   "410002": "This EndpointBody contains deprecated fields and will be removed in the future",
