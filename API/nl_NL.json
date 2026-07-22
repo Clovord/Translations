@@ -712,6 +712,7 @@
   "503039": "Kan facturatiecliëntgeheim niet verkrijgen",
   "503042": "Kan betalingsmethode niet bijvoegen",
   "503043": "Kan factuur niet betalen",
+  "503100": "Database tijdelijk niet beschikbaar",
   "504032": "Timeout bij opzoeken van klant-ID",
   "504033": "Timeout bij upsert van klant",
   "response_note_language_missing": "Dit antwoord ondersteunt momenteel alleen de taal {language}",

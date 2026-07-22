@@ -712,6 +712,7 @@
   "503039": "Unfähig zu erhalten Abrechnung Client Geheimnis",
   "503042": "Unfähig, Zahlungsmethode zu befestigen",
   "503043": "Unfähig, Rechnung zu bezahlen",
+  "503100": "Datenbank vorübergehend nicht verfügbar",
   "504032": "Kunden-ID-Lookup Timeout",
   "504033": "Kunden-upsert Timeout",
   "response_note_language_missing": "Diese Antwort unterstützt derzeit nur die{language}Sprache",

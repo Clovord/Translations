@@ -841,6 +841,7 @@
   "503039": "Unable to obtain billing client secret",
   "503042": "Unable to attach payment method",
   "503043": "Unable to pay invoice",
+  "503100": "Database is temporarily unavailable",
   "504032": "Customer ID lookup timeout",
   "504033": "Customer upsert timeout",
   "response_note_language_missing": "This response currently only supports the {language} language",
