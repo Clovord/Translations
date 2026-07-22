@@ -157,9 +157,44 @@ Preserve any placeholder markers like __PLACEHOLDER_X__ exactly as they are.
 class GoogleTranslatorBackend:
     """Translates text using deep-translator (works in CI without local services)."""
 
-    def __init__(self, batch_size: int = 40, batch_delay: float = 0.25):
+    def __init__(
+        self,
+        batch_size: int = 25,
+        batch_delay: float = 0.5,
+        request_timeout: float = 30.0,
+        max_retries: int = 3,
+    ):
         self.batch_size = batch_size
         self.batch_delay = batch_delay
+        self.request_timeout = request_timeout
+        self.max_retries = max_retries
+
+    def _translate_batch_with_retry(self, translator, protected_values: List[str]) -> List[str]:
+        last_exc: Optional[Exception] = None
+
+        for attempt in range(1, self.max_retries + 1):
+            try:
+                return translator.translate_batch(protected_values)
+            except Exception as exc:
+                last_exc = exc
+                print(f"⚠️  Batch translation attempt {attempt}/{self.max_retries} failed: {exc}")
+                if attempt < self.max_retries:
+                    time.sleep(min(2 ** attempt, 8))
+
+        print(f"⚠️  Batch translation failed, falling back to single requests: {last_exc}")
+        translated_values: List[str] = []
+        for protected in protected_values:
+            translated = ""
+            for attempt in range(1, self.max_retries + 1):
+                try:
+                    translated = translator.translate(protected)
+                    break
+                except Exception as single_exc:
+                    print(f"❌ Single translation attempt {attempt}/{self.max_retries} failed: {single_exc}")
+                    if attempt < self.max_retries:
+                        time.sleep(min(2 ** attempt, 8))
+            translated_values.append(translated)
+        return translated_values
 
     def batch_translate(self, texts: Dict[str, str], target_language: str) -> Dict[str, str]:
         from deep_translator import GoogleTranslator
@@ -169,6 +204,12 @@ class GoogleTranslatorBackend:
             raise ValueError(f"Unsupported target language for Google Translate: {target_language}")
 
         translator = GoogleTranslator(source="en", target=iso_code)
+        if hasattr(translator, "session") and translator.session is not None:
+            translator.session.request = _wrap_request_with_timeout(
+                translator.session.request,
+                self.request_timeout,
+            )
+
         results: Dict[str, str] = {}
         items = list(texts.items())
         total = len(items)
@@ -185,17 +226,7 @@ class GoogleTranslatorBackend:
                 protected_values.append(protected)
                 placeholder_maps.append(placeholders)
 
-            try:
-                translated_values = translator.translate_batch(protected_values)
-            except Exception as exc:
-                print(f"⚠️  Batch translation failed, falling back to single requests: {exc}")
-                translated_values = []
-                for protected in protected_values:
-                    try:
-                        translated_values.append(translator.translate(protected))
-                    except Exception as single_exc:
-                        print(f"❌ Single translation failed: {single_exc}")
-                        translated_values.append("")
+            translated_values = self._translate_batch_with_retry(translator, protected_values)
 
             for (key, original_text), translated, placeholders in zip(
                 batch, translated_values, placeholder_maps
@@ -206,12 +237,20 @@ class GoogleTranslatorBackend:
                     results[key] = original_text
 
             done = min(batch_start + self.batch_size, total)
-            print(f"   [{done}/{total}] translated...")
+            print(f"   [{done}/{total}] translated...", flush=True)
             if done < total:
                 time.sleep(self.batch_delay)
 
         print("✅ Translation complete!")
         return results
+
+
+def _wrap_request_with_timeout(request_method, timeout: float):
+    def request_with_timeout(method, url, **kwargs):
+        kwargs.setdefault("timeout", timeout)
+        return request_method(method, url, **kwargs)
+
+    return request_with_timeout
 
 
 def create_translator(backend: str = "auto", model: str = "neural-chat", ollama_url: str = "http://localhost:11434"):
@@ -298,6 +337,7 @@ class TranslationSyncer:
         category: str,
         target_language: str,
         old_en_us: Optional[Dict[str, str]] = None,
+        backfill_missing: bool = False,
     ) -> Dict[str, str]:
         en_us = self.load_json_file(category, "en_US")
         target = self.load_json_file(category, target_language)
@@ -307,9 +347,15 @@ class TranslationSyncer:
             if not isinstance(value, str):
                 continue
 
-            if key not in target or not target.get(key):
-                keys_to_translate[key] = value
-            elif old_en_us is not None and old_en_us.get(key) != value:
+            if old_en_us is not None:
+                previous_value = old_en_us.get(key)
+                if previous_value is None:
+                    keys_to_translate[key] = value
+                elif previous_value != value:
+                    keys_to_translate[key] = value
+                continue
+
+            if backfill_missing and (key not in target or not target.get(key)):
                 keys_to_translate[key] = value
 
         return keys_to_translate
@@ -331,6 +377,7 @@ class TranslationSyncer:
         translator: TranslatorBackend,
         languages: Optional[List[str]] = None,
         old_en_us: Optional[Dict[str, str]] = None,
+        backfill_missing: bool = False,
     ) -> bool:
         languages = self.list_target_languages(category, languages)
 
@@ -357,7 +404,12 @@ class TranslationSyncer:
             if removed_count:
                 print(f"   🗑️  Removed {removed_count} orphan keys")
 
-            keys_to_translate = self.get_keys_to_translate(category, target_lang, old_en_us)
+            keys_to_translate = self.get_keys_to_translate(
+                category,
+                target_lang,
+                old_en_us,
+                backfill_missing=backfill_missing,
+            )
 
             if not keys_to_translate and removed_count == 0:
                 print("   ✓ Locale already in sync")
@@ -405,6 +457,11 @@ def main() -> int:
     parser.add_argument("--category", action="append", default=[], help="Specific category to translate")
     parser.add_argument("--language", action="append", default=[], help="Target language codes (e.g., de_DE, nl_NL)")
     parser.add_argument("--before-sha", default=os.getenv("BEFORE_SHA", ""), help="Previous commit SHA for change detection")
+    parser.add_argument(
+        "--backfill-missing",
+        action="store_true",
+        help="Translate all missing target keys (slow; off by default in CI)",
+    )
     parser.add_argument("--base-path", type=Path, help="Base path to translations folder")
 
     args = parser.parse_args()
@@ -416,15 +473,28 @@ def main() -> int:
     syncer = TranslationSyncer(base_path=args.base_path)
     languages = args.language or None
     categories = args.category or syncer.categories
+    backfill_missing = args.backfill_missing
 
     all_success = True
     for category in categories:
         old_en_us = load_old_en_us_from_git(category, args.before_sha)
+        if old_en_us is None and not backfill_missing:
+            if args.before_sha and not args.before_sha.startswith("000000"):
+                print(f"ℹ️  No previous en_US snapshot for {category}; treating all keys as new")
+                old_en_us = {}
+            else:
+                print(
+                    f"⚠️  No previous en_US snapshot for {category}; "
+                    "skipping translation (use --backfill-missing to translate all missing keys)"
+                )
+                continue
+
         if not syncer.sync_translations_for_category(
             category,
             translator,
             languages=languages,
             old_en_us=old_en_us,
+            backfill_missing=backfill_missing,
         ):
             all_success = False
 

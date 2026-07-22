@@ -69,6 +69,8 @@ def run_translation(
     target_languages: Optional[List[str]] = None,
     before_sha: str = "",
     backend: str = "auto",
+    backfill_missing: bool = False,
+    timeout_seconds: int = 1800,
 ) -> bool:
     script_path = Path(__file__).parent / "llm_translator.py"
     if not script_path.exists():
@@ -79,9 +81,11 @@ def run_translation(
     print(f"   Categories: {', '.join(categories)}")
     print(f"   Backend: {backend}")
 
-    cmd = ["python", str(script_path), "--backend", backend]
+    cmd = ["python", "-u", str(script_path), "--backend", backend]
     if before_sha:
         cmd.extend(["--before-sha", before_sha])
+    if backfill_missing:
+        cmd.append("--backfill-missing")
 
     for category in categories:
         cmd.extend(["--category", category])
@@ -98,18 +102,16 @@ def run_translation(
         print(f"   Languages: {discovered}")
 
     try:
-        result = subprocess.run(cmd, capture_output=True, text=True)
-
-        if result.stdout:
-            print(result.stdout)
-        if result.stderr:
-            print(result.stderr, file=sys.stderr)
+        result = subprocess.run(cmd, timeout=timeout_seconds)
 
         if result.returncode == 0:
             print("\n✅ Translation successful!")
             return True
 
-        print("\n❌ Translation failed!")
+        print(f"\n❌ Translation failed with exit code {result.returncode}!")
+        return False
+    except subprocess.TimeoutExpired:
+        print(f"\n❌ Translation timed out after {timeout_seconds} seconds!")
         return False
     except Exception as exc:
         print(f"❌ Error running translation: {exc}")
@@ -138,7 +140,7 @@ def commit_changes(categories: List[str]) -> bool:
 
         subprocess.run(["git", "add", *files_to_add], check=True)
 
-        commit_msg = f"chore: auto-translate {', '.join(categories)}"
+        commit_msg = f"chore: auto-translate {', '.join(categories)} [skip ci]"
         commit = subprocess.run(
             ["git", "commit", "-m", commit_msg, "--author=Clovord Bot <bot@clovord.com>"],
             capture_output=True,
@@ -201,6 +203,17 @@ def main() -> int:
     parser.add_argument("--target-languages", nargs="+", default=None)
     parser.add_argument("--backend", default=os.getenv("TRANSLATION_BACKEND", "auto"))
     parser.add_argument("--auto-commit", action="store_true", help="Auto-commit and push changes")
+    parser.add_argument(
+        "--backfill-missing",
+        action="store_true",
+        help="Translate all missing keys, not just en_US deltas",
+    )
+    parser.add_argument(
+        "--timeout-seconds",
+        type=int,
+        default=int(os.getenv("TRANSLATION_TIMEOUT_SECONDS", "1800")),
+        help="Maximum seconds to wait for translation subprocess",
+    )
 
     args = parser.parse_args()
 
@@ -237,6 +250,8 @@ def main() -> int:
         target_languages=args.target_languages,
         before_sha=before_sha,
         backend=args.backend,
+        backfill_missing=args.backfill_missing,
+        timeout_seconds=args.timeout_seconds,
     ):
         send_webhook_notification(
             f"Translation failed for: {', '.join(categories_to_translate)}",
