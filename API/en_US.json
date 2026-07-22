@@ -1101,5 +1101,13 @@
   "classifications_reason_title_guild_violent_extremism": "Violent extremism promotion",
   "classifications_reason_description_guild_violent_extremism": "Server used to promote, recruit for, or coordinate terrorist or extremist activity.",
   "classifications_reason_title_guild_raid_organization": "Raid or mass harassment coordination",
-  "classifications_reason_description_guild_raid_organization": "Server primarily used to organize coordinated raids or mass harassment of other communities."
+  "classifications_reason_description_guild_raid_organization": "Server primarily used to organize coordinated raids or mass harassment of other communities.",
+  "classifications_reason_title_user_ncii": "Non-consensual intimate media",
+  "classifications_reason_description_user_ncii": "Sharing, threatening to share, or soliciting intimate images or videos without consent.",
+  "classifications_reason_title_user_intellectual_property": "Intellectual property violation",
+  "classifications_reason_description_user_intellectual_property": "Unauthorized distribution or misuse of copyrighted or trademarked material.",
+  "classifications_reason_title_user_illegal_goods": "Illegal goods or activity",
+  "classifications_reason_description_user_illegal_goods": "Buying, selling, or promoting illegal drugs, weapons, or other clearly illegal goods or services.",
+  "classifications_reason_title_user_child_endangerment": "Child endangerment",
+  "classifications_reason_description_user_child_endangerment": "Behavior that puts a minor at risk of harm, exploitation, or unsafe contact."
 }
