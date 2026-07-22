@@ -606,6 +606,7 @@
   "404091": "Unknown Endpoint",
   "404092": "Unknown Intent",
   "404093": "Unknown Intent Level",
+  "404094": "Unknown Reason",
   "405000": "Method Not Allowed",
   "405001": "Method Not Allowed - MultiStatus",
   "409000": "Conflict",
