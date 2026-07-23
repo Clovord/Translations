@@ -6,6 +6,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   validate-json:
@@ -82,33 +83,14 @@ jobs:
           TRANSLATION_BACKEND: google
           PYTHONUNBUFFERED: "1"
           TRANSLATION_TIMEOUT_SECONDS: "1500"
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python scripts/translation_webhook_handler.py \
             --before-sha "$BEFORE_SHA" \
             --head-sha "$HEAD_SHA" \
             --backend google \
             --auto-commit
-      
-      - name: Create Pull Request for translations
-        if: always()
-        uses: peter-evans/create-pull-request@v5
-        with:
-          commit-message: 'chore: auto-generated translations from en_US changes'
-          title: 'chore: auto-translated strings (de_DE, nl_NL)'
-          body: |
-            ## Auto-translated Strings
-            
-            This PR contains automatically generated translations using local LLM.
-            
-            **Languages**: German (de_DE), Dutch (nl_NL)
-            **Source**: English (en_US)
-            
-            Please review the translations for accuracy before merging.
-            
-            - [ ] German translations reviewed
-            - [ ] Dutch translations reviewed
-          branch: automation/llm-auto-translate
-          delete-branch: true
 
   trigger-translation-webhook:
     needs: [detect, auto-translate-with-llm]

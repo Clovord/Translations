@@ -10,6 +10,7 @@ concurrency:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   validate-json:
@@ -86,6 +87,8 @@ jobs:
           TRANSLATION_BACKEND: google
           PYTHONUNBUFFERED: "1"
           TRANSLATION_TIMEOUT_SECONDS: "1500"
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python scripts/translation_webhook_handler.py \
             --before-sha "$BEFORE_SHA" \
@@ -101,8 +104,10 @@ jobs:
       (needs.auto-translate-llm.result == 'success' || needs.auto-translate-llm.result == 'skipped' || needs.auto-translate-llm.result == 'failure')
     runs-on: ubuntu-latest
     steps:
+      # Prefer latest main so merged auto-translations are included
       - uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
       - name: Trigger translation webhook
         env:
@@ -122,6 +127,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
       - name: Sync API translations
         env:
           TOKEN: ${{ secrets.SYNC_API_TOKEN }}
@@ -238,6 +246,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
       - name: Sync WebApp translations
         env:
           TOKEN: ${{ secrets.SYNC_WEBAPP_TOKEN }}
@@ -357,6 +368,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
       - name: Sync Downloads translations
         env:
           TOKEN: ${{ secrets.SYNC_DOWNLOADS_TOKEN }}
@@ -448,6 +462,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
       - name: Sync Desktop translations
         env:
           TOKEN: ${{ secrets.SYNC_DESKTOP_TOKEN }}
@@ -545,6 +562,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
       - name: Sync Mobile translations
         env:
           TOKEN: ${{ secrets.SYNC_MOBILE_TOKEN }}
