@@ -2326,5 +2326,7 @@
   "fcS4eRt7mYp": "Announcement channel ID",
   "fcP6uHj0qWn": "Paste announcement channel ID",
   "fcE7yNb2wHs": "No channels are following this announcement channel.",
-  "fcT3mKx8nVa": "Follow an announcement channel to receive published posts here."
+  "fcT3mKx8nVa": "Follow an announcement channel to receive published posts here.",
+  "whN4mQx8kLp": "Webhook name",
+  "whP2rYt6vNc": "Incoming Webhook"
 }
