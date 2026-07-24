@@ -2389,5 +2389,7 @@
   "DgALGrEbciLP4CFZZ1oy": "Edits a previously-sent webhook message. Returns the updated Message Object.",
   "WivqxC2lLSDegSyOwRtP": "new message contents",
   "xDQxRBDAotQd0RonnLi6": "Delete Webhook Message",
-  "btmZt0WYp0ins2PkeUHd": "Deletes a message created by this webhook."
+  "btmZt0WYp0ins2PkeUHd": "Deletes a message created by this webhook.",
+  "mNvXp2QkR4WhkObjH2": "Webhook objects",
+  "qWs3HkEndIntroY8uM": "Create, list, modify, execute, and manage webhook messages."
 }
