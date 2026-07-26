@@ -647,6 +647,8 @@
   "423019": "You need the DOMAINLIST_INTENT to perform this action",
   "423020": "You need at least the DOMAINLIST_INTENT_LIMITED to perform this action",
   "423050": "You're missing a guild feature to perform this action",
+  "423070": "This account have an active classification that prevents you from performing this action",
+  "423071": "This guild have an active classification that prevents you from performing this action",
   "424000": "Missing Dependency",
   "424001": "Missing Dependency - MultiStatus",
   "424002": "Your request is missing an Content-Length header",
