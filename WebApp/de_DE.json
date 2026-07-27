@@ -2342,5 +2342,17 @@
     "S4oRs0WdHh5O":  "Monatliche Verlängerung: 15 Credits. Jederzeit kündbar.",
     "T7pSt3XeIi8P":  "Mehr Credits nötig?",
     "U0qTu6YfJj1Q":  "Lade Credits im Wallet auf, wenn dein Guthaben zu niedrig ist.",
-    "V3rUv9ZgKk4R":  "Wallet öffnen"
+    "V3rUv9ZgKk4R":  "Wallet öffnen",
+    "nM4kQp8wRt2":  "Du wurdest erwähnt",
+    "wRelsChTitle":  "Release-Kanäle",
+    "wRelsChMuted":  "Wähle, welchen Update-Tracks du folgen möchtest.",
+    "wRelsDeskTitle":  "Desktop-App",
+    "wRelsDeskBody":  "Steuert, welche Desktop-Builds du erhältst.",
+    "wRelsWebTitle":  "Web-App",
+    "wRelsWebBody":  "Wechselt zwischen den Web-App-Release-Tracks.",
+    "wRelsWebHelp":  "Eine Änderung lädt die Web-App neu.",
+    "wRelsDeskOnly":  "Nur in der Desktop-App verfügbar.",
+    "wRelsDeskHelp":  "Kanalwechsel betrifft zukünftige Desktop-Updates.",
+    "wRelsDeskFail":  "Desktop-Kanal konnte nicht geladen werden.",
+    "wRelsDeskSaved":  "Kanal gespeichert. Updates nutzen diesen Track."
 }

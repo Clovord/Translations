@@ -2531,5 +2531,17 @@
     "DrbmpMz6bRSdTb": "For 8 Hours",
     "KK1429LGoBDF8K": "For 24 Hours",
     "205TGcxeDFAMya": "Until I turn it back on",
-    "0GvS9iB0fIS8ln": "Unmute Channel"
+    "0GvS9iB0fIS8ln": "Unmute Channel",
+    "nM4kQp8wRt2": "You were mentioned",
+    "wRelsChTitle": "Release Channels",
+    "wRelsChMuted": "Choose which update tracks you want to follow.",
+    "wRelsDeskTitle": "Desktop App",
+    "wRelsDeskBody": "Controls which desktop builds you receive.",
+    "wRelsWebTitle": "Web App",
+    "wRelsWebBody": "Switches between the web app release tracks.",
+    "wRelsWebHelp": "Changing this will reload the web app.",
+    "wRelsDeskOnly": "Available only in the desktop app.",
+    "wRelsDeskHelp": "Switching channels affects future desktop updates.",
+    "wRelsDeskFail": "Failed to load desktop channel.",
+    "wRelsDeskSaved": "Channel saved. Updates will use this track."
 }

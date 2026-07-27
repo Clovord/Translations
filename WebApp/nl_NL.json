@@ -1768,7 +1768,7 @@
     "uuSGrfmXHfzgtB":  "Door op \u0027bevestigen\u0027 te klikken ga je akkoord met Stripe\u0027s",
     "KX0QrShvpg":  "Cond.",
     "Gk2v2Ux2":  "Doorzoeken...",
-    "cV5zO2q7mwp":  "Venstersinstellingen",
+    "cV5zO2q7mwp":  "Windows-instellingen",
     "mB0x5ywvQTB":  "Bureaubladgedrag",
     "wfHxd0IYkMV":  "Kies hoe Clovord zich gedraagt op Windows.",
     "I7lPuWxyNKn":  "Clovord draaiend houden op de achtergrond",
@@ -1936,5 +1936,17 @@
     "S4oRs0WdHh5O":  "Maandelijkse verlenging: 15 credits. Altijd opzegbaar.",
     "T7pSt3XeIi8P":  "Meer credits nodig?",
     "U0qTu6YfJj1Q":  "Laad credits bij via Wallet als je saldo te laag is.",
-    "V3rUv9ZgKk4R":  "Wallet openen"
+    "V3rUv9ZgKk4R":  "Wallet openen",
+    "nM4kQp8wRt2":  "Je bent genoemd",
+    "wRelsChTitle":  "Releasekanalen",
+    "wRelsChMuted":  "Kies welke update-tracks je wilt volgen.",
+    "wRelsDeskTitle":  "Desktop-app",
+    "wRelsDeskBody":  "Bepaalt welke desktop builds je ontvangt.",
+    "wRelsWebTitle":  "Web-app",
+    "wRelsWebBody":  "Schakelt tussen de web-app release tracks.",
+    "wRelsWebHelp":  "Dit herlaadt de web-app.",
+    "wRelsDeskOnly":  "Alleen beschikbaar in de desktop-app.",
+    "wRelsDeskHelp":  "Kanaalwissels gelden voor toekomstige desktop-updates.",
+    "wRelsDeskFail":  "Desktopkanaal laden mislukt.",
+    "wRelsDeskSaved":  "Kanaal opgeslagen. Updates gebruiken dit track."
 }
