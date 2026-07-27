@@ -323,7 +323,7 @@
   "403037": "This application is not supported in your region",
   "403038": "This action requires an application to be authorized by the user",
   "403039": "403039 (UNDEFINED_STRING)",
-  "403040": "403040 (UNDEFINED_STRING)",
+  "403040": "Guild context is required for this action.",
   "403041": "Missing Access",
   "403042": "Invalid account type",
   "403043": "Cannot execute action on a DM channel",
