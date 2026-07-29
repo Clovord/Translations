@@ -967,5 +967,8 @@
   "email_force_verification_action": "Bevestig het eigendom van dit e-mailadres via de knop hieronder:",
   "email_force_verification_button": "E-mailadres bevestigen",
   "email_force_verification_login_blocked": "Inloggen tijdelijk geblokkeerd",
-  "email_force_verification_login_blocked_text": "U kunt pas weer inloggen nadat dit e-mailadres is geverifieerd. Als u geen Clovord-account heeft aangemaakt, kunt u dit bericht negeren."
+  "email_force_verification_login_blocked_text": "U kunt pas weer inloggen nadat dit e-mailadres is geverifieerd. Als u geen Clovord-account heeft aangemaakt, kunt u dit bericht negeren — het account wordt automatisch verwijderd.",
+  "email_force_verification_expires": "Deze link verloopt over {grace_hours} uur.",
+  "email_force_verification_deletion_warning": "Waarschuwing: accountverwijdering",
+  "email_force_verification_deletion_warning_text": "Als u dit e-mailadres niet binnen {grace_hours} uur bevestigt, wordt uw account permanent verwijderd."
 }

@@ -1121,5 +1121,8 @@
   "email_force_verification_action": "Please confirm ownership of this email address by clicking the button below:",
   "email_force_verification_button": "Verify email address",
   "email_force_verification_login_blocked": "Sign-in is temporarily blocked",
-  "email_force_verification_login_blocked_text": "You will not be able to log in until this email address has been verified. If you did not create a Clovord account, you can ignore this message."
+  "email_force_verification_login_blocked_text": "You will not be able to log in until this email address has been verified. If you did not create a Clovord account, you can ignore this message — the account will be deleted automatically.",
+  "email_force_verification_expires": "This link will expire in {grace_hours} hours.",
+  "email_force_verification_deletion_warning": "Account deletion warning",
+  "email_force_verification_deletion_warning_text": "If you do not verify this email address within {grace_hours} hours, your account will be permanently deleted."
 }
