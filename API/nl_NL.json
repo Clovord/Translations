@@ -958,5 +958,14 @@
   "classifications_reason_title_guild_violent_extremism": "Gewelddadig extremisme bevorderen",
   "classifications_reason_description_guild_violent_extremism": "Server gebruikt om terroristische of extremistische activiteiten te promoten, aan te werven of te coördineren.",
   "classifications_reason_title_guild_raid_organization": "Coördinatie van aanvallen of massale intimidatie",
-  "classifications_reason_description_guild_raid_organization": "Server voornamelijk gebruikt voor het organiseren van gecoördineerde invallen of massale intimidatie van andere gemeenschappen."
+  "classifications_reason_description_guild_raid_organization": "Server voornamelijk gebruikt voor het organiseren van gecoördineerde invallen of massale intimidatie van andere gemeenschappen.",
+  "403229": "E-mailverificatie is vereist voordat u kunt inloggen. Controleer uw inbox voor de verificatielink.",
+  "email_force_verification_subject": "Actie vereist: Bevestig uw Clovord e-mailadres",
+  "email_force_verification_title": "E-mailverificatie vereist",
+  "email_force_verification_notice": "Beveiligingsmelding",
+  "email_force_verification_body": "Uw e-mailadres is als ongebruikelijk gemarkeerd. Om veiligheidsredenen en om het platform te beschermen, moet u uw e-mail bevestigen voordat u weer kunt inloggen.",
+  "email_force_verification_action": "Bevestig het eigendom van dit e-mailadres via de knop hieronder:",
+  "email_force_verification_button": "E-mailadres bevestigen",
+  "email_force_verification_login_blocked": "Inloggen tijdelijk geblokkeerd",
+  "email_force_verification_login_blocked_text": "U kunt pas weer inloggen nadat dit e-mailadres is geverifieerd. Als u geen Clovord-account heeft aangemaakt, kunt u dit bericht negeren."
 }

@@ -958,5 +958,14 @@
   "classifications_reason_title_guild_violent_extremism": "Gewalt gegen Extremismus",
   "classifications_reason_description_guild_violent_extremism": "Server verwendet, um terroristische oder extremistische Aktivitäten zu fördern, zu rekrutieren oder zu koordinieren.",
   "classifications_reason_title_guild_raid_organization": "Raid- oder Massenvernichtungskoordination",
-  "classifications_reason_description_guild_raid_organization": "Server hat vor allem koordinierte Razzien oder Massenvernichtung anderer Gemeinschaften organisiert."
+  "classifications_reason_description_guild_raid_organization": "Server hat vor allem koordinierte Razzien oder Massenvernichtung anderer Gemeinschaften organisiert.",
+  "403229": "E-Mail-Verifizierung ist erforderlich, bevor Sie sich anmelden können. Prüfen Sie Ihren Posteingang auf den Verifizierungslink.",
+  "email_force_verification_subject": "Aktion erforderlich: Bestätigen Sie Ihre Clovord-E-Mail-Adresse",
+  "email_force_verification_title": "E-Mail-Verifizierung erforderlich",
+  "email_force_verification_notice": "Sicherheitshinweis",
+  "email_force_verification_body": "Ihre E-Mail-Adresse wurde als ungewöhnlich eingestuft. Aus Sicherheitsgründen und zum Schutz der Plattform müssen Sie Ihre E-Mail bestätigen, bevor Sie sich wieder anmelden können.",
+  "email_force_verification_action": "Bitte bestätigen Sie den Besitz dieser E-Mail-Adresse über den folgenden Button:",
+  "email_force_verification_button": "E-Mail-Adresse bestätigen",
+  "email_force_verification_login_blocked": "Anmeldung vorübergehend gesperrt",
+  "email_force_verification_login_blocked_text": "Sie können sich erst wieder anmelden, wenn diese E-Mail-Adresse verifiziert wurde. Falls Sie kein Clovord-Konto erstellt haben, können Sie diese Nachricht ignorieren."
 }

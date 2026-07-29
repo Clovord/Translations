@@ -512,6 +512,7 @@
   "403226": "You are trying to access our service trough a proxy that is not working properly, please access our service directly at https://clovord.com",
   "403227": "Bots cannot use this endpoint",
   "403228": "You dont have enough credits to perform this action",
+  "403229": "Email verification is required before you can sign in. Check your inbox for a verification link.",
   "404000": "Not Found",
   "404001": "Not Found - MultiStatus",
   "404002": "Unknown Application",
@@ -1112,5 +1113,13 @@
   "classifications_reason_title_user_illegal_goods": "Illegal goods or activity",
   "classifications_reason_description_user_illegal_goods": "Buying, selling, or promoting illegal drugs, weapons, or other clearly illegal goods or services.",
   "classifications_reason_title_user_child_endangerment": "Child endangerment",
-  "classifications_reason_description_user_child_endangerment": "Behavior that puts a minor at risk of harm, exploitation, or unsafe contact."
+  "classifications_reason_description_user_child_endangerment": "Behavior that puts a minor at risk of harm, exploitation, or unsafe contact.",
+  "email_force_verification_subject": "Action required: Verify your Clovord email address",
+  "email_force_verification_title": "Email verification required",
+  "email_force_verification_notice": "Security notice",
+  "email_force_verification_body": "Your email address was flagged as unusual. For security reasons, and to help protect the platform, you must verify your email before you can sign in again.",
+  "email_force_verification_action": "Please confirm ownership of this email address by clicking the button below:",
+  "email_force_verification_button": "Verify email address",
+  "email_force_verification_login_blocked": "Sign-in is temporarily blocked",
+  "email_force_verification_login_blocked_text": "You will not be able to log in until this email address has been verified. If you did not create a Clovord account, you can ignore this message."
 }
