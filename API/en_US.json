@@ -1133,5 +1133,20 @@
   "email_force_verification_login_blocked_text": "You will not be able to log in until this email address has been verified. If you did not create a Clovord account, you can ignore this message — the account will be deleted automatically.",
   "email_force_verification_expires": "This link will expire in {grace_hours} hours.",
   "email_force_verification_deletion_warning": "Account deletion warning",
-  "email_force_verification_deletion_warning_text": "If you do not verify this email address within {grace_hours} hours, your account will be permanently deleted."
+  "email_force_verification_deletion_warning_text": "If you do not verify this email address within {grace_hours} hours, your account will be permanently deleted.",
+  "email_ticket_created_subject": "Support request received: {subject}",
+  "email_ticket_created_title": "We received your support request",
+  "email_ticket_created_body": "Thanks for contacting Clovord Support. We created a ticket and will reply as soon as we can.",
+  "email_ticket_reply_subject": "New reply on your support request: {subject}",
+  "email_ticket_reply_title": "New reply from Support",
+  "email_ticket_reply_body": "Our team replied to your support request.",
+  "email_ticket_status_subject": "Your support request was updated: {subject}",
+  "email_ticket_status_title": "Support request status updated",
+  "email_ticket_status_body": "The status of your support request has changed.",
+  "email_ticket_subject": "Subject",
+  "email_ticket_id": "Ticket ID",
+  "email_ticket_status_label": "Status",
+  "email_ticket_latest_reply": "Latest reply",
+  "email_ticket_view_button": "View request",
+  "email_ticket_prefs_hint": "You can turn support emails off in Settings → Notifications."
 }

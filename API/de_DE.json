@@ -979,5 +979,20 @@
   "email_force_verification_login_blocked_text": "Sie können sich erst wieder anmelden, wenn diese E-Mail-Adresse verifiziert wurde. Falls Sie kein Clovord-Konto erstellt haben, können Sie diese Nachricht ignorieren — das Konto wird automatisch gelöscht.",
   "email_force_verification_expires": "Dieser Link läuft in {grace_hours} Stunden ab.",
   "email_force_verification_deletion_warning": "Warnung: Kontolöschung",
-  "email_force_verification_deletion_warning_text": "Wenn Sie diese E-Mail-Adresse nicht innerhalb von {grace_hours} Stunden bestätigen, wird Ihr Konto dauerhaft gelöscht."
+  "email_force_verification_deletion_warning_text": "Wenn Sie diese E-Mail-Adresse nicht innerhalb von {grace_hours} Stunden bestätigen, wird Ihr Konto dauerhaft gelöscht.",
+  "email_ticket_created_subject": "Support-Anfrage erhalten: {subject}",
+  "email_ticket_created_title": "Wir haben deine Support-Anfrage erhalten",
+  "email_ticket_created_body": "Danke, dass du Clovord Support kontaktiert hast. Wir haben ein Ticket erstellt und melden uns so schnell wie möglich.",
+  "email_ticket_reply_subject": "Neue Antwort auf deine Support-Anfrage: {subject}",
+  "email_ticket_reply_title": "Neue Antwort vom Support",
+  "email_ticket_reply_body": "Unser Team hat auf deine Support-Anfrage geantwortet.",
+  "email_ticket_status_subject": "Deine Support-Anfrage wurde aktualisiert: {subject}",
+  "email_ticket_status_title": "Status der Support-Anfrage aktualisiert",
+  "email_ticket_status_body": "Der Status deiner Support-Anfrage hat sich geändert.",
+  "email_ticket_subject": "Betreff",
+  "email_ticket_id": "Ticket-ID",
+  "email_ticket_status_label": "Status",
+  "email_ticket_latest_reply": "Neueste Antwort",
+  "email_ticket_view_button": "Anfrage ansehen",
+  "email_ticket_prefs_hint": "Support-E-Mails kannst du unter Einstellungen → Benachrichtigungen deaktivieren."
 }

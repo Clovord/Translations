@@ -979,5 +979,20 @@
   "email_force_verification_login_blocked_text": "U kunt pas weer inloggen nadat dit e-mailadres is geverifieerd. Als u geen Clovord-account heeft aangemaakt, kunt u dit bericht negeren — het account wordt automatisch verwijderd.",
   "email_force_verification_expires": "Deze link verloopt over {grace_hours} uur.",
   "email_force_verification_deletion_warning": "Waarschuwing: accountverwijdering",
-  "email_force_verification_deletion_warning_text": "Als u dit e-mailadres niet binnen {grace_hours} uur bevestigt, wordt uw account permanent verwijderd."
+  "email_force_verification_deletion_warning_text": "Als u dit e-mailadres niet binnen {grace_hours} uur bevestigt, wordt uw account permanent verwijderd.",
+  "email_ticket_created_subject": "Supportverzoek ontvangen: {subject}",
+  "email_ticket_created_title": "We hebben je supportverzoek ontvangen",
+  "email_ticket_created_body": "Bedankt dat je contact hebt opgenomen met Clovord Support. We hebben een ticket aangemaakt en reageren zo snel mogelijk.",
+  "email_ticket_reply_subject": "Nieuw antwoord op je supportverzoek: {subject}",
+  "email_ticket_reply_title": "Nieuw antwoord van Support",
+  "email_ticket_reply_body": "Ons team heeft geantwoord op je supportverzoek.",
+  "email_ticket_status_subject": "Je supportverzoek is bijgewerkt: {subject}",
+  "email_ticket_status_title": "Status van supportverzoek bijgewerkt",
+  "email_ticket_status_body": "De status van je supportverzoek is gewijzigd.",
+  "email_ticket_subject": "Onderwerp",
+  "email_ticket_id": "Ticket-ID",
+  "email_ticket_status_label": "Status",
+  "email_ticket_latest_reply": "Laatste antwoord",
+  "email_ticket_view_button": "Verzoek bekijken",
+  "email_ticket_prefs_hint": "Je kunt support-e-mails uitzetten via Instellingen → Meldingen."
 }
