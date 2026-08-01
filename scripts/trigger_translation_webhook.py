@@ -144,7 +144,7 @@ def main() -> int:
             continue
         if path.startswith("API/"):
             file_changes["api"].append(path)
-        elif path.startswith("WebApp/") or path.startswith("DesktopApp/") or path.startswith("MobileApp/") or path.startswith("DownloadPage/"):
+        elif path.startswith("WebApp/") or path.startswith("DesktopApp/") or path.startswith("MobileApp/") or path.startswith("DownloadPage/") or path.startswith("SupportPortal/"):
             file_changes["frontend"].append(path)
 
     if not file_changes["api"] and not file_changes["frontend"]:

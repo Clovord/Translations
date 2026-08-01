@@ -30,6 +30,7 @@ jobs:
       downloads: ${{ steps.filter.outputs.downloads }}
       desktop: ${{ steps.filter.outputs.desktop }}
       mobile: ${{ steps.filter.outputs.mobile }}
+      support: ${{ steps.filter.outputs.support }}
       en_us_changed: ${{ steps.check-en-us.outputs.changed }}
     steps:
       - uses: actions/checkout@v4
@@ -49,11 +50,13 @@ jobs:
             mobile:
               - "MobileApp/**"
               - "WebApp/**"
+            support:
+              - "SupportPortal/**"
       
       - name: Check if en_US files changed
         id: check-en-us
         run: |
-          if git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E "^(WebApp|API|DesktopApp|DownloadPage)/en_US\.json"; then
+          if git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E "^(WebApp|API|DesktopApp|DownloadPage|SupportPortal)/en_US\.json"; then
             echo "changed=true" >> $GITHUB_OUTPUT
           else
             echo "changed=false" >> $GITHUB_OUTPUT
@@ -100,7 +103,7 @@ jobs:
     needs: [detect, auto-translate-llm]
     if: |
       always() &&
-      (needs.detect.outputs.api == 'true' || needs.detect.outputs.webapp == 'true' || needs.detect.outputs.desktop == 'true' || needs.detect.outputs.mobile == 'true' || needs.detect.outputs.downloads == 'true') &&
+      (needs.detect.outputs.api == 'true' || needs.detect.outputs.webapp == 'true' || needs.detect.outputs.desktop == 'true' || needs.detect.outputs.mobile == 'true' || needs.detect.outputs.downloads == 'true' || needs.detect.outputs.support == 'true') &&
       (needs.auto-translate-llm.result == 'success' || needs.auto-translate-llm.result == 'skipped' || needs.auto-translate-llm.result == 'failure')
     runs-on: ubuntu-latest
     steps:
@@ -432,6 +435,128 @@ jobs:
               --base "${BASE_BRANCH}" \
               --head "${BRANCH}" \
               --title "Sync translations (Downloads)" \
+              --body "Automated translation sync from Translations."
+
+            PR_NUMBER=$(gh pr list \
+              --repo "$REPO" \
+              --head "${BRANCH}" \
+              --base "${BASE_BRANCH}" \
+              --state open \
+              --json number \
+              --jq '.[0].number')
+          fi
+
+          MERGE_OUTPUT=$(gh pr merge \
+            --repo "$REPO" \
+            --squash \
+            "${PR_NUMBER}" 2>&1) || MERGE_STATUS=$?
+
+          if [ "${MERGE_STATUS:-0}" -ne 0 ]; then
+            echo "${MERGE_OUTPUT}"
+            exit "${MERGE_STATUS}"
+          fi
+
+  sync-support:
+    needs: [detect, auto-translate-llm]
+    if: |
+      always() &&
+      needs.detect.outputs.support == 'true' &&
+      (needs.auto-translate-llm.result == 'success' || needs.auto-translate-llm.result == 'skipped' || needs.auto-translate-llm.result == 'failure')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Sync SupportPortal translations
+        env:
+          TOKEN: ${{ secrets.SYNC_SUPPORTPORTAL_TOKEN }}
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          ROOT_DIR="$PWD"
+          BRANCH="automation/sync-support-translations"
+          BASE_BRANCH="main"
+          REPO="Clovord/SupportPortal"
+
+          if [ -z "$TOKEN" ]; then
+            echo "SYNC_SUPPORTPORTAL_TOKEN is empty or not configured"
+            exit 1
+          fi
+
+          git clone "https://x-access-token:${TOKEN}@github.com/${REPO}.git" target
+          cd target
+
+          git config user.email "bot@clovord.com"
+          git config user.name "Clovord Bot"
+          git fetch origin "${BRANCH}" || true
+
+          if git show-ref --verify --quiet "refs/remotes/origin/${BRANCH}"; then
+            git checkout -B "${BRANCH}" "origin/${BRANCH}"
+          else
+            git checkout -B "${BRANCH}" "origin/${BASE_BRANCH}"
+          fi
+
+          python "$ROOT_DIR/scripts/require_codeowners.py" --repo-dir "$PWD" --required-path "dist/assets/translations/"
+
+          if ! compgen -G "$ROOT_DIR/SupportPortal/*.json" > /dev/null; then
+            echo "No source translation files found in $ROOT_DIR/SupportPortal"
+            exit 1
+          fi
+
+          TMP_TRANSLATIONS_DIR=$(mktemp -d)
+          cp -f "$ROOT_DIR"/SupportPortal/*.json "$TMP_TRANSLATIONS_DIR"/
+
+          mkdir -p dist/assets/translations
+          find dist/assets/translations -maxdepth 1 -type f -name "*.json" -delete
+          cp -f "$TMP_TRANSLATIONS_DIR"/*.json dist/assets/translations/
+          rm -rf "$TMP_TRANSLATIONS_DIR"
+
+          python - <<'PY'
+          import json
+          import os
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          source_sha = (os.environ.get("SOURCE_SHA") or "").strip()
+          version = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
+          payload = {
+              "version": version,
+              "source_commit": source_sha,
+              "updated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
+          }
+          out = Path("dist/assets/translations/manifest.json")
+          out.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+          print("Wrote", out)
+          PY
+
+          git add -A -f dist/assets/translations
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+
+          git commit -m "Sync translations (SupportPortal)"
+          git push origin "${BRANCH}" --force-with-lease
+
+          git fetch origin "${BASE_BRANCH}"
+          git rebase -X ours "origin/${BASE_BRANCH}"
+          git push origin "${BRANCH}" --force-with-lease
+
+          export GH_TOKEN="$TOKEN"
+          PR_NUMBER=$(gh pr list \
+            --repo "$REPO" \
+            --head "${BRANCH}" \
+            --base "${BASE_BRANCH}" \
+            --state open \
+            --json number \
+            --jq '.[0].number')
+
+          if [ -z "${PR_NUMBER}" ]; then
+            gh pr create \
+              --repo "$REPO" \
+              --base "${BASE_BRANCH}" \
+              --head "${BRANCH}" \
+              --title "Sync translations (SupportPortal)" \
               --body "Automated translation sync from Translations."
 
             PR_NUMBER=$(gh pr list \

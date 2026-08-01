@@ -26,6 +26,7 @@ jobs:
       downloads: ${{ steps.filter.outputs.downloads }}
       desktop: ${{ steps.filter.outputs.desktop }}
       mobile: ${{ steps.filter.outputs.mobile }}
+      support: ${{ steps.filter.outputs.support }}
       en_us_changed: ${{ steps.check-en-us.outputs.changed }}
     steps:
       - uses: actions/checkout@v4
@@ -45,11 +46,13 @@ jobs:
             mobile:
               - "MobileApp/**"
               - "WebApp/**"
+            support:
+              - "SupportPortal/**"
       
       - name: Check if en_US files changed
         id: check-en-us
         run: |
-          if git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E "^(WebApp|API|DesktopApp|DownloadPage)/en_US\.json"; then
+          if git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E "^(WebApp|API|DesktopApp|DownloadPage|SupportPortal)/en_US\.json"; then
             echo "changed=true" >> $GITHUB_OUTPUT
           else
             echo "changed=false" >> $GITHUB_OUTPUT

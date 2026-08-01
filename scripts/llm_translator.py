@@ -292,7 +292,7 @@ class TranslationSyncer:
 
     def __init__(self, base_path: Optional[Path] = None):
         self.base_path = base_path or Path(__file__).parent.parent
-        self.categories = ["WebApp", "API", "DesktopApp", "DownloadPage", "MobileApp"]
+        self.categories = ["WebApp", "API", "DesktopApp", "DownloadPage", "MobileApp", "SupportPortal"]
 
     def get_category_path(self, category: str) -> Path:
         return self.base_path / category
