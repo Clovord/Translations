@@ -1148,5 +1148,6 @@
   "email_ticket_status_label": "Status",
   "email_ticket_latest_reply": "Latest reply",
   "email_ticket_view_button": "View request",
-  "email_ticket_prefs_hint": "You can turn support emails off in Settings → Notifications."
+  "email_ticket_prefs_hint": "You can turn support emails off in Settings → Notifications.",
+  "404096": "Unknown OAuth Authorization"
 }

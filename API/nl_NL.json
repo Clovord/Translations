@@ -994,5 +994,6 @@
   "email_ticket_status_label": "Status",
   "email_ticket_latest_reply": "Laatste antwoord",
   "email_ticket_view_button": "Verzoek bekijken",
-  "email_ticket_prefs_hint": "Je kunt support-e-mails uitzetten via Instellingen → Meldingen."
+  "email_ticket_prefs_hint": "Je kunt support-e-mails uitzetten via Instellingen → Meldingen.",
+  "404096": "Onbekende OAuth-autorisatie"
 }

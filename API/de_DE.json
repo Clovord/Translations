@@ -994,5 +994,6 @@
   "email_ticket_status_label": "Status",
   "email_ticket_latest_reply": "Neueste Antwort",
   "email_ticket_view_button": "Anfrage ansehen",
-  "email_ticket_prefs_hint": "Support-E-Mails kannst du unter Einstellungen → Benachrichtigungen deaktivieren."
+  "email_ticket_prefs_hint": "Support-E-Mails kannst du unter Einstellungen → Benachrichtigungen deaktivieren.",
+  "404096": "Unbekannte OAuth-Autorisierung"
 }
