@@ -2195,6 +2195,11 @@
   "iQv5Ecq0avJFAcKP2SO": "Message snowflake ID",
   "eSLyftkzxURU": "Channel snowflake ID",
   "9yXuifoaXILACo6KmTm": "Guild object",
+  "IuZYdKoBRGvbU7": "Guild update payload",
+  "fJjmVSkQADtbf3": "Guild delete payload",
+  "3WLHgcuErwsAnG": "Guild id",
+  "guyMZyOgYbSxkD": "Updated guild display name",
+
   "rUNAXOfsiu": "User object",
   "usv3OnbwEgvBmHukVUVT": "Guild member object",
   "R0GfXFS5lR5IYrjaZw": "Member nickname (string or null)",

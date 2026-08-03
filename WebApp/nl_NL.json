@@ -2009,5 +2009,9 @@
   "pBpcgJWpCAQh": "Could not deauthorize this application.",
   "c5Fl3HEaoZ18": "Application deauthorized.",
   "dBBNaqbreOSI": "Expires {date}",
-  "J2DzUR7OdETV": "Authorized {date}"
+  "J2DzUR7OdETV": "Authorized {date}",
+  "IuZYdKoBRGvbU7": "Guild-updatepayload",
+  "fJjmVSkQADtbf3": "Guild-verwijderpayload",
+  "3WLHgcuErwsAnG": "Guild-id",
+  "guyMZyOgYbSxkD": "Bijgewerkte guildweergavenaam"
 }

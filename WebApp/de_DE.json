@@ -257,6 +257,11 @@
   "9tZA67ALxpxZ": "Durch die Erstellung einer Bewerbung stimmen Sie der",
   "9uAseSEfLGgtPM": "Standardmäßig werden die Benutzer eine Popup-Benachrichtigung, die sie über das Verbot informieren, indem es dies ermöglicht, die Popup wird nicht angezeigt",
   "9yXuifoaXILACo6KmTm": "Gildenobjekt",
+  "IuZYdKoBRGvbU7": "Gilden-Update-Payload",
+  "fJjmVSkQADtbf3": "Gilden-Lösch-Payload",
+  "3WLHgcuErwsAnG": "Gilden-ID",
+  "guyMZyOgYbSxkD": "Aktualisierter Gildenanzeigename",
+
   "A0ujOQ6ECN8Bu": "curl -X GET \"https://clovord.com/api/gateway\" -H \"Autorisierung: Bot YOUR TOKEN HERE\"",
   "A1u4NskcBX65EA": "Clovord • Billing Produkte",
   "A2BuIcjz": "Array",
