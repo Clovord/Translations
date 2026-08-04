@@ -216,6 +216,8 @@
   "400167": "Cannot reply to a closed ticket",
   "400168": "Invalid ticket message visibility",
   "400169": "Ticket message body is required",
+  "400170": "Voice channel is full",
+  "400171": "Channel is not a voice or stage channel",
   "401000": "Unauthorized",
   "401001": "Unauthorized - MultiStatus",
   "401002": "Invalid MFA token",
@@ -616,6 +618,7 @@
   "404093": "Unknown Intent Level",
   "404094": "Unknown Reason",
   "404095": "Unknown Ticket",
+  "404096": "Unknown OAuth Authorization",
   "405000": "Method Not Allowed",
   "405001": "Method Not Allowed - MultiStatus",
   "409000": "Conflict",
@@ -1148,6 +1151,5 @@
   "email_ticket_status_label": "Status",
   "email_ticket_latest_reply": "Latest reply",
   "email_ticket_view_button": "View request",
-  "email_ticket_prefs_hint": "You can turn support emails off in Settings → Notifications.",
-  "404096": "Unknown OAuth Authorization"
+  "email_ticket_prefs_hint": "You can turn support emails off in Settings → Notifications."
 }
