@@ -218,6 +218,10 @@
   "400169": "Ticket message body is required",
   "400170": "Voice channel is full",
   "400171": "Channel is not a voice or stage channel",
+  "400172": "Invalid billing mail status",
+  "400173": "Invalid billing mail priority",
+  "400174": "Invalid billing mail category",
+  "400175": "Invalid billing mail whitelist value",
   "401000": "Unauthorized",
   "401001": "Unauthorized - MultiStatus",
   "401002": "Invalid MFA token",
@@ -619,6 +623,8 @@
   "404094": "Unknown Reason",
   "404095": "Unknown Ticket",
   "404096": "Unknown OAuth Authorization",
+  "404097": "Unknown Billing Mail",
+  "404098": "Unknown Billing Mail Whitelist Entry",
   "405000": "Method Not Allowed",
   "405001": "Method Not Allowed - MultiStatus",
   "409000": "Conflict",
@@ -1151,5 +1157,7 @@
   "email_ticket_status_label": "Status",
   "email_ticket_latest_reply": "Latest reply",
   "email_ticket_view_button": "View request",
-  "email_ticket_prefs_hint": "You can turn support emails off in Settings → Notifications."
+  "email_ticket_prefs_hint": "You can turn support emails off in Settings → Notifications.",
+  "email_ticket_unknown_sender_subject": "Please use your Clovord account email",
+  "email_ticket_unknown_sender_body": "We received your message to {support_email}, but that address is not linked to a Clovord account.\n\nPlease resend from the email address on your Clovord account so we can create a support ticket.\n\nOriginal subject: {subject}"
 }
