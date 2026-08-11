@@ -649,7 +649,7 @@
   "423003": "The guild is locked",
   "423004": "The channel is locked",
   "423005": "The thread is locked",
-  "423006": "User account is disabled",
+  "423006": "This action is blocked because the account is disabled",
   "423007": "This feature is locked",
   "423008": "This feature is locked for Staff",
   "423009": "This feature is locked for Staff with higher rank",

@@ -2181,7 +2181,7 @@
   "yOtCdoUDw": "Ihre Rechte",
   "yT9cQ2vB7m": "Kurzueberblick ueber Ablauf und Leistungen.",
   "yU5iOp3As9DfGhJk": "Primäre Gildenschneeflocke, die dem Benutzer zugeordnet ist, falls festgelegt.",
-  "yU6iOp3As5DfGhJk": "Markiert das Konto als deaktiviert und für den normalen Zugriff gesperrt.",
+  "yU6iOp3As5DfGhJk": "Markiert das Konto als deaktiviert und für den normalen App-Zugriff gesperrt. Login und Support bleiben möglich.",
   "yU8XPT1Y": "Menschen",
   "yX6TZsNwq36XG": "Leitlinien der Gemeinschaft – Clovord",
   "yXuyYJJyXGxTZVEL": "Die Einladung darf maximal so oft verwendet werden.",
@@ -2420,5 +2420,17 @@
   "pBpcgJWpCAQh": "Could not deauthorize this application.",
   "c5Fl3HEaoZ18": "Application deauthorized.",
   "dBBNaqbreOSI": "Expires {date}",
-  "J2DzUR7OdETV": "Authorized {date}"
+  "J2DzUR7OdETV": "Authorized {date}",
+  "OBC6exfvKz": "Dein Konto ist gesperrt",
+  "BAaypuKtgd": "Du kannst deinen Account-Standing einsehen und den Support kontaktieren. Der normale Clovord-Zugang bleibt gesperrt, bis das geklärt ist.",
+  "i1ToPlzwX4": "Dein Konto ist deaktiviert",
+  "2hT8OymJNW": "Dieses Konto ist derzeit deaktiviert und kann Clovord nicht nutzen. Du kannst den Support trotzdem kontaktieren, solange du angemeldet bist.",
+  "qYH6PkzuHu": "Support kontaktieren",
+  "H0w3Z8mTPf": "Abmelden",
+  "eUE9pKI7c7": "Kontostatus",
+  "tsyJlJf6zs": "Aktive Classifications",
+  "eU0n9Sb0Xs": "Abgelaufene Classifications",
+  "jwPDYpfplu": "Keine aktiven Classifications",
+  "DWdMk7cynV": "Keine abgelaufenen Classifications",
+  "9ukZGEdPia": "Kontozugriff wird geprüft..."
 }

@@ -2122,7 +2122,7 @@
   "qW9eRt1Yu4IoPaSd": "Badge flag for Early Supporter.",
   "tY7uIo2Pa6SdFgHj": "Badge flag for Certified Moderator.",
   "rF4tGy8Hu1JiKoLp": "Badge flag for Active Developer.",
-  "yU6iOp3As5DfGhJk": "Marks the account as disabled and blocked from normal access.",
+  "yU6iOp3As5DfGhJk": "Marks the account as disabled and blocked from normal app access. Login and support remain available.",
   "uI8oPa4Sd7FgHjKl": "Marks the account as deleted.",
   "iP2oLm9Nk5JhGfDs": "Marks a user-initiated deletion state.",
   "oK4jHg7Fd1SaQwEr": "Marks the account as quarantined due to security or policy checks.",
@@ -2630,5 +2630,17 @@
   "cAlLUpDesc": "Accept, decline, or end an active DM call.",
   "vKc8mN2pQxR4": "Voice Connected",
   "cAlL1nC0m1ngR": "Incoming call",
-  "dmC4llBtnKey1": "Call"
+  "dmC4llBtnKey1": "Call",
+  "OBC6exfvKz": "Your account is suspended",
+  "BAaypuKtgd": "You can review your account standing and contact support. Normal Clovord access stays locked until this is resolved.",
+  "i1ToPlzwX4": "Your account is disabled",
+  "2hT8OymJNW": "This account is currently disabled and cannot use Clovord. You can still contact support while signed in.",
+  "qYH6PkzuHu": "Contact support",
+  "H0w3Z8mTPf": "Log out",
+  "eUE9pKI7c7": "Account status",
+  "tsyJlJf6zs": "Active classifications",
+  "eU0n9Sb0Xs": "Expired classifications",
+  "jwPDYpfplu": "No active classifications",
+  "DWdMk7cynV": "No expired classifications",
+  "9ukZGEdPia": "Checking account access..."
 }
