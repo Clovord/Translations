@@ -1867,6 +1867,7 @@
   "k3LpQm8Vx2": "❱❱ /domains/intel",
   "t6QmLp2Vx9": "Ruft <a href=\"https://docs.linkshieldai.com/#v1-scan\">LinkShieldAI</a>- und <a href=\"https://ti.linkshieldai.com/api-docs\">DragonFly</a>-Ergebnisse für eine Domain ab. Gibt vorgeschlagene Flags und den Status zur Staff-Prüfung zurück.",
   "d4QmVx7Lp3": "Domain, Host oder URL zur Prüfung. <code>q</code> oder <code>domain</code> angeben.",
+  "f2QmLp8Vx1": "Optional. Welchen Partner abgefragt werden soll: <code>linkshieldai</code>, <code>dragonfly</code>, oder weglassen um beide abzufragen.",
   "b5QmVx8Lp2": "Queue-Eintrag genehmigen",
   "h9LpQm1Vx6": "❱❱ /domains/queue/{queue_id}/approve",
   "m4QmLp7Vx3": "Genehmigt einen ausstehenden Queue-Eintrag in die Domainliste. Optionale <code>flags</code> und <code>status</code> überschreiben die automatische Zuordnung.",

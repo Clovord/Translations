@@ -1744,6 +1744,7 @@
   "k3LpQm8Vx2": "❱❱ /domains/intel",
   "t6QmLp2Vx9": "Look up <a href=\"https://docs.linkshieldai.com/#v1-scan\">LinkShieldAI</a> and <a href=\"https://ti.linkshieldai.com/api-docs\">DragonFly</a> results for a domain. Returns suggested flags and status for staff review.",
   "d4QmVx7Lp3": "Domain, host, or URL to inspect. Provide <code>q</code> or <code>domain</code>.",
+  "f2QmLp8Vx1": "Optional. Which partner to query: <code>linkshieldai</code>, <code>dragonfly</code>, or omit to query both.",
   "b5QmVx8Lp2": "Approve queue entry",
   "h9LpQm1Vx6": "❱❱ /domains/queue/{queue_id}/approve",
   "m4QmLp7Vx3": "Approve a pending queue entry into the domain list. Optional <code>flags</code> and <code>status</code> override the automatic mapping.",
