@@ -2051,8 +2051,10 @@
   "B6pQx4Lm7VtN": "Optionele extra notities voor reviewers.",
   "V2mLp9Qx4RtN": "De applicatie is geverifieerd en mag meer dan 20 servers joinen.",
   "n8qLm2Vp4XtR": "Verificatie",
+  "K8nWp2Lm4XtR": "HTTPS-URL naar een supportserver-invite of een openbare contactpagina.",
+  "W7qLm2Xp4RtN": "Checklist per intent. Volledige toegang kan alleen worden aangevraagd als aan alle vereisten is voldaan.",
   "K4mVp9Qx1LtN": "Optioneel. <code>full</code> (standaard) zet een vragenlijst in de wachtrij. <code>limited</code> wordt meteen verleend.",
   "hJLAYxDvcSDTWUgXOyvW": "Applicatie-intents aanvragen",
-  "MJvutnsJxYVRERQlZvgm": "Dien een intentverzoek in voor een applicatie van de ingelogde gebruiker. Beperkte toegang wordt direct verleend. Volledige toegang vereist een vragenlijst en review.",
+  "MJvutnsJxYVRERQlZvgm": "Dien een intentverzoek in voor een applicatie van de ingelogde gebruiker. Beperkte toegang wordt direct verleend. Volledige toegang vereist de intent-checklist, een vragenlijst en review.",
   "ZzAaBbCcDdEeFfGgHhIiJ": "Optionele extra notities naast de vragenlijstantwoorden."
 }

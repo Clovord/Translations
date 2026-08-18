@@ -226,6 +226,7 @@
   "400177": "Intent questionnaire answers are incomplete or too short",
   "400178": "Application verification is on cooldown",
   "400179": "Application must have a bot user for verification",
+  "400180": "Application does not meet the requirements for full intent access",
   "401000": "Unauthorized",
   "401001": "Unauthorized - MultiStatus",
   "401002": "Invalid MFA token",
@@ -1189,5 +1190,8 @@
   "email_developer_verification_approved_body": "{application} is now verified and can join more than 20 servers.",
   "email_developer_verification_rejected_subject": "Your application verification was not approved",
   "email_developer_verification_rejected_title": "Verification not approved",
-  "email_developer_verification_rejected_body": "The verification request for {application} was not approved. Review the requirements and try again after the cooldown."
+  "email_developer_verification_rejected_body": "The verification request for {application} was not approved. Review the requirements and try again after the cooldown.",
+  "email_developer_verification_revoked_subject": "Verification for {application} was removed",
+  "email_developer_verification_revoked_title": "Verification revoked",
+  "email_developer_verification_revoked_body": "Verification for {application} was removed because application standing fell below 50%. The 20-server join cap applies again and staff opened an automatic re-review."
 }

@@ -726,7 +726,7 @@
   "MEu4LOUiHi": "Anmelden",
   "MF9johyzKaO": "Prohibited Content",
   "MHE1QdvCFp": "Wenn der Benutzer in anhängigem Zustand ist",
-  "MJvutnsJxYVRERQlZvgm": "Senden Sie eine Intent-Anfrage für eine Anwendung, die dem authentifizierten Benutzer gehört. Eingeschränkter Zugriff wird sofort gewährt. Voller Zugriff erfordert einen Fragebogen und eine Prüfung.",
+  "MJvutnsJxYVRERQlZvgm": "Senden Sie eine Intent-Anfrage für eine Anwendung, die dem authentifizierten Benutzer gehört. Eingeschränkter Zugriff wird sofort gewährt. Voller Zugriff erfordert die Intent-Checklist, einen Fragebogen und eine Prüfung.",
   "MKHpd1eNo2Xt2V": "Aufkleber",
   "MMq1CsHPoi6Q": "Warum Clovord?",
   "MNFah9Ezcq": "Verletzung Objektstruktur",
@@ -2452,5 +2452,7 @@
   "B6pQx4Lm7VtN": "Optionale Hinweise für Reviewer.",
   "V2mLp9Qx4RtN": "Die Application ist verifiziert und darf mehr als 20 Server joinen.",
   "n8qLm2Vp4XtR": "Verification",
+  "K8nWp2Lm4XtR": "HTTPS-URL zu einem Support-Server-Invite oder einer öffentlichen Kontaktseite.",
+  "W7qLm2Xp4RtN": "Checklist pro Intent. Voller Zugriff kann nur angefragt werden, wenn alle Anforderungen erfüllt sind.",
   "K4mVp9Qx1LtN": "Optional. <code>full</code> (Standard) stellt einen Fragebogen zur Prüfung. <code>limited</code> wird sofort gewährt."
 }

@@ -197,6 +197,7 @@
   "400177": "Vragenlijstantwoorden zijn onvolledig of te kort",
   "400178": "Applicatieverificatie zit in een wachttijd",
   "400179": "De applicatie moet een bot-gebruiker hebben voor verificatie",
+  "400180": "De applicatie voldoet niet aan de vereisten voor volledige intent-toegang",
   "401000": "Ongeautoriseerd",
   "401001": "Ontbrekend of ongeldig token",
   "401002": "Ongeldig MFA-token",
@@ -1025,5 +1026,8 @@
   "email_developer_verification_rejected_subject": "Je applicatieverificatie is niet goedgekeurd",
   "email_developer_verification_rejected_title": "Verificatie niet goedgekeurd",
   "email_developer_verification_rejected_body": "Het verificatieverzoek voor {application} is niet goedgekeurd. Controleer de vereisten en probeer het na de wachttijd opnieuw.",
+  "email_developer_verification_revoked_subject": "Verificatie voor {application} is ingetrokken",
+  "email_developer_verification_revoked_title": "Verificatie ingetrokken",
+  "email_developer_verification_revoked_body": "De verificatie voor {application} is ingetrokken omdat de application-standing onder 50% is gezakt. De limiet van 20 servers geldt weer en het team heeft een automatische herbeoordeling geopend.",
   "404096": "Onbekende OAuth-autorisatie"
 }

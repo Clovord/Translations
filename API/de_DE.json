@@ -197,6 +197,7 @@
   "400177": "Fragebogenantworten sind unvollständig oder zu kurz",
   "400178": "Antragsprüfung befindet sich in einer Wartezeit",
   "400179": "Die Anwendung muss einen Bot-User für die Prüfung haben",
+  "400180": "Die Anwendung erfüllt die Anforderungen für vollen Intent-Zugriff nicht",
   "401000": "Unbefugt",
   "401001": "Fehlende oder ungültige Token",
   "401002": "Invalid MFA token",
@@ -1025,5 +1026,8 @@
   "email_developer_verification_rejected_subject": "Deine Application-Verification wurde nicht genehmigt",
   "email_developer_verification_rejected_title": "Verification nicht genehmigt",
   "email_developer_verification_rejected_body": "Die Verification-Anfrage für {application} wurde nicht genehmigt. Prüfe die Anforderungen und versuche es nach der Wartezeit erneut.",
+  "email_developer_verification_revoked_subject": "Verification für {application} wurde entzogen",
+  "email_developer_verification_revoked_title": "Verification entzogen",
+  "email_developer_verification_revoked_body": "Die Verification für {application} wurde entzogen, weil der Application-Standing unter 50% gefallen ist. Das 20-Server-Limit gilt wieder, und das Team hat eine automatische Re-Review eröffnet.",
   "404096": "Unbekannte OAuth-Autorisierung"
 }
