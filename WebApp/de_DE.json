@@ -1228,7 +1228,7 @@
   "Zu9lJw6odcNnK": "Suche Rollen oder Mitglieder",
   "Zv7Lp2Qm5RtN": "Groesse nicht verfuegbar.",
   "Zvc9ntPk": "Noch keine Abzeichen. Erstellen Sie Ihre erste 👆",
-  "ZwXyVaBcDeFgHiJkLmNo": "Neuer Anwendungsname oder null, um ihn unverändert zu lassen.",
+  "ZwXyVaBcDeFgHiJkLmNo": "Neuer Anwendungsname oder null, um ihn unverändert zu lassen. Nach der Verifizierung kann dieses Feld nicht ohne Clovord-Support geändert werden (`400181`).",
   "ZxNxIvEyNul": "Stornierung, Verlängerung oder Aktualisierung der Zahlungsmethode.",
   "Zy4ssp9IoL1G6": "Benutzer",
   "ZynVXhVTfGj": "Banner entfernen",
@@ -2454,5 +2454,10 @@
   "n8qLm2Vp4XtR": "Verification",
   "K8nWp2Lm4XtR": "HTTPS-URL zu einem Support-Server-Invite oder einer öffentlichen Kontaktseite.",
   "W7qLm2Xp4RtN": "Checklist pro Intent. Voller Zugriff kann nur angefragt werden, wenn alle Anforderungen erfüllt sind.",
+  "T5vLm8Qx1RtN": "Wenn die Application verifiziert ist, ist <code>verification.identity_locked</code> true. App-Name und Inhaber können dann nur noch über den Clovord-Support geändert werden.",
+  "N4qLm8Xp2VtR": "Anwendungsinhaberschaft übertragen",
+  "P7mQx3Lp9RtN": "Überträgt eine unverifizierte Application an einen anderen Clovord-User. Nach der Verifizierung kann die Inhaberschaft nur noch der Clovord-Support ändern (`400182`).",
+  "H2nWp6Lm4XtR": "Snowflake-User-ID des neuen Inhabers. Muss ein bestehendes Nicht-Bot-Konto sein.",
+  "R9qLm2Xp4NtK": "Nach der Verifizierung kann <code>name</code> nicht ohne Clovord-Support geändert werden (`400181`).",
   "K4mVp9Qx1LtN": "Optional. <code>full</code> (Standard) stellt einen Fragebogen zur Prüfung. <code>limited</code> wird sofort gewährt."
 }
