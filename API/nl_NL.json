@@ -730,6 +730,7 @@
   "504032": "Timeout bij opzoeken van klant-ID",
   "504033": "Timeout bij upsert van klant",
   "response_note_language_missing": "Dit antwoord ondersteunt momenteel alleen de taal {language}",
+  "domain_search_history_missing_intent": "De domain history is alleen beschikbaar met de volledige DOMAINLIST intent. DOMAINLIST_LIMITED is niet voldoende.",
   "email_password_reset_subject": "Uw Clovord-wachtwoord resetten",
   "email_password_reset_title": "Resetverzoek voor wachtwoord",
   "email_greeting": "Hallo.",

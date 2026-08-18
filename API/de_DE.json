@@ -730,6 +730,7 @@
   "504032": "Kunden-ID-Lookup Timeout",
   "504033": "Kunden-upsert Timeout",
   "response_note_language_missing": "Diese Antwort unterstützt derzeit nur die{language}Sprache",
+  "domain_search_history_missing_intent": "Die Domain-History ist nur mit dem vollen DOMAINLIST Intent sichtbar. DOMAINLIST_LIMITED reicht nicht aus.",
   "email_password_reset_subject": "Passwort zurücksetzen",
   "email_password_reset_title": "Passwort zurücksetzen Anfrage",
   "email_greeting": "Hallo.",
