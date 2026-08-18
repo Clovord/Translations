@@ -2043,5 +2043,16 @@
   "eU0n9Sb0Xs": "Verlopen classifications",
   "jwPDYpfplu": "Geen actieve classifications",
   "DWdMk7cynV": "Geen verlopen classifications",
-  "9ukZGEdPia": "Accounttoegang controleren..."
+  "9ukZGEdPia": "Accounttoegang controleren...",
+  "wP9xLm3Qv7RtB": "answers",
+  "H4mQx8Lp2VtN": "Vereist voor <code>full</code>. Map van vraag-id naar antwoord. Elk antwoord moet minstens 40 tekens lang zijn.",
+  "Q7vLm2Xp9RtK": "Applicatieverificatie aanvragen",
+  "L3qXm8Lp1VtR": "Dien een verificatieverzoek in zodat de applicatie meer dan 20 servers kan joinen. Alle checklistvereisten moeten eerst zijn voldaan.",
+  "B6pQx4Lm7VtN": "Optionele extra notities voor reviewers.",
+  "V2mLp9Qx4RtN": "De applicatie is geverifieerd en mag meer dan 20 servers joinen.",
+  "n8qLm2Vp4XtR": "Verificatie",
+  "K4mVp9Qx1LtN": "Optioneel. <code>full</code> (standaard) zet een vragenlijst in de wachtrij. <code>limited</code> wordt meteen verleend.",
+  "hJLAYxDvcSDTWUgXOyvW": "Applicatie-intents aanvragen",
+  "MJvutnsJxYVRERQlZvgm": "Dien een intentverzoek in voor een applicatie van de ingelogde gebruiker. Beperkte toegang wordt direct verleend. Volledige toegang vereist een vragenlijst en review.",
+  "ZzAaBbCcDdEeFfGgHhIiJ": "Optionele extra notities naast de vragenlijstantwoorden."
 }

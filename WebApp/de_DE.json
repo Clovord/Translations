@@ -726,7 +726,7 @@
   "MEu4LOUiHi": "Anmelden",
   "MF9johyzKaO": "Prohibited Content",
   "MHE1QdvCFp": "Wenn der Benutzer in anhängigem Zustand ist",
-  "MJvutnsJxYVRERQlZvgm": "Senden Sie eine Intent-Anfrage für eine Anwendung, die dem authentifizierten Benutzer gehört.",
+  "MJvutnsJxYVRERQlZvgm": "Senden Sie eine Intent-Anfrage für eine Anwendung, die dem authentifizierten Benutzer gehört. Eingeschränkter Zugriff wird sofort gewährt. Voller Zugriff erfordert einen Fragebogen und eine Prüfung.",
   "MKHpd1eNo2Xt2V": "Aufkleber",
   "MMq1CsHPoi6Q": "Warum Clovord?",
   "MNFah9Ezcq": "Verletzung Objektstruktur",
@@ -1232,7 +1232,7 @@
   "ZxNxIvEyNul": "Stornierung, Verlängerung oder Aktualisierung der Zahlungsmethode.",
   "Zy4ssp9IoL1G6": "Benutzer",
   "ZynVXhVTfGj": "Banner entfernen",
-  "ZzAaBbCcDdEeFfGgHhIiJ": "Grund für die Anforderung der angegebenen Absicht.",
+  "ZzAaBbCcDdEeFfGgHhIiJ": "Optionale zusätzliche Hinweise neben den Fragebogenantworten.",
   "a1Kz1E9RyeYU": "Anwendungsbereich",
   "a3LmQ7Vx2P": "❱❱ /domains/search",
   "a3hwZ2tX": "Wählen Sie einen Server",
@@ -2444,5 +2444,13 @@
   "eU0n9Sb0Xs": "Abgelaufene Classifications",
   "jwPDYpfplu": "Keine aktiven Classifications",
   "DWdMk7cynV": "Keine abgelaufenen Classifications",
-  "9ukZGEdPia": "Kontozugriff wird geprüft..."
+  "9ukZGEdPia": "Kontozugriff wird geprüft...",
+  "wP9xLm3Qv7RtB": "answers",
+  "H4mQx8Lp2VtN": "Erforderlich für <code>full</code>. Map von Frage-ID zu Antwort. Jede Antwort muss mindestens 40 Zeichen haben.",
+  "Q7vLm2Xp9RtK": "Anwendungsprüfung beantragen",
+  "L3qXm8Lp1VtR": "Reiche eine Verification ein, damit die Application mehr als 20 Server joinen kann. Alle Checklist-Anforderungen müssen erfüllt sein.",
+  "B6pQx4Lm7VtN": "Optionale Hinweise für Reviewer.",
+  "V2mLp9Qx4RtN": "Die Application ist verifiziert und darf mehr als 20 Server joinen.",
+  "n8qLm2Vp4XtR": "Verification",
+  "K4mVp9Qx1LtN": "Optional. <code>full</code> (Standard) stellt einen Fragebogen zur Prüfung. <code>limited</code> wird sofort gewährt."
 }
