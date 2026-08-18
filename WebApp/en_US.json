@@ -2321,6 +2321,7 @@
   "1hFKWShjwnO": "Gateway Event Payloads",
   "CxVdiDQsqzKWosCLXF": "Channel object",
   "rmlchz7OW84KHJDU20Kq": "Array of Channel objects",
+  "wN4kQ8tLmP2sYxR": "Array of release channels: dev, alpha, beta, or stable",
   "fjwmNNOCIihTXBJDW": "Message object",
   "iQv5Ecq0avJFAcKP2SO": "Message snowflake ID",
   "eSLyftkzxURU": "Channel snowflake ID",
