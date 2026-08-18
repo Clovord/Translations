@@ -2459,5 +2459,10 @@
   "P7mQx3Lp9RtN": "Überträgt eine unverifizierte Application an einen anderen Clovord-User. Nach der Verifizierung kann die Inhaberschaft nur noch der Clovord-Support ändern (`400182`).",
   "H2nWp6Lm4XtR": "Snowflake-User-ID des neuen Inhabers. Muss ein bestehendes Nicht-Bot-Konto sein.",
   "R9qLm2Xp4NtK": "Nach der Verifizierung kann <code>name</code> nicht ohne Clovord-Support geändert werden (`400181`).",
+  "J3nWp8Lm4XtR": "Application-Icon hochladen",
+  "F6qXm2Lp9VtN": "Multipart-Feld <code>icon</code>. PNG, JPEG oder WebP, max. 5 MB.",
+  "G4mQx2Lp8VtN": "file",
+  "D8vLm4Qx1RtN": "Application-Icon entfernen",
+  "C5nWp7Lm2XtR": "Entfernt das aktuelle Application-Icon.",
   "K4mVp9Qx1LtN": "Optional. <code>full</code> (Standard) stellt einen Fragebogen zur Prüfung. <code>limited</code> wird sofort gewährt."
 }
