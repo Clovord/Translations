@@ -1687,6 +1687,7 @@
   "c4VmL7pQxN": "Anzahl der Schritte in diesem Job. Derzeit immer <code>4</code>.",
   "y9LpQ2xVmR": "Ungefähre Fertigstellung von <code>0</code> bis <code>100</code>.",
   "k1NxM8qLpV": "Live-RDAP/WHOIS-Snapshot für diesen Host. Vorhanden bei exaktem <code>domain=</code>-Lookup. Fehlt bei Listensuche. Siehe das <a href=\"#domain-objects--domain-whois-object\">Domain-Whois-Objekt</a>.",
+  "x4LmQ9pVxR3": "Live-DNS-Snapshot für diesen Host. Vorhanden bei exaktem <code>domain=</code>-Lookup. Fehlt bei Listensuche. Enthält aufgelöste Records wenn verfügbar; kann leer sein, wenn Live-DNS keine Antworten liefert, obwohl RDAP Delegations-Nameserver unter <code>whois.nameservers</code> listet.",
   "v2LmQ8xNpR4": "Standard-Objekt-Cache-Metadaten. Fehlt bei der ersten fertigen Exact-Host-Antwort (wie bei anderen Clovord-Objekten). Bei späteren Wiederhol-Lookups mit <code>cache.cached: true</code> vorhanden. Siehe das <a href=\"#domain-objects--domain-cache-object\">Domain-Cache-Objekt</a>.",
   "p4QxL9mVpR2": "Domain-Cache-Objekt",
   "h3LmQ7xVpN9": "<code>true</code>, wenn diese Payload aus dem gemeinsamen Exact-Host-Cache gelesen wurde. Fehlt bei der ersten fertigen Lookup-Antwort.",

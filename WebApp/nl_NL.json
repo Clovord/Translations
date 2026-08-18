@@ -1585,6 +1585,7 @@
   "c4VmL7pQxN": "Totaal aantal stappen in deze job. Momenteel altijd <code>4</code>.",
   "y9LpQ2xVmR": "Geschatte voortgang van <code>0</code> tot <code>100</code>.",
   "k1NxM8qLpV": "Live RDAP/WHOIS-snapshot voor deze host. Aanwezig bij exacte <code>domain=</code>-lookup. Ontbreekt bij lijstzoeken. Zie het <a href=\"#domain-objects--domain-whois-object\">domein whois object</a>.",
+  "x4LmQ9pVxR3": "Live DNS-snapshot voor deze host. Aanwezig bij exacte <code>domain=</code>-lookup. Ontbreekt bij lijstzoeken. Bevat opgeloste records wanneer beschikbaar; kan leeg zijn wanneer live DNS geen antwoorden heeft, ook al noemt RDAP delegatie-nameservers in <code>whois.nameservers</code>.",
   "v2LmQ8xNpR4": "Standaard object-cache-metadata. Ontbreekt bij het eerste voltooide exact-host-antwoord (zoals bij andere Clovord-objecten). Aanwezig bij latere herhaalde lookups met <code>cache.cached: true</code>. Zie het <a href=\"#domain-objects--domain-cache-object\">domein cache object</a>.",
   "p4QxL9mVpR2": "Domein cache object",
   "h3LmQ7xVpN9": "<code>true</code> wanneer deze payload uit de gedeelde exact-host-cache is gelezen. Ontbreekt bij het eerste voltooide lookup-antwoord.",

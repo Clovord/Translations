@@ -1846,6 +1846,7 @@
   "c4VmL7pQxN": "Total number of steps in this job. Currently always <code>4</code>.",
   "y9LpQ2xVmR": "Approximate completion from <code>0</code> to <code>100</code>.",
   "k1NxM8qLpV": "Live RDAP/WHOIS snapshot for this host. Present on exact <code>domain=</code> lookup results. Omitted on list search. See the <a href=\"#domain-objects--domain-whois-object\">domain whois object</a>.",
+  "x4LmQ9pVxR3": "Live DNS snapshot for this host. Present on exact <code>domain=</code> lookup results. Omitted on list search. Includes resolved records when available; may be empty when live DNS has no answers even though RDAP lists delegation nameservers in <code>whois.nameservers</code>.",
   "v2LmQ8xNpR4": "Standard object cache metadata. Omitted on the first completed exact-host response (same as other Clovord objects). Present on later repeat lookups with <code>cache.cached: true</code>. See the <a href=\"#domain-objects--domain-cache-object\">domain cache object</a>.",
   "p4QxL9mVpR2": "Domain Cache Object",
   "h3LmQ7xVpN9": "<code>true</code> when this payload was read from the shared exact-host cache. Omitted on the first completed lookup response; present with <code>false</code> on the stored entry until the next cache read.",
