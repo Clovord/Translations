@@ -2682,5 +2682,14 @@
   "eU0n9Sb0Xs": "Expired classifications",
   "jwPDYpfplu": "No active classifications",
   "DWdMk7cynV": "No expired classifications",
-  "9ukZGEdPia": "Checking account access..."
+  "9ukZGEdPia": "Checking account access...",
+  "P4mQx2FaH7cR": "Two-factor authentication",
+  "V8nLt3KpWq9D": "Authenticator app",
+  "R2bHs6YmXc4E": "Use an authenticator app to generate 6-digit codes when you sign in.",
+  "J7kQw1ZaPn5M": "Security keys",
+  "T5cDv8LrBg2N": "Passkeys & hardware keys",
+  "W9pEr4HsNk7Q": "Use a passkey on this device or a hardware security key as a second factor.",
+  "G3mFaBakHd8": "Recovery",
+  "Y6tUaBakCd2": "Recovery codes",
+  "L4nVaBakBd9": "Single-use codes that let you sign in if you lose your authenticator or security key."
 }

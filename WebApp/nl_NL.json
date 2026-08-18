@@ -2066,5 +2066,14 @@
   "K4mVp9Qx1LtN": "Optioneel. <code>full</code> (standaard) zet een vragenlijst in de wachtrij. <code>limited</code> wordt meteen verleend.",
   "hJLAYxDvcSDTWUgXOyvW": "Applicatie-intents aanvragen",
   "MJvutnsJxYVRERQlZvgm": "Dien een intentverzoek in voor een applicatie van de ingelogde gebruiker. Beperkte toegang wordt direct verleend. Volledige toegang vereist de intent-checklist, een vragenlijst en review.",
-  "ZzAaBbCcDdEeFfGgHhIiJ": "Optionele extra notities naast de vragenlijstantwoorden."
+  "ZzAaBbCcDdEeFfGgHhIiJ": "Optionele extra notities naast de vragenlijstantwoorden.",
+  "P4mQx2FaH7cR": "Tweefactorauthenticatie",
+  "V8nLt3KpWq9D": "Authenticator-app",
+  "R2bHs6YmXc4E": "Gebruik een authenticator-app om bij het inloggen 6-cijferige codes te genereren.",
+  "J7kQw1ZaPn5M": "Beveiligingssleutels",
+  "T5cDv8LrBg2N": "Passkeys en hardware-sleutels",
+  "W9pEr4HsNk7Q": "Gebruik een passkey op dit apparaat of een hardware-beveiligingssleutel als tweede factor.",
+  "G3mFaBakHd8": "Herstel",
+  "Y6tUaBakCd2": "Herstelcodes",
+  "L4nVaBakBd9": "Eenmalige codes waarmee je kunt inloggen als je authenticator of beveiligingssleutel kwijt is."
 }

@@ -2464,5 +2464,14 @@
   "G4mQx2Lp8VtN": "file",
   "D8vLm4Qx1RtN": "Application-Icon entfernen",
   "C5nWp7Lm2XtR": "Entfernt das aktuelle Application-Icon.",
-  "K4mVp9Qx1LtN": "Optional. <code>full</code> (Standard) stellt einen Fragebogen zur Prüfung. <code>limited</code> wird sofort gewährt."
+  "K4mVp9Qx1LtN": "Optional. <code>full</code> (Standard) stellt einen Fragebogen zur Prüfung. <code>limited</code> wird sofort gewährt.",
+  "P4mQx2FaH7cR": "Zwei-Faktor-Authentifizierung",
+  "V8nLt3KpWq9D": "Authenticator-App",
+  "R2bHs6YmXc4E": "Nutze eine Authenticator-App, um beim Anmelden 6-stellige Codes zu erzeugen.",
+  "J7kQw1ZaPn5M": "Sicherheitsschlüssel",
+  "T5cDv8LrBg2N": "Passkeys und Hardware-Schlüssel",
+  "W9pEr4HsNk7Q": "Nutze einen Passkey auf diesem Gerät oder einen Hardware-Sicherheitsschlüssel als zweiten Faktor.",
+  "G3mFaBakHd8": "Wiederherstellung",
+  "Y6tUaBakCd2": "Wiederherstellungscodes",
+  "L4nVaBakBd9": "Einmalcodes, mit denen du dich anmelden kannst, wenn du Authenticator oder Sicherheitsschlüssel verlierst."
 }
