@@ -2337,5 +2337,12 @@
   "s7QmVx4Lp1": "❱❱ /files/scans/{scan_id}",
   "y5LpQm2Vx7": "Poll dit endpoint tot <code>terminal</code> <code>true</code> is. Respecteer <code>Retry-After</code> en <code>poll_after_ms</code>.",
   "c5QmVx4Lp7": "Bestandsscan annuleren",
-  "z2LpQm6Vx8": "❱❱ /files/scans/{scan_id}/cancel"
+  "z2LpQm6Vx8": "❱❱ /files/scans/{scan_id}/cancel",
+  "w4KpLm9Qx2": "Avatar bijsnijden",
+  "z7NqRx5Tv8": "Banner bijsnijden",
+  "b3HpWn6Ky1": "Sleep om te verplaatsen. Gebruik de schuifregelaar om in te zoomen.",
+  "c8JmZq4Lp5": "Zoom",
+  "d2VkPn7Rx9": "Toepassen",
+  "f6KpLm2Rx8": "Serverpictogram bijsnijden",
+  "h9NqRx4Tv1": "App-pictogram bijsnijden"
 }

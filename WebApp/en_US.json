@@ -2958,5 +2958,12 @@
   "s7QmVx4Lp1": "❱❱ /files/scans/{scan_id}",
   "y5LpQm2Vx7": "Poll this endpoint until <code>terminal</code> is <code>true</code>. Respect <code>Retry-After</code> and <code>poll_after_ms</code> instead of hammering the API.",
   "c5QmVx4Lp7": "Cancel File Scan",
-  "z2LpQm6Vx8": "❱❱ /files/scans/{scan_id}/cancel"
+  "z2LpQm6Vx8": "❱❱ /files/scans/{scan_id}/cancel",
+  "w4KpLm9Qx2": "Crop avatar",
+  "z7NqRx5Tv8": "Crop banner",
+  "b3HpWn6Ky1": "Drag to reposition. Use the slider to zoom.",
+  "c8JmZq4Lp5": "Zoom",
+  "d2VkPn7Rx9": "Apply",
+  "f6KpLm2Rx8": "Crop server icon",
+  "h9NqRx4Tv1": "Crop application icon"
 }

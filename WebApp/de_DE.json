@@ -2736,5 +2736,12 @@
   "s7QmVx4Lp1": "❱❱ /files/scans/{scan_id}",
   "y5LpQm2Vx7": "Diesen Endpunkt pollen, bis <code>terminal</code> <code>true</code> ist. <code>Retry-After</code> und <code>poll_after_ms</code> beachten.",
   "c5QmVx4Lp7": "Dateiscan abbrechen",
-  "z2LpQm6Vx8": "❱❱ /files/scans/{scan_id}/cancel"
+  "z2LpQm6Vx8": "❱❱ /files/scans/{scan_id}/cancel",
+  "w4KpLm9Qx2": "Avatar zuschneiden",
+  "z7NqRx5Tv8": "Banner zuschneiden",
+  "b3HpWn6Ky1": "Ziehen zum Verschieben. Mit dem Schieberegler zoomen.",
+  "c8JmZq4Lp5": "Zoom",
+  "d2VkPn7Rx9": "Übernehmen",
+  "f6KpLm2Rx8": "Server-Icon zuschneiden",
+  "h9NqRx4Tv1": "Anwendungs-Icon zuschneiden"
 }
