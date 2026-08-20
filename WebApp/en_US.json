@@ -1,4 +1,4 @@
-{
+﻿{
   "c1LqvS7NwP": "You broke Clovord rules for {short_title}",
   "k8FmT2rQaJ": "Read this notice to understand what changed on your account.",
   "w9YpL3cRdE": "What this means for you",
@@ -1500,11 +1500,13 @@
   "dsR9pPtmvXWpd5": "All API requests are made to the following base URL:",
   "UtdOs1Nk8BpNj": "Base URL",
   "6ROWpg69Y": "API Versioning",
-  "hjD7bgd2Cg": "Clovord uses versioning to ensure backward compatibility and to allow for continuous improvements. Each version is identified by a version number in the URL path, such as ``https://clovord.com/api/v{version_number}``. When breaking changes are introduced, a new major version is released (e.g., `v2`). Minor updates that are backward-compatible are added to the current version.",
+  "hjD7bgd2Cg": "Clovord uses versioning to ensure backward compatibility and to allow for continuous improvements. Each version is identified by a version number in the URL path, such as ``https://clovord.com/api/v{version_number}``. When breaking changes are introduced, a new major version is released (e.g., `v2`). Minor updates that are backward-compatible are added to the current version. Official Clovord clients use API `v2` by default.",
   "papMjWiRPDPVzj": "API Versions",
   "tjffA9pNaFR9y3": "VERSION",
   "sDFGZT7e": "DEFAULT",
   "S7wypEY1FaZGFw": "Available",
+  "TPOe2zywgKB8XK": "Legacy envelope: <code>request.user</code>, dual <code>request.time</code>, UNIX resource timestamps.",
+  "QdxDpmL1xPzKlT": "ISO timestamps, no <code>request.user</code>, <code>request.time</code> as ISO string. Official Clovord clients use this version by default.",
   "tkvAqlHKXXQ": "Error Messages",
   "8x8nqMItgY": "Clovord uses a consistent error response format to help developers debug and resolve issues efficiently. Below is an overview of common error codes and their meanings.",
   "eiAbHhcRfkE": "Error Codes",
