@@ -2965,5 +2965,14 @@
   "c8JmZq4Lp5": "Zoom",
   "d2VkPn7Rx9": "Apply",
   "f6KpLm2Rx8": "Crop server icon",
-  "h9NqRx4Tv1": "Crop application icon"
+  "h9NqRx4Tv1": "Crop application icon",
+  "iWTeIiQL9Q": "Exact host lookup when <code>limit</code> is omitted. Returns the finished domain object in one response (no progress polling).",
+  "EpJY9zMqwM": "<strong>Exact <code>domain=</code> lookup (v2)</strong><span>Without <code>limit</code>, the response is the domain object immediately (DNS/RDAP + fast threat checks). Score and flags refresh on a short TTL (~1 hour). Heavier intel may refine score/flags shortly after in the background.</span><span>Not registered: <code>200028</code> (DB entry removed when present). Ready codes: <code>200005</code> / <code>200007</code> / <code>200002</code>.</span>",
+  "gdiDTMocqe": "Threat confidence score from 0 to 100. On <strong>v2</strong> exact lookups, score is computed from live fast providers on each fresh scan (about hourly) and may be refined shortly after by background intel.",
+  "VhhAyn0LRX": "Example Exact Search Response (v2)",
+  "1fdsZqncoLl4": "Bitmask integer encoding domain threat and trust properties. On <strong>v2</strong> exact lookups, flags stay fresh with the same short refresh window as <code>score</code>. See the <a href=\"#domain-objects--domain-flags\" class=\"text-blue underline\">Domain Flags</a> section for details.",
+  "5mUHjKjrvp": "<strong>No pending object on v2</strong><span>v2 never returns the processing progress object for exact <code>domain=</code> lookups. The first response is the domain object (or <code>200028</code> when unregistered). The pending object below applies to <strong>v1</strong> only.</span>",
+  "kdIutv6wyP": "Exact Search Response (v2)",
+  "mJ4EBRHHXU": "API version",
+  "PR3LE4y36X": "<strong>Intent behavior (v2)</strong><span><code>INTENT_DOMAINLIST_LIMITED</code>: only <code>domain=</code> without <code>limit</code> is allowed. Exact-host lookup returns a finished domain object in one request (no <code>202008</code>/<code>206002</code> polling).</span><span><code>INTENT_DOMAINLIST</code>: required for <code>limit</code> (multiple related results) and all other filters (<code>q</code>, <code>hash</code>, <code>status</code>, <code>tags</code>).</span>"
 }
