@@ -150,7 +150,7 @@ def main() -> int:
     if not file_changes["api"] and not file_changes["frontend"]:
         print("No translation JSON changes to send.")
         return 0
-
+ 
     overall_exit = 0
     for file_type, paths in file_changes.items():
         if not paths:
