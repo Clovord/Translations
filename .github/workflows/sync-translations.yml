@@ -3,6 +3,12 @@
 on:
   push:
     branches: [main]
+  workflow_dispatch:
+    inputs:
+      sync_all:
+        description: Sync all translation targets
+        type: boolean
+        default: true
 
 concurrency:
   group: sync-translations-${{ github.ref }}
@@ -25,32 +31,80 @@ jobs:
     needs: validate-json
     runs-on: ubuntu-latest
     outputs:
-      api: ${{ steps.filter.outputs.api }}
-      webapp: ${{ steps.filter.outputs.webapp }}
-      downloads: ${{ steps.filter.outputs.downloads }}
-      desktop: ${{ steps.filter.outputs.desktop }}
-      mobile: ${{ steps.filter.outputs.mobile }}
-      support: ${{ steps.filter.outputs.support }}
+      api: ${{ steps.detect-changes.outputs.api }}
+      webapp: ${{ steps.detect-changes.outputs.webapp }}
+      downloads: ${{ steps.detect-changes.outputs.downloads }}
+      desktop: ${{ steps.detect-changes.outputs.desktop }}
+      mobile: ${{ steps.detect-changes.outputs.mobile }}
+      support: ${{ steps.detect-changes.outputs.support }}
     steps:
       - uses: actions/checkout@v4
-      - uses: dorny/paths-filter@6852f92c20ea7fd3b0c25de3b5112db3a98da050
-        id: filter
         with:
-          filters: |
-            api:
-              - "API/**"
-            webapp:
-              - "WebApp/**"
-            downloads:
-              - "DownloadPage/**"
-            desktop:
-              - "DesktopApp/**"
-              - "WebApp/**"
-            mobile:
-              - "MobileApp/**"
-              - "WebApp/**"
-            support:
-              - "SupportPortal/**"
+          fetch-depth: 0
+
+      - name: Detect changed translation categories
+        id: detect-changes
+        env:
+          SYNC_ALL: ${{ github.event_name == 'workflow_dispatch' && inputs.sync_all }}
+        run: |
+          set -euo pipefail
+
+          write_outputs() {
+            echo "api=$1" >> "$GITHUB_OUTPUT"
+            echo "webapp=$2" >> "$GITHUB_OUTPUT"
+            echo "downloads=$3" >> "$GITHUB_OUTPUT"
+            echo "desktop=$4" >> "$GITHUB_OUTPUT"
+            echo "mobile=$5" >> "$GITHUB_OUTPUT"
+            echo "support=$6" >> "$GITHUB_OUTPUT"
+          }
+
+          if [ "${SYNC_ALL}" = "true" ]; then
+            echo "Manual dispatch: syncing all targets"
+            write_outputs true true true true true true
+            exit 0
+          fi
+
+          BEFORE="${{ github.event.before }}"
+          AFTER="${{ github.sha }}"
+
+          if [ -z "$BEFORE" ] || [[ "$BEFORE" =~ ^0+$ ]]; then
+            CHANGED="$(git diff --name-only "${AFTER}~1" "$AFTER" || true)"
+          else
+            CHANGED="$(git diff --name-only "$BEFORE" "$AFTER" || true)"
+          fi
+
+          echo "Changed files in push:"
+          echo "$CHANGED"
+
+          if echo "$CHANGED" | grep -q '^\.github/workflows/sync-translations\.yml$'; then
+            echo "Sync workflow changed; forcing full sync to catch up pending translations"
+            write_outputs true true true true true true
+            exit 0
+          fi
+
+          api=false
+          webapp=false
+          downloads=false
+          desktop=false
+          mobile=false
+          support=false
+
+          if echo "$CHANGED" | grep -q '^API/'; then api=true; fi
+          if echo "$CHANGED" | grep -q '^WebApp/'; then webapp=true; fi
+          if echo "$CHANGED" | grep -q '^DownloadPage/'; then downloads=true; fi
+          if echo "$CHANGED" | grep -q '^DesktopApp/'; then desktop=true; fi
+          if echo "$CHANGED" | grep -q '^MobileApp/'; then mobile=true; fi
+          if echo "$CHANGED" | grep -q '^SupportPortal/'; then support=true; fi
+
+          # WebApp changes also feed Desktop/Mobile override bundles.
+          if [ "$webapp" = true ]; then
+            desktop=true
+            mobile=true
+          fi
+
+          write_outputs "$api" "$webapp" "$downloads" "$desktop" "$mobile" "$support"
+
+          echo "Detect results: api=$api webapp=$webapp downloads=$downloads desktop=$desktop mobile=$mobile support=$support"
 
   trigger-translation-webhook:
     needs: detect
