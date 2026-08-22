@@ -31,7 +31,6 @@ jobs:
       desktop: ${{ steps.filter.outputs.desktop }}
       mobile: ${{ steps.filter.outputs.mobile }}
       support: ${{ steps.filter.outputs.support }}
-      en_us_changed: ${{ steps.check-en-us.outputs.changed }}
     steps:
       - uses: actions/checkout@v4
       - uses: dorny/paths-filter@6852f92c20ea7fd3b0c25de3b5112db3a98da050
@@ -52,59 +51,11 @@ jobs:
               - "WebApp/**"
             support:
               - "SupportPortal/**"
-      
-      - name: Check if en_US files changed
-        id: check-en-us
-        run: |
-          if git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E "^(WebApp|API|DesktopApp|DownloadPage|SupportPortal)/en_US\.json"; then
-            echo "changed=true" >> $GITHUB_OUTPUT
-          else
-            echo "changed=false" >> $GITHUB_OUTPUT
-          fi
-
-  auto-translate-llm:
-    needs: detect
-    if: needs.detect.outputs.en_us_changed == 'true'
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r scripts/llm_translator_requirements.txt
-
-      - name: Run auto-translation
-        env:
-          BEFORE_SHA: ${{ github.event.before }}
-          HEAD_SHA: ${{ github.sha }}
-          TRANSLATION_BACKEND: google
-          PYTHONUNBUFFERED: "1"
-          TRANSLATION_TIMEOUT_SECONDS: "1500"
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          python scripts/translation_webhook_handler.py \
-            --before-sha "$BEFORE_SHA" \
-            --head-sha "$HEAD_SHA" \
-            --backend google \
-            --auto-commit
 
   trigger-translation-webhook:
-    needs: [detect, auto-translate-llm]
+    needs: detect
     if: |
-      always() &&
-      (needs.detect.outputs.api == 'true' || needs.detect.outputs.webapp == 'true' || needs.detect.outputs.desktop == 'true' || needs.detect.outputs.mobile == 'true' || needs.detect.outputs.downloads == 'true' || needs.detect.outputs.support == 'true') &&
-      (needs.auto-translate-llm.result == 'success' || needs.auto-translate-llm.result == 'skipped' || needs.auto-translate-llm.result == 'failure')
+      needs.detect.outputs.api == 'true' || needs.detect.outputs.webapp == 'true' || needs.detect.outputs.desktop == 'true' || needs.detect.outputs.mobile == 'true' || needs.detect.outputs.downloads == 'true' || needs.detect.outputs.support == 'true'
     runs-on: ubuntu-latest
     steps:
       # Prefer latest main so merged auto-translations are included
@@ -122,11 +73,8 @@ jobs:
           python scripts/trigger_translation_webhook.py
 
   sync-api:
-    needs: [detect, auto-translate-llm]
-    if: |
-      always() &&
-      needs.detect.outputs.api == 'true' &&
-      (needs.auto-translate-llm.result == 'success' || needs.auto-translate-llm.result == 'skipped' || needs.auto-translate-llm.result == 'failure')
+    needs: detect
+    if: needs.detect.outputs.api == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -241,11 +189,8 @@ jobs:
           fi
 
   sync-webapp:
-    needs: [detect, auto-translate-llm]
-    if: |
-      always() &&
-      needs.detect.outputs.webapp == 'true' &&
-      (needs.auto-translate-llm.result == 'success' || needs.auto-translate-llm.result == 'skipped' || needs.auto-translate-llm.result == 'failure')
+    needs: detect
+    if: needs.detect.outputs.webapp == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -363,11 +308,8 @@ jobs:
           fi
 
   sync-downloads:
-    needs: [detect, auto-translate-llm]
-    if: |
-      always() &&
-      needs.detect.outputs.downloads == 'true' &&
-      (needs.auto-translate-llm.result == 'success' || needs.auto-translate-llm.result == 'skipped' || needs.auto-translate-llm.result == 'failure')
+    needs: detect
+    if: needs.detect.outputs.downloads == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -457,11 +399,8 @@ jobs:
           fi
 
   sync-support:
-    needs: [detect, auto-translate-llm]
-    if: |
-      always() &&
-      needs.detect.outputs.support == 'true' &&
-      (needs.auto-translate-llm.result == 'success' || needs.auto-translate-llm.result == 'skipped' || needs.auto-translate-llm.result == 'failure')
+    needs: detect
+    if: needs.detect.outputs.support == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -579,11 +518,8 @@ jobs:
           fi
 
   sync-desktop:
-    needs: [detect, auto-translate-llm]
-    if: |
-      always() &&
-      needs.detect.outputs.desktop == 'true' &&
-      (needs.auto-translate-llm.result == 'success' || needs.auto-translate-llm.result == 'skipped' || needs.auto-translate-llm.result == 'failure')
+    needs: detect
+    if: needs.detect.outputs.desktop == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -679,11 +615,8 @@ jobs:
           fi
 
   sync-mobile:
-    needs: [detect, auto-translate-llm]
-    if: |
-      always() &&
-      needs.detect.outputs.mobile == 'true' &&
-      (needs.auto-translate-llm.result == 'success' || needs.auto-translate-llm.result == 'skipped' || needs.auto-translate-llm.result == 'failure')
+    needs: detect
+    if: needs.detect.outputs.mobile == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
