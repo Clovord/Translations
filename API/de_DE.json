@@ -752,6 +752,7 @@
   "503042": "Unfähig, Zahlungsmethode zu befestigen",
   "503043": "Unfähig, Rechnung zu bezahlen",
   "503044": "Ataraxia-API-Schlüssel ist nicht konfiguriert",
+  "503045": "Badge-Zuweisungen sind nicht verfügbar",
   "503100": "Datenbank vorübergehend nicht verfügbar",
   "504032": "Kunden-ID-Lookup Timeout",
   "504033": "Kunden-upsert Timeout",

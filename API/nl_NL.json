@@ -743,6 +743,7 @@
   "503042": "Kan betalingsmethode niet bijvoegen",
   "503043": "Kan factuur niet betalen",
   "503044": "Ataraxia API-sleutel is niet geconfigureerd",
+  "503045": "Badge-toewijzingen zijn niet beschikbaar",
   "503100": "Database tijdelijk niet beschikbaar",
   "504032": "Timeout bij opzoeken van klant-ID",
   "504033": "Timeout bij upsert van klant",

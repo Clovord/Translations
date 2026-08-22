@@ -909,6 +909,7 @@
   "503042": "Unable to attach payment method",
   "503043": "Unable to pay invoice",
   "503044": "Ataraxia API key is not configured",
+  "503045": "Badge assignments are unavailable",
   "503100": "Database is temporarily unavailable",
   "504032": "Customer ID lookup timeout",
   "504033": "Customer upsert timeout",
