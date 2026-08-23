@@ -8,7 +8,7 @@
   "200006": "We found a safe domain for your search, but it is not an exact match (partial, wildcard, or regex match)",
   "200007": "We found a potentially unsafe domain for your search",
   "200008": "We found a potentially unsafe domain for your search, but it is not an exact match (partial, wildcard, or regex match)",
-  "200009": "We found no relevant domains for your search",
+  "200009": "We found a domain but the state of it is not defined",
   "200010": "We found a safe match for your search, but only slug/path rules matched (including wildcard or regex rules)",
   "200011": "We found a safe match for your search, but only subdomain rules matched (including wildcard or regex rules)",
   "200012": "We found a safe match for your search, but only subdomain and slug/path rules matched (including wildcard or regex rules)",
