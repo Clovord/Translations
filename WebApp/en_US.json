@@ -2809,7 +2809,7 @@
   "v0cModTitle": "Moderate Voice Member",
   "v0cModDesc": "Server mute, deafen, suppress, or move a member in voice.",
   "cAlLCrTitle": "Start DM Call",
-  "cAlLCrDesc": "Ring a DM channel and create a LiveKit call room.",
+  "cAlLCrDesc": "Ring a DM channel and create a LiveKit call room. System DMs are not callable (403232).",
   "cAlLUpTitle": "Update DM Call",
   "cAlLUpDesc": "Accept, decline, or end an active DM call.",
   "vKc8mN2pQxR4": "Voice Connected",
