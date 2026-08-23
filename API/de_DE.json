@@ -648,6 +648,7 @@
   "423018": "Sie benötigen mindestens die REFERRALS INTENT LIMITED, um diese Aktion auszuführen",
   "423019": "Sie benötigen die DOMAINLIST INTENT, um diese Aktion durchzuführen",
   "423020": "Sie benötigen mindestens die DOMAINLIST INTENT LIMITED, um diese Aktion auszuführen",
+  "423021": "Das Ändern deines Tags ist derzeit unter Verschluss",
   "424000": "Eine erforderliche Abhängigkeit wurde nicht erfüllt",
   "424001": "Ihre Anfrage fehlt ein Content-Length Header",
   "424002": "Ihre Anfrage enthält einen ungültigen Content-Length Header",

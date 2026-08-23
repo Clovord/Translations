@@ -708,6 +708,7 @@
   "423018": "You need at least the REFERRALS_INTENT_LIMITED to perform this action",
   "423019": "You need the DOMAINLIST_INTENT to perform this action",
   "423020": "You need at least the DOMAINLIST_INTENT_LIMITED to perform this action",
+  "423021": "Changing your tag is currently under wraps",
   "423050": "You're missing a guild feature to perform this action",
   "423070": "This account have an active classification that prevents you from performing this action",
   "423071": "This guild have an active classification that prevents you from performing this action",
