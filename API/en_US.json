@@ -258,6 +258,7 @@
   "400202": "Invalid news title or body",
   "400203": "Unknown news type or audience",
   "400204": "Missing required news dependency",
+  "400205": "Reason is too long",
   "401000": "Unauthorized",
   "401001": "Unauthorized - MultiStatus",
   "401002": "Invalid MFA token",
