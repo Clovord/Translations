@@ -2319,7 +2319,7 @@
   "d8lUwZ5qBcO7": "Vereist de domainlist-intent.",
   "e1mVxA8rCdP0": "Intern. Ontvangt handlerfouten als het beleid <code>dispatch</code> is.",
   "f4nWyB1sDeQ3": "Constructor en properties",
-  "g7oXzC4tEfR6": "Toegestane statussen: <code>online</code>, <code>idle</code>, <code>dnd</code>, <code>offline</code>.",
+  "g7oXzC4tEfR6": "Toegestane statussen: <code>online</code>, <code>idle</code>, <code>dnd</code>, <code>invisible</code>. Je gekozen status blijft behouden tussen sessies.",
   "h0pYaD7uFgS9": "Lokale ontwikkeling",
   "i3qZbE0vGhT2": "Vanuit een clone van het library-repository:",
   "j6rAcF3wHiU5": "Commandopties",

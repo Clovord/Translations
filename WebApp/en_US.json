@@ -2938,7 +2938,7 @@
   "d8lUwZ5qBcO7": "Requires the domainlist intent.",
   "e1mVxA8rCdP0": "Internal. Receives handler failures when the policy is <code>dispatch</code>.",
   "f4nWyB1sDeQ3": "Constructor and properties",
-  "g7oXzC4tEfR6": "Allowed statuses: <code>online</code>, <code>idle</code>, <code>dnd</code>, <code>offline</code>.",
+  "g7oXzC4tEfR6": "Allowed statuses: <code>online</code>, <code>idle</code>, <code>dnd</code>, <code>invisible</code>. Your chosen status persists across sessions.",
   "h0pYaD7uFgS9": "Local development",
   "i3qZbE0vGhT2": "From a clone of the library repository:",
   "j6rAcF3wHiU5": "Command options",

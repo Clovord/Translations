@@ -2713,7 +2713,7 @@
   "d8lUwZ5qBcO7": "Benötigt den Domainlist-Intent.",
   "e1mVxA8rCdP0": "Intern. Empfängt Handler-Fehler, wenn die Policy <code>dispatch</code> ist.",
   "f4nWyB1sDeQ3": "Konstruktor und Properties",
-  "g7oXzC4tEfR6": "Erlaubte Statuswerte: <code>online</code>, <code>idle</code>, <code>dnd</code>, <code>offline</code>.",
+  "g7oXzC4tEfR6": "Erlaubte Statuswerte: <code>online</code>, <code>idle</code>, <code>dnd</code>, <code>invisible</code>. Dein gewählter Status bleibt über Sitzungen hinweg erhalten.",
   "h0pYaD7uFgS9": "Lokale Entwicklung",
   "i3qZbE0vGhT2": "Aus einem Clone des Library-Repositories:",
   "j6rAcF3wHiU5": "Command-Optionen",
