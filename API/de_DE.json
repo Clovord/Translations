@@ -1006,6 +1006,7 @@
   "403230": "Sie besitzen dieses Ticket nicht",
   "403231": "Fehlende Staff-Berechtigung",
   "403232": "Mit System kann kein Anruf gestartet werden",
+  "403233": "Du hast keine Berechtigung, @everyone oder @here zu erwähnen",
   "404099": "Unbekannte Staff-Gruppe",
   "404100": "Unbekannte Staff-Permission-Zuweisung",
   "404101": "Unbekannter Dateiscan",

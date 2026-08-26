@@ -565,6 +565,7 @@
   "403230": "You do not own this ticket",
   "403231": "Missing staff permission",
   "403232": "Cannot start a call with System",
+  "403233": "You do not have permission to mention @everyone or @here",
   "404000": "Not Found",
   "404001": "Not Found - MultiStatus",
   "404002": "Unknown Application",
