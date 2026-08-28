@@ -150,7 +150,7 @@
   "400094": "Application verification already submitted",
   "400095": "Application verification already approved",
   "400096": "An application command with that name already exists",
-  "400097": "Application interaction failed",
+  "400097": "The application did not respond",
   "400098": "Entry already exists in this directory channel",
   "400099": "There is no outbound promotion code to claim",
   "400100": "Application must be verified to request intents",
