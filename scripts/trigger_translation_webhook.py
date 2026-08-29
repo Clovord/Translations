@@ -116,7 +116,7 @@ def send_webhook(file_type: str, changes: List[Dict[str, Any]]) -> None:
     }
     body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
     req = urllib.request.Request(
-        f"{API_BASE_URL}/v1/webhooks/translations",
+        f"{API_BASE_URL}/v2/webhooks/translations",
         data=body,
         method="POST",
     )
