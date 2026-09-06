@@ -2436,5 +2436,13 @@
   "vN4tY9cH2sKb": "Nog geen auditlogvermeldingen.",
   "pQ3wL8mN5tXr": "Vernieuwen",
   "rT6yU1aS4dFg": "Recente configuratie- en moderatiewijzigingen voor deze server.",
-  "0CHPPupmRvCh": "Kanaal-, rol- en moderatiewijzigingen verschijnen hier."
+  "0CHPPupmRvCh": "Kanaal-, rol- en moderatiewijzigingen verschijnen hier.",
+  "g2ZWDuJpV7rL": "Geeft recente guild-auditlogvermeldingen terug voor leden met VIEW_GUILD_LOG. Vereist experiment 2026_09_logger. Omvat kanaal-, rol-, member-, ban/unban-, invite-, emoji-, webhook-, message- en profielacties.",
+  "4be45rgJUnLE": "Vereist de VIEW_GUILD_LOG-machtiging en experiment 2026_09_logger.",
+  "NaAcUzDidqgR": "Guild-ban verwijderen",
+  "cHL8MCgxPvfy": "❱❱ /guilds/{guild_id}/settings/bans/{user_id}",
+  "VQAWgNx2tmmX": "Verwijdert de ban voor de opgegeven gebruiker uit de guild.",
+  "DeXv20HtdDSa": "Vereist de BAN_MEMBERS-machtiging.",
+  "kFTzdcQ8pUN4": "Guild-auditlog ophalen",
+  "eYCEqHf0sQF5": "❱❱ /guilds/{guild_id}/audit-log"
 }

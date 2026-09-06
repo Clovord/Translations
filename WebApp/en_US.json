@@ -3103,6 +3103,10 @@
   "0CHPPupmRvCh": "Channel, role, and moderation changes will appear here.",
   "kFTzdcQ8pUN4": "Get Guild Audit Log",
   "eYCEqHf0sQF5": "❱❱ /guilds/{guild_id}/audit-log",
-  "g2ZWDuJpV7rL": "Returns recent guild audit log entries for members with VIEW_GUILD_LOG. Requires experiment 2026_09_logger.",
-  "4be45rgJUnLE": "Requires the VIEW_GUILD_LOG permission and experiment 2026_09_logger."
+  "g2ZWDuJpV7rL": "Returns recent guild audit log entries for members with VIEW_GUILD_LOG. Requires experiment 2026_09_logger. Includes channel, role, member, ban/unban, invite, emoji, webhook, message, and profile actions.",
+  "4be45rgJUnLE": "Requires the VIEW_GUILD_LOG permission and experiment 2026_09_logger.",
+  "NaAcUzDidqgR": "Remove Guild Ban",
+  "cHL8MCgxPvfy": "❱❱ /guilds/{guild_id}/settings/bans/{user_id}",
+  "VQAWgNx2tmmX": "Removes a ban for the given user from the guild.",
+  "DeXv20HtdDSa": "Requires the BAN_MEMBERS permission."
 }
