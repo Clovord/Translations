@@ -2830,6 +2830,8 @@
   "pQ3wL8mN5tXr": "Aktualisieren",
   "rT6yU1aS4dFg": "Aktuelle Konfigurations- und Moderationsänderungen für diesen Server.",
   "0CHPPupmRvCh": "Kanal-, Rollen- und Moderationsänderungen erscheinen hier.",
+  "1HQbKMv9dX14": "{n} Änderung",
+  "PGdVnA7VgDKV": "{n} Änderungen",
   "g2ZWDuJpV7rL": "Gibt aktuelle Guild-Audit-Log-Einträge für Mitglieder mit VIEW_GUILD_LOG zurück. Erfordert Experiment 2026_09_logger. Umfasst Channel-, Rollen-, Member-, Ban/Unban-, Invite-, Emoji-, Webhook-, Message- und Profil-Aktionen.",
   "4be45rgJUnLE": "Erfordert die Berechtigung VIEW_GUILD_LOG und Experiment 2026_09_logger.",
   "NaAcUzDidqgR": "Guild-Ban entfernen",
