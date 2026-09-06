@@ -2440,7 +2440,7 @@
   "g2ZWDuJpV7rL": "Geeft recente guild-auditlogvermeldingen terug voor leden met VIEW_GUILD_LOG. Vereist experiment 2026_09_logger. Omvat kanaal-, rol-, member-, ban/unban-, invite-, emoji-, webhook-, message- en profielacties.",
   "4be45rgJUnLE": "Vereist de VIEW_GUILD_LOG-machtiging en experiment 2026_09_logger.",
   "NaAcUzDidqgR": "Guild-ban verwijderen",
-  "cHL8MCgxPvfy": "❱❱ /guilds/{guild_id}/settings/bans/{user_id}",
+  "cHL8MCgxPvfy": "❱❱ /guilds/{guild_id}/bans/{user_id}",
   "VQAWgNx2tmmX": "Verwijdert de ban voor de opgegeven gebruiker uit de guild.",
   "DeXv20HtdDSa": "Vereist de BAN_MEMBERS-machtiging.",
   "kFTzdcQ8pUN4": "Guild-auditlog ophalen",
