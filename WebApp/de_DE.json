@@ -2824,5 +2824,10 @@
   "SWwGdyhkteOs": "Kann in Discovery erscheinen",
   "7uUUhnEa7QRP": "Featured-Platzierung in Discovery",
   "NHSyonQZXoVo": "Community-Features für diese Guild aktiviert",
-  "Yo2KVWvcgiaZ": "Array von Guild-Feature-Strings (Capability- und Status-Flags). Siehe <a href=\"/developers/docs/resources/guilds#guild-features\">Guild Features</a>."
+  "Yo2KVWvcgiaZ": "Array von Guild-Feature-Strings (Capability- und Status-Flags). Siehe <a href=\"/developers/docs/resources/guilds#guild-features\">Guild Features</a>.",
+  "k8mQp2xR7nLw": "Audit-Log wird geladen…",
+  "vN4tY9cH2sKb": "Noch keine Audit-Log-Einträge.",
+  "pQ3wL8mN5tXr": "Aktualisieren",
+  "rT6yU1aS4dFg": "Aktuelle Konfigurations- und Moderationsänderungen für diesen Server.",
+  "0CHPPupmRvCh": "Kanal-, Rollen- und Moderationsänderungen erscheinen hier."
 }

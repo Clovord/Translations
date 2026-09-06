@@ -2431,5 +2431,10 @@
   "SWwGdyhkteOs": "Komt in aanmerking voor discovery",
   "7uUUhnEa7QRP": "Featured-plaatsing in discovery",
   "NHSyonQZXoVo": "Community-features ingeschakeld voor deze guild",
-  "Yo2KVWvcgiaZ": "Array van guild-featurestrings (capability- en statusflags). Zie <a href=\"/developers/docs/resources/guilds#guild-features\">Guild Features</a>."
+  "Yo2KVWvcgiaZ": "Array van guild-featurestrings (capability- en statusflags). Zie <a href=\"/developers/docs/resources/guilds#guild-features\">Guild Features</a>.",
+  "k8mQp2xR7nLw": "Auditlog laden…",
+  "vN4tY9cH2sKb": "Nog geen auditlogvermeldingen.",
+  "pQ3wL8mN5tXr": "Vernieuwen",
+  "rT6yU1aS4dFg": "Recente configuratie- en moderatiewijzigingen voor deze server.",
+  "0CHPPupmRvCh": "Kanaal-, rol- en moderatiewijzigingen verschijnen hier."
 }
