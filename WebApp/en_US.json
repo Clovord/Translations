@@ -3095,5 +3095,13 @@
   "SWwGdyhkteOs": "Eligible to appear in discovery",
   "7uUUhnEa7QRP": "Featured placement in discovery",
   "NHSyonQZXoVo": "Community features enabled for this guild",
-  "Yo2KVWvcgiaZ": "Array of guild feature strings (capability and status flags). See <a href=\"/developers/docs/resources/guilds#guild-features\">Guild Features</a>."
+  "Yo2KVWvcgiaZ": "Array of guild feature strings (capability and status flags). See <a href=\"/developers/docs/resources/guilds#guild-features\">Guild Features</a>.",
+  "k8mQp2xR7nLw": "Loading audit log…",
+  "vN4tY9cH2sKb": "No audit log entries yet.",
+  "pQ3wL8mN5tXr": "Refresh",
+  "rT6yU1aS4dFg": "Recent configuration and moderation changes for this server.",
+  "kFTzdcQ8pUN4": "Get Guild Audit Log",
+  "eYCEqHf0sQF5": "❱❱ /guilds/{guild_id}/audit-log",
+  "g2ZWDuJpV7rL": "Returns recent guild audit log entries for members with VIEW_GUILD_LOG. Requires experiment 2026_09_logger.",
+  "4be45rgJUnLE": "Requires the VIEW_GUILD_LOG permission and experiment 2026_09_logger."
 }
