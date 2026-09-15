@@ -2460,9 +2460,10 @@
   "Y2DYm5eLJkyc": "Weigeren",
   "2PEZQqEbYeuY": "Hiermee log je in op het andere apparaat. 2FA wordt niet opnieuw gevraagd.",
   "FRRCbm8SmkFr": "Remote-login",
-  "cLYmk7G9g8TW": "Camera niet beschikbaar. Plak in plaats daarvan de login-code.",
-  "xlSW1cIlyxoT": "Live scannen wordt hier niet ondersteund. Plak de code uit de QR-link.",
+  "cLYmk7G9g8TW": "Cameratoegang is nodig om de login-QR te scannen.",
+  "xlSW1cIlyxoT": "QR-scannen wordt op dit apparaat niet ondersteund.",
   "TJsaFUzBR8z3": "Voer een geldige login-QR-code of link in.",
   "dbEyCy8r3Ld8": "Of plak de QR-link / code",
-  "L3jz3BUP0nxU": "Desktop- of web-login goedkeuren"
+  "L3jz3BUP0nxU": "Desktop- of web-login goedkeuren",
+  "jAmGSud1y5Id": "Sta cameratoegang toe om de login-QR van desktop of web te scannen."
 }

@@ -2853,9 +2853,10 @@
   "Y2DYm5eLJkyc": "Ablehnen",
   "2PEZQqEbYeuY": "Damit meldest du dich auf dem anderen Gerät an. 2FA wird nicht erneut abgefragt.",
   "FRRCbm8SmkFr": "Remote-Login",
-  "cLYmk7G9g8TW": "Kamera nicht verfuegbar. Fuege den Login-Code stattdessen ein.",
-  "xlSW1cIlyxoT": "Live-Scan wird hier nicht unterstuetzt. Fuege den Code aus dem QR-Link ein.",
+  "cLYmk7G9g8TW": "Kamerazugriff ist noetig, um den Login-QR zu scannen.",
+  "xlSW1cIlyxoT": "QR-Scan wird auf diesem Geraet nicht unterstuetzt.",
   "TJsaFUzBR8z3": "Gib einen gueltigen Login-QR-Code oder Link ein.",
   "dbEyCy8r3Ld8": "Oder QR-Link / Code einfuegen",
-  "L3jz3BUP0nxU": "Desktop- oder Web-Login freigeben"
+  "L3jz3BUP0nxU": "Desktop- oder Web-Login freigeben",
+  "jAmGSud1y5Id": "Erlaube Kamerazugriff, um den Login-QR von Desktop oder Web zu scannen."
 }
