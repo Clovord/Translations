@@ -2446,5 +2446,17 @@
   "VQAWgNx2tmmX": "Verwijdert de ban voor de opgegeven gebruiker uit de guild.",
   "DeXv20HtdDSa": "Vereist de BAN_MEMBERS-machtiging.",
   "kFTzdcQ8pUN4": "Guild-auditlog ophalen",
-  "eYCEqHf0sQF5": "❱❱ /guilds/{guild_id}/audit-log"
+  "eYCEqHf0sQF5": "❱❱ /guilds/{guild_id}/audit-log",
+  "rEbgGaxJHyTl": "QR-code",
+  "jFy9RK9adUnQ": "Scan deze code met de Clovord-mobielapp om in te loggen.",
+  "UpHGe3Cuauz0": "Wachten op goedkeuring op je telefoon…",
+  "p1v7HyTl44DA": "Deze QR-code is verlopen.",
+  "8vkK8QtzkDCF": "QR-code vernieuwen",
+  "ovP5w6awnk1G": "Ingelogd met QR-code",
+  "pziURCemCRkc": "QR-login kon niet worden gestart",
+  "3lqnhd1rEM0m": "Login-QR scannen",
+  "xkHH1MME6r0K": "Inloggen op een ander apparaat",
+  "ft1hMpp4vCG7": "Login goedkeuren",
+  "Y2DYm5eLJkyc": "Weigeren",
+  "2PEZQqEbYeuY": "Hiermee log je in op het andere apparaat. 2FA wordt niet opnieuw gevraagd."
 }

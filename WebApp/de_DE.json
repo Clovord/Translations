@@ -2839,5 +2839,17 @@
   "VQAWgNx2tmmX": "Entfernt den Ban für den angegebenen User aus der Guild.",
   "DeXv20HtdDSa": "Erfordert die Berechtigung BAN_MEMBERS.",
   "kFTzdcQ8pUN4": "Guild-Audit-Log abrufen",
-  "eYCEqHf0sQF5": "❱❱ /guilds/{guild_id}/audit-log"
+  "eYCEqHf0sQF5": "❱❱ /guilds/{guild_id}/audit-log",
+  "rEbgGaxJHyTl": "QR-Code",
+  "jFy9RK9adUnQ": "Scanne diesen Code mit der Clovord-Mobile-App, um dich anzumelden.",
+  "UpHGe3Cuauz0": "Warte auf Freigabe auf deinem Handy…",
+  "p1v7HyTl44DA": "Dieser QR-Code ist abgelaufen.",
+  "8vkK8QtzkDCF": "QR-Code aktualisieren",
+  "ovP5w6awnk1G": "Mit QR-Code angemeldet",
+  "pziURCemCRkc": "QR-Login konnte nicht gestartet werden",
+  "3lqnhd1rEM0m": "Login-QR scannen",
+  "xkHH1MME6r0K": "Auf anderem Gerät anmelden",
+  "ft1hMpp4vCG7": "Anmeldung freigeben",
+  "Y2DYm5eLJkyc": "Ablehnen",
+  "2PEZQqEbYeuY": "Damit meldest du dich auf dem anderen Gerät an. 2FA wird nicht erneut abgefragt."
 }

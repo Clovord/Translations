@@ -3222,5 +3222,17 @@
   "aUdLgChgS16": "Audit Log Change Structure",
   "aUdLgRspE17": "Array of <a href=\"/developers/docs/resources/audit-log#audit-log-entry-object\">Audit Log Entry</a> objects, newest first.",
   "aUdLgGuildPtr": "Guild audit log objects and the list endpoint are documented on the <a href=\"/developers/docs/resources/audit-log\">Audit Log</a> resource page.",
-  "JGQwHCWepkFXkPwg": "Attributes"
+  "JGQwHCWepkFXkPwg": "Attributes",
+  "rEbgGaxJHyTl": "QR code",
+  "jFy9RK9adUnQ": "Scan this code with the Clovord mobile app to sign in.",
+  "UpHGe3Cuauz0": "Waiting for approval on your phone…",
+  "p1v7HyTl44DA": "This QR code expired.",
+  "8vkK8QtzkDCF": "Refresh QR code",
+  "ovP5w6awnk1G": "Signed in with QR code",
+  "pziURCemCRkc": "Could not start QR login",
+  "3lqnhd1rEM0m": "Scan login QR",
+  "xkHH1MME6r0K": "Log in on another device",
+  "ft1hMpp4vCG7": "Approve login",
+  "Y2DYm5eLJkyc": "Deny",
+  "2PEZQqEbYeuY": "This signs you in on the other device. 2FA is not asked again."
 }
