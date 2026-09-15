@@ -2851,5 +2851,11 @@
   "xkHH1MME6r0K": "Auf anderem Gerät anmelden",
   "ft1hMpp4vCG7": "Anmeldung freigeben",
   "Y2DYm5eLJkyc": "Ablehnen",
-  "2PEZQqEbYeuY": "Damit meldest du dich auf dem anderen Gerät an. 2FA wird nicht erneut abgefragt."
+  "2PEZQqEbYeuY": "Damit meldest du dich auf dem anderen Gerät an. 2FA wird nicht erneut abgefragt.",
+  "FRRCbm8SmkFr": "Remote-Login",
+  "cLYmk7G9g8TW": "Kamera nicht verfuegbar. Fuege den Login-Code stattdessen ein.",
+  "xlSW1cIlyxoT": "Live-Scan wird hier nicht unterstuetzt. Fuege den Code aus dem QR-Link ein.",
+  "TJsaFUzBR8z3": "Gib einen gueltigen Login-QR-Code oder Link ein.",
+  "dbEyCy8r3Ld8": "Oder QR-Link / Code einfuegen",
+  "L3jz3BUP0nxU": "Desktop- oder Web-Login freigeben"
 }

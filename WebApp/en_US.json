@@ -3234,5 +3234,11 @@
   "xkHH1MME6r0K": "Log in on another device",
   "ft1hMpp4vCG7": "Approve login",
   "Y2DYm5eLJkyc": "Deny",
-  "2PEZQqEbYeuY": "This signs you in on the other device. 2FA is not asked again."
+  "2PEZQqEbYeuY": "This signs you in on the other device. 2FA is not asked again.",
+  "FRRCbm8SmkFr": "Remote login",
+  "cLYmk7G9g8TW": "Camera is not available. Paste the login code instead.",
+  "xlSW1cIlyxoT": "Live scanning is not supported here. Paste the code from the QR link.",
+  "TJsaFUzBR8z3": "Enter a valid login QR code or link.",
+  "dbEyCy8r3Ld8": "Or paste the QR link / code",
+  "L3jz3BUP0nxU": "Approve desktop or web login"
 }
