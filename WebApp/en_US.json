@@ -3241,5 +3241,14 @@
   "TJsaFUzBR8z3": "Enter a valid login QR code or link.",
   "dbEyCy8r3Ld8": "Or paste the QR link / code",
   "L3jz3BUP0nxU": "Approve desktop or web login",
-  "jAmGSud1y5Id": "Allow camera access to scan the login QR on your desktop or web session."
+  "jAmGSud1y5Id": "Allow camera access to scan the login QR on your desktop or web session.",
+  "JyLSlvqkLmwf": "Update available",
+  "xNOrOadD6c3C": "Clovord {version} (build {build}) is ready. Download and install now?",
+  "XBjM6mT1toWE": "Update",
+  "6NyfRnTkyJzj": "Later",
+  "Mg7JvB7HnIvP": "Downloading update",
+  "WQKgSTPnnIyx": "Keep Clovord open until the installer opens.",
+  "aR8kQm2nXp4L": "Allow app installs",
+  "bT5nHw9vLp2M": "Turn on “Allow from this source” for Clovord, then return here.",
+  "cV3pLs8yRk7N": "Could not install the update. Allow installs from Clovord in Android settings, then try again."
 }
