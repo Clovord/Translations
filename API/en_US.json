@@ -259,6 +259,7 @@
   "400203": "Unknown news type or audience",
   "400204": "Missing required news dependency",
   "400205": "Notes are too long",
+  "400206": "Application does not have a bot",
   "401000": "Unauthorized",
   "401001": "Unauthorized - MultiStatus",
   "401002": "Invalid MFA token",

@@ -220,6 +220,7 @@
   "400193": "Ongeldige static-asset-categorie",
   "400194": "Afbeeldingsbestand vereist voor static-asset-upload",
   "400195": "Titel of beschrijving van static asset is te lang",
+  "400206": "Applicatie heeft geen bot",
   "401000": "Ongeautoriseerd",
   "401001": "Ontbrekend of ongeldig token",
   "401002": "Ongeldig MFA-token",
