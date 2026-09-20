@@ -2870,5 +2870,9 @@
   "cV3pLs8yRk7N": "Update konnte nicht installiert werden. Erlaube Installationen von Clovord in den Android-Einstellungen und versuche es erneut.",
   "u28ZIoC9DjSQ": "Moment — bist du ein Mensch?",
   "ieoc3SPT1V96": "Schließe die Sicherheitsprüfung ab, um fortzufahren.",
-  "PB5Vssz5TH8A": "Captcha konnte nicht geladen werden. Bitte versuche es erneut."
+  "PB5Vssz5TH8A": "Captcha konnte nicht geladen werden. Bitte versuche es erneut.",
+  "mUpdTitle9Kx2": "Update verfügbar",
+  "mUpdBody7Qw1": "Im Play Store liegt eine neuere Clovord-Version für deinen Release-Track bereit. Bitte aktualisiere.",
+  "mUpdBusy3Np8": "Öffnen…",
+  "mUpdCta5Rm4": "Aktualisieren"
 }

@@ -3253,5 +3253,9 @@
   "cV3pLs8yRk7N": "Could not install the update. Allow installs from Clovord in Android settings, then try again.",
   "u28ZIoC9DjSQ": "Wait, are you a human?",
   "ieoc3SPT1V96": "Complete the security check to continue.",
-  "PB5Vssz5TH8A": "Captcha could not be loaded. Please try again."
+  "PB5Vssz5TH8A": "Captcha could not be loaded. Please try again.",
+  "mUpdTitle9Kx2": "Update available",
+  "mUpdBody7Qw1": "A newer Clovord build is ready on the Play Store for your release track. Please update.",
+  "mUpdBusy3Np8": "Opening…",
+  "mUpdCta5Rm4": "Update"
 }
