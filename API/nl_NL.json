@@ -1099,5 +1099,11 @@
   "email_developer_verification_revoked_subject": "Verificatie voor {application} is ingetrokken",
   "email_developer_verification_revoked_title": "Verificatie ingetrokken",
   "email_developer_verification_revoked_body": "De verificatie voor {application} is ingetrokken omdat de application-standing onder 50% is gezakt. De limiet van 20 servers geldt weer en het team heeft een automatische herbeoordeling geopend.",
+  "email_developer_application_deactivated_subject": "Je applicatie {application} is gedeactiveerd",
+  "email_developer_application_deactivated_title": "Applicatie gedeactiveerd",
+  "email_developer_application_deactivated_body": "Staff heeft {application} gedeactiveerd. De bot kan de API niet gebruiken tot hij opnieuw wordt geactiveerd.",
+  "email_developer_application_activated_subject": "Je applicatie {application} is geactiveerd",
+  "email_developer_application_activated_title": "Applicatie geactiveerd",
+  "email_developer_application_activated_body": "Staff heeft {application} geactiveerd. Je bot kan de API weer gebruiken.",
   "404096": "Onbekende OAuth-autorisatie"
 }

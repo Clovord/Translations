@@ -1273,5 +1273,11 @@
   "email_developer_verification_rejected_body": "The verification request for {application} was not approved. Review the requirements and try again after the cooldown.",
   "email_developer_verification_revoked_subject": "Verification for {application} was removed",
   "email_developer_verification_revoked_title": "Verification revoked",
-  "email_developer_verification_revoked_body": "Verification for {application} was removed because application standing fell below 50%. The 20-server join cap applies again and staff opened an automatic re-review."
+  "email_developer_verification_revoked_body": "Verification for {application} was removed because application standing fell below 50%. The 20-server join cap applies again and staff opened an automatic re-review.",
+  "email_developer_application_deactivated_subject": "Your application {application} was deactivated",
+  "email_developer_application_deactivated_title": "Application deactivated",
+  "email_developer_application_deactivated_body": "Staff deactivated {application}. The bot can no longer use the API until it is activated again.",
+  "email_developer_application_activated_subject": "Your application {application} was activated",
+  "email_developer_application_activated_title": "Application activated",
+  "email_developer_application_activated_body": "Staff activated {application}. Your bot can use the API again."
 }
