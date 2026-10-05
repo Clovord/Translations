@@ -231,6 +231,11 @@
   "400214": "Er is geen account gekoppeld aan deze Discord-gebruiker, kies een andere inlogmethode",
   "400215": "Ongeldige 2FA-vereiste voor leden",
   "400216": "Schakel twee-factor-authenticatie in op je account voordat je die voor leden kunt eisen",
+  "400217": "Ongeldig collectible-type",
+  "400218": "Deze collectible is momenteel niet beschikbaar in de shop",
+  "400219": "Je bezit deze collectible niet",
+  "400220": "Ongeldige collectible-velden",
+  "400221": "Afbeeldingsbestand is vereist voor collectible-upload",
   "401000": "Ongeautoriseerd",
   "401001": "Ontbrekend of ongeldig token",
   "401002": "Ongeldig MFA-token",
@@ -1109,5 +1114,6 @@
   "email_developer_application_activated_subject": "Je applicatie {application} is geactiveerd",
   "email_developer_application_activated_title": "Applicatie geactiveerd",
   "email_developer_application_activated_body": "Staff heeft {application} geactiveerd. Je bot kan de API weer gebruiken.",
-  "404096": "Onbekende OAuth-autorisatie"
+  "404096": "Onbekende OAuth-autorisatie",
+  "404106": "Onbekende shop-collectible"
 }
