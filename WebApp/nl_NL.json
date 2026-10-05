@@ -2567,5 +2567,20 @@
   "sEcPatPth06": "❱❱ /guilds/{guild_id}/security",
   "sEcPatDsc07": "Wijzigt de 2FA-plicht voor leden. Alleen de guild-eigenaar kan dit wijzigen. De eigenaar moet zelf twee-factor-authenticatie hebben ingeschakeld voordat de plicht strenger wordt.",
   "sEcOwnDsc08": "Of de huidige gebruiker de guild-eigenaar is en deze instellingen mag wijzigen.",
-  "sEcJsonTtl09": "JSON-parameters"
+  "sEcJsonTtl09": "JSON-parameters",
+  "c4rXxbzpRTaR": "Meer over Turbo",
+  "n0G9iLz9lgPP": "Abonnement beheren",
+  "HSQmWROgdDDX": "Wat zit erin",
+  "w6mZOPkfC1Ke": "Jouw abonnementen",
+  "Z76uG2ozWyjj": "Actieve plannen voor Turbo, Server Flux en toekomstige aankopen — beheer verlengingen en opzeggingen hier.",
+  "L5Qycc7Myped": "Je hebt Turbo-voordelen voor {price}.",
+  "kJcJRGbntBt1": "Turbo openen",
+  "epGUTOCJK4yy": "Server Flux openen",
+  "vEXBqwurur9M": "Geen actieve abonnementen.",
+  "uTLAtrfJ6lpA": "Geen eerdere abonnementen.",
+  "Vb5y6y0lik9x": "Annuleer of hervat hier, of open Abonnementen voor alle plannen.",
+  "MpAsSEQSpVuT": "Alle Turbo-functies",
+  "OkdaTzcD0dgo": "Je hebt Server Flux — {price}.",
+  "W2sez6GwtUct": "Annuleren",
+  "Yo2JZELVPbN4": "Dit abonnement annuleren?"
 }

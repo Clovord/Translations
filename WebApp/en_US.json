@@ -3389,5 +3389,20 @@
   "sEcPatPth06": "❱❱ /guilds/{guild_id}/security",
   "sEcPatDsc07": "Changes the member two-factor requirement. Only the guild owner can change this. The owner must already have two-factor authentication enabled before raising the requirement.",
   "sEcOwnDsc08": "Whether the current user is the guild owner and may change these settings.",
-  "sEcJsonTtl09": "JSON Params"
+  "sEcJsonTtl09": "JSON Params",
+  "c4rXxbzpRTaR": "Learn more about Turbo",
+  "n0G9iLz9lgPP": "Manage subscription",
+  "HSQmWROgdDDX": "What's included",
+  "w6mZOPkfC1Ke": "Your Subscriptions",
+  "Z76uG2ozWyjj": "Active plans for Turbo, Server Flux, and future Clovord purchases — manage renewals and cancellations here.",
+  "L5Qycc7Myped": "You have Turbo perks for {price}.",
+  "kJcJRGbntBt1": "Open Turbo",
+  "epGUTOCJK4yy": "Open Server Flux",
+  "vEXBqwurur9M": "No active subscriptions.",
+  "uTLAtrfJ6lpA": "No past subscriptions.",
+  "Vb5y6y0lik9x": "Cancel or resume from here, or open Subscriptions for all plans.",
+  "MpAsSEQSpVuT": "All Turbo features",
+  "OkdaTzcD0dgo": "You have Server Flux — {price}.",
+  "W2sez6GwtUct": "Cancel",
+  "Yo2JZELVPbN4": "Cancel this subscription?"
 }

@@ -2968,5 +2968,20 @@
   "sEcPatPth06": "❱❱ /guilds/{guild_id}/security",
   "sEcPatDsc07": "Ändert die 2FA-Pflicht für Mitglieder. Nur der Guild-Inhaber kann das ändern. Der Inhaber muss selbst Zwei-Faktor-Authentifizierung aktiviert haben, bevor er die Pflicht verschärft.",
   "sEcOwnDsc08": "Ob der aktuelle Benutzer der Guild-Inhaber ist und diese Einstellungen ändern darf.",
-  "sEcJsonTtl09": "JSON-Parameter"
+  "sEcJsonTtl09": "JSON-Parameter",
+  "c4rXxbzpRTaR": "Mehr über Turbo erfahren",
+  "n0G9iLz9lgPP": "Abo verwalten",
+  "HSQmWROgdDDX": "Das ist inkludiert",
+  "w6mZOPkfC1Ke": "Deine Abonnements",
+  "Z76uG2ozWyjj": "Aktive Pläne für Turbo, Server Flux und künftige Käufe — Verlängerungen und Kündigungen verwaltest du hier.",
+  "L5Qycc7Myped": "Du hast Turbo-Vorteile für {price}.",
+  "kJcJRGbntBt1": "Turbo öffnen",
+  "epGUTOCJK4yy": "Server Flux öffnen",
+  "vEXBqwurur9M": "Keine aktiven Abonnements.",
+  "uTLAtrfJ6lpA": "Keine früheren Abonnements.",
+  "Vb5y6y0lik9x": "Hier kündigen oder fortsetzen, oder unter Abonnements alle Pläne verwalten.",
+  "MpAsSEQSpVuT": "Alle Turbo-Features",
+  "OkdaTzcD0dgo": "Du hast Server Flux — {price}.",
+  "W2sez6GwtUct": "Kündigen",
+  "Yo2JZELVPbN4": "Dieses Abonnement kündigen?"
 }
