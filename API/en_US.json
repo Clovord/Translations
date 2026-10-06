@@ -275,6 +275,7 @@
   "400219": "You do not own this collectible",
   "400220": "Invalid shop collectible fields",
   "400221": "Image file is required for collectible upload",
+  "400222": "Avatar decoration asset must use Clovord framing (square canvas, transparent center, ring sized for 1.2 avatar scale)",
   "401000": "Unauthorized",
   "401001": "Unauthorized - MultiStatus",
   "401002": "Invalid MFA token",

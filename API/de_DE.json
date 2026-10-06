@@ -246,6 +246,7 @@
   "400219": "Du besitzt dieses Collectible nicht",
   "400220": "Ungültige Collectible-Felder",
   "400221": "Bilddatei für Collectible-Upload erforderlich",
+  "400222": "Avatar-Decoration-Asset muss dem Clovord-Framing entsprechen (quadratische Canvas, transparentes Zentrum, Ring für Avatar-Scale 1.2)",
   "401000": "Unbefugt",
   "401001": "Fehlende oder ungültige Token",
   "401002": "Invalid MFA token",

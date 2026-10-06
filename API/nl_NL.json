@@ -236,6 +236,7 @@
   "400219": "Je bezit deze collectible niet",
   "400220": "Ongeldige collectible-velden",
   "400221": "Afbeeldingsbestand is vereist voor collectible-upload",
+  "400222": "Avatar-decoration-asset moet Clovord-framing gebruiken (vierkant canvas, transparant midden, ring voor avatar-schaal 1.2)",
   "401000": "Ongeautoriseerd",
   "401001": "Ontbrekend of ongeldig token",
   "401002": "Ongeldig MFA-token",
