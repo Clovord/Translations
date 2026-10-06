@@ -275,7 +275,7 @@
   "400219": "You do not own this collectible",
   "400220": "Invalid shop collectible fields",
   "400221": "Image file is required for collectible upload",
-  "400222": "Avatar decoration must be a square image (min 64x64, recommended 512x512), with a transparent center hole about 83% of the canvas width and the opaque frame in the outer rim (display scale 1.2)",
+  "400222": "Avatar decoration must be a square PNG (min 64x64, recommended 512x512) with a transparent center so the profile photo shows through. Clients draw it at avatar size × 1.2; artwork may overlap the avatar. Rejected when empty, unreadable, not square, fully filled, or outside implied scale 1.0–2.0",
   "400223": "Hard delete of a shop collectible requires explicit confirmation (query: hard=true&confirm=refund)",
   "400224": "Invalid shop collectible moderation fields",
   "401000": "Unauthorized",

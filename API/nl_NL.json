@@ -236,7 +236,7 @@
   "400219": "Je bezit deze collectible niet",
   "400220": "Ongeldige collectible-velden",
   "400221": "Afbeeldingsbestand is vereist voor collectible-upload",
-  "400222": "Avatar-decoration moet een vierkante afbeelding zijn (min. 64x64, aanbevolen 512x512), met een transparant midden (~83% van de canvasbreedte) en een ondoorzichtige rand aan de buitenkant (weergaveschaal 1.2)",
+  "400222": "Avatar-decoration moet een vierkante PNG zijn (min. 64x64, aanbevolen 512x512) met een transparant midden zodat de profielfoto zichtbaar blijft. Clients tekenen het op avatarformaat × 1.2; overlap op de avatar is toegestaan. Afgewezen bij leeg, onleesbaar, niet vierkant, volledig gevuld of implied scale buiten 1.0–2.0",
   "400223": "Hard delete van een shop-collectible vereist expliciete bevestiging (query: hard=true&confirm=refund)",
   "400224": "Ongeldige velden voor shop-collectible-moderatie",
   "401000": "Ongeautoriseerd",
