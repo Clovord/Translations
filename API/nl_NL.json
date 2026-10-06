@@ -238,6 +238,7 @@
   "400221": "Afbeeldingsbestand is vereist voor collectible-upload",
   "400222": "Avatar-decoration moet een vierkante afbeelding zijn (min. 64x64, aanbevolen 512x512), met een transparant midden (~83% van de canvasbreedte) en een ondoorzichtige rand aan de buitenkant (weergaveschaal 1.2)",
   "400223": "Hard delete van een shop-collectible vereist expliciete bevestiging (query: hard=true&confirm=refund)",
+  "400224": "Ongeldige velden voor shop-collectible-moderatie",
   "401000": "Ongeautoriseerd",
   "401001": "Ontbrekend of ongeldig token",
   "401002": "Ongeldig MFA-token",

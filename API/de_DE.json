@@ -248,6 +248,7 @@
   "400221": "Bilddatei für Collectible-Upload erforderlich",
   "400222": "Avatar-Decoration muss ein quadratisches Bild sein (min. 64x64, empfohlenohlen 512x512), mit transparentem Zentrum (~83% der Canvas-Breite) und undurchsichtigem Rahmen am äußeren Rand (Anzeige-Scale 1.2)",
   "400223": "Hard-Delete eines Shop-Collectibles erfordert eine ausdrückliche Bestätigung (Query: hard=true&confirm=refund)",
+  "400224": "Ungültige Felder für Shop-Collectible-Moderation",
   "401000": "Unbefugt",
   "401001": "Fehlende oder ungültige Token",
   "401002": "Invalid MFA token",

@@ -277,6 +277,7 @@
   "400221": "Image file is required for collectible upload",
   "400222": "Avatar decoration must be a square image (min 64x64, recommended 512x512), with a transparent center hole about 83% of the canvas width and the opaque frame in the outer rim (display scale 1.2)",
   "400223": "Hard delete of a shop collectible requires explicit confirmation (query: hard=true&confirm=refund)",
+  "400224": "Invalid shop collectible moderation fields",
   "401000": "Unauthorized",
   "401001": "Unauthorized - MultiStatus",
   "401002": "Invalid MFA token",
