@@ -386,6 +386,7 @@ jobs:
       - name: Sync Downloads translations
         env:
           TOKEN: ${{ secrets.SYNC_DOWNLOADS_TOKEN }}
+          SOURCE_SHA: ${{ github.sha }}
         run: |
           ROOT_DIR="$PWD"
           BRANCH="automation/sync-downloads-translations"
@@ -412,11 +413,51 @@ jobs:
 
           python "$ROOT_DIR/scripts/require_codeowners.py" --repo-dir "$PWD" --required-path "assets/translations/"
 
-          rm -rf assets/translations
-          mkdir -p assets/translations
-          cp -R "$ROOT_DIR"/DownloadPage/* assets/translations/
+          if ! compgen -G "$ROOT_DIR/DownloadPage/*.json" > /dev/null; then
+            echo "No source translation files found in $ROOT_DIR/DownloadPage"
+            exit 1
+          fi
 
-          git add -A assets/translations
+          TMP_TRANSLATIONS_DIR=$(mktemp -d)
+          cp -f "$ROOT_DIR"/DownloadPage/*.json "$TMP_TRANSLATIONS_DIR"/
+
+          mkdir -p assets/translations
+          find assets/translations -maxdepth 1 -type f -name "*.json" ! -name "manifest.json" -delete
+          cp -f "$TMP_TRANSLATIONS_DIR"/*.json assets/translations/
+          rm -rf "$TMP_TRANSLATIONS_DIR"
+
+          python - <<'PY'
+          import hashlib
+          import json
+          import os
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          def hash_translation_files(dir_path: Path) -> str:
+              digest = hashlib.sha256()
+              for file in sorted(
+                  p for p in dir_path.glob("*.json") if p.name != "manifest.json"
+              ):
+                  digest.update(file.name.encode("utf-8"))
+                  digest.update(b"\0")
+                  digest.update(file.read_bytes())
+              return digest.hexdigest()[:16]
+
+          source_sha = (os.environ.get("SOURCE_SHA") or "").strip()
+          translations_dir = Path("assets/translations")
+          version = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
+          payload = {
+              "version": version,
+              "content_hash": hash_translation_files(translations_dir),
+              "source_commit": source_sha,
+              "updated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
+          }
+          out = translations_dir / "manifest.json"
+          out.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+          print("Wrote", out)
+          PY
+
+          git add -A -f assets/translations
           if git diff --cached --quiet; then
             echo "No changes"
             exit 0
