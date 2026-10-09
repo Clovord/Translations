@@ -3526,5 +3526,9 @@
   "aRHQlteSB7if": "No message",
   "R5PGzRJhk5SF": "Pending review",
   "U27sy2nEBmpv": "Reviewed",
-  "R4mG6rLp3zWr": "Closed"
+  "R4mG6rLp3zWr": "Closed",
+  "pS7nC2kQ9mWx": "Permissions synced with category",
+  "pU4vB8nM1qAz": "Permissions are not synced with the category",
+  "pR3cX6yH0tLk": "Sync with category",
+  "pH1jK4lP7qWs": "Changes to this category apply to all synced channels inside it."
 }
