@@ -747,6 +747,8 @@ jobs:
       - name: Sync Mobile translations
         env:
           TOKEN: ${{ secrets.SYNC_MOBILE_TOKEN }}
+          HEAD_SHA: ${{ github.sha }}
+          SOURCE_SHA: ${{ github.sha }}
         run: |
           ROOT_DIR="$PWD"
           BRANCH="automation/sync-mobile-translations"
@@ -772,18 +774,63 @@ jobs:
           fi
 
           python "$ROOT_DIR/scripts/require_codeowners.py" --repo-dir "$PWD" --required-path "assets/translations/"
+          python "$ROOT_DIR/scripts/require_codeowners.py" --repo-dir "$PWD" --required-path "mobile-ui/assets/translations/"
 
+          if ! compgen -G "$ROOT_DIR/WebApp/*.json" > /dev/null; then
+            echo "No source translation files found in $ROOT_DIR/WebApp"
+            exit 1
+          fi
+
+          TMP_TRANSLATIONS_DIR=$(mktemp -d)
+          if [ -d "$ROOT_DIR/MobileApp" ]; then
+            cp -f "$ROOT_DIR"/MobileApp/*.json "$TMP_TRANSLATIONS_DIR"/ 2>/dev/null || true
+          fi
+          cp -f "$ROOT_DIR"/WebApp/*.json "$TMP_TRANSLATIONS_DIR"/
+
+          # Native shell catalog (React Native t()).
           rm -rf assets/translations
           mkdir -p assets/translations
+          cp -f "$TMP_TRANSLATIONS_DIR"/*.json assets/translations/
 
-          if [ -d "$ROOT_DIR/MobileApp" ]; then
-            cp -R "$ROOT_DIR"/MobileApp/. assets/translations/
-          fi
-          if [ -d "$ROOT_DIR/WebApp" ]; then
-            cp -R "$ROOT_DIR"/WebApp/. assets/translations/
-          fi
+          # WebView UI catalog — must stay in sync or Mobile shows raw keys / stale strings.
+          mkdir -p mobile-ui/assets/translations
+          find mobile-ui/assets/translations -maxdepth 1 -type f -name "*.json" -delete
+          cp -f "$TMP_TRANSLATIONS_DIR"/*.json mobile-ui/assets/translations/
+          rm -rf "$TMP_TRANSLATIONS_DIR"
 
-          git add -A assets/translations
+          export SOURCE_SHA="${HEAD_SHA:-${GITHUB_SHA:-}}"
+          python - <<'PY'
+          import hashlib
+          import json
+          import os
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          def hash_translation_files(dir_path: Path) -> str:
+              digest = hashlib.sha256()
+              for file in sorted(
+                  p for p in dir_path.glob("*.json") if p.name != "manifest.json"
+              ):
+                  digest.update(file.name.encode("utf-8"))
+                  digest.update(b"\0")
+                  digest.update(file.read_bytes())
+              return digest.hexdigest()[:16]
+
+          source_sha = (os.environ.get("SOURCE_SHA") or "").strip()
+          translations_dir = Path("mobile-ui/assets/translations")
+          version = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
+          payload = {
+              "version": version,
+              "content_hash": hash_translation_files(translations_dir),
+              "source_commit": source_sha,
+              "updated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
+          }
+          out = translations_dir / "manifest.json"
+          out.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+          print("Wrote", out, payload)
+          PY
+
+          git add -A assets/translations mobile-ui/assets/translations
           if git diff --cached --quiet; then
             echo "No changes"
             exit 0
