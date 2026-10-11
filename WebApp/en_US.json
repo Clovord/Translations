@@ -1583,7 +1583,7 @@
   "SGGeAFbJ": "Validation failures keep the same envelope but populate",
   "bzSj2XLMUcI": "with field level",
   "y3gNexSTbg4": "blocks so you can map issues back to form inputs:",
-  "RNDzBn4B31": "{ \"error\": { \"code\": 50034, \"message\": \"Invalid Form Body\", \"details\": { \"body\": { \"_errors\": [ { \"code\": \"VALUE_ERROR.MISSING\", \"message\": \"Field 'name' is required\" } ] }, \"email\": { \"_errors\": [ { \"code\": \"VALUE_ERROR.EMAIL\", \"message\": \"Email address is invalid\" } ] } }, \"request_id\": \"b4157c52-6125-4a5d-a363-1cf53d1ad3f5\", \"ts\": \"2025-11-14T12:35:01.004Z\" } }",
+  "RNDzBn4B31": "{ \"error\": { \"code\": 500000, \"message\": \"Invalid Form Body\", \"details\": { \"body\": { \"_errors\": [ { \"code\": \"VALUE_ERROR.MISSING\", \"message\": \"Field 'name' is required\" } ] }, \"email\": { \"_errors\": [ { \"code\": \"VALUE_ERROR.EMAIL\", \"message\": \"Email address is invalid\" } ] } }, \"request_id\": \"b4157c52-6125-4a5d-a363-1cf53d1ad3f5\", \"ts\": \"2025-11-14T12:35:01.004Z\" } }",
   "ZmaHTFoCNqrkgJ": "Authentication",
   "AlMkfnVOe": "Clovord uses token-based authentication to ensure secure access to its endpoints. All API requests must include an",
   "Rukg9KkIKGf": "Authorization",
