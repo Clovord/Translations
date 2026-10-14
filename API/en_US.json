@@ -299,6 +299,7 @@
   "400243": "Invalid maintenance settings",
   "400244": "Invalid activity settings",
   "400245": "Invalid date of birth",
+  "400246": "Date of birth cannot be changed",
   "400403": "Invalid monthly credits amount",
   "400404": "Product is not eligible for credits subscriptions",
   "401000": "Unauthorized",
