@@ -661,6 +661,7 @@
   "409000": "Es gab einen Konflikt mit dem aktuellen Zustand der Ressource",
   "409001": "Kein freier Diskriminator für diesen Namen verfügbar. Versuchen Sie einen anderen Namen.",
   "409002": "Das mit den Anwendungen verknüpfte Bot-Konto fehlt die Bot-Flagge, die für die Verwendung der Bot-API erforderlich ist.",
+  "409007": "Nur News-Entwürfe können aktualisiert werden",
   "410000": "Die Ressource ist nicht mehr verfügbar",
   "410001": "Dieser Endpunkt wurde abgeschrieben und wird in Zukunft entfernt",
   "410002": "Diese EndpointBody enthält deprecierte Felder und wird in Zukunft entfernt",

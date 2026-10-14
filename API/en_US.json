@@ -732,6 +732,7 @@
   "409004": "Channel category loop detected, a channel cannot be its own parent or an ancestor of its parent.",
   "409005": "This type of relationship already exists",
   "409006": "Friend request already pending",
+  "409007": "Only draft news items can be updated",
   "410000": "Gone",
   "410001": "Gone - MultiStatus",
   "410002": "This EndpointBody contains deprecated fields and will be removed in the future",

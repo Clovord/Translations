@@ -651,6 +651,7 @@
   "409000": "Er was een conflict met de huidige staat van de bron",
   "409001": "Geen gratis discriminator beschikbaar voor deze naam. Probeer een andere naam.",
   "409002": "De botaccount die aan de applicatie is gekoppeld mist de Bot-vlag, die vereist is om de bot-API te gebruiken",
+  "409007": "Alleen conceptnieuwsberichten kunnen worden bijgewerkt",
   "410000": "De bron is niet meer beschikbaar",
   "410001": "Dit eindpunt is verouderd en zal in de toekomst worden verwijderd",
   "410002": "Deze EndpointBody bevat verouderde velden en zal in de toekomst worden verwijderd",
