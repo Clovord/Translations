@@ -294,6 +294,12 @@ jobs:
           cp -f "$TMP_TRANSLATIONS_DIR"/*.json dist/assets/translations/
           rm -rf "$TMP_TRANSLATIONS_DIR"
 
+          if compgen -G "$ROOT_DIR/WebApp/NoticeCopy/*.json" > /dev/null; then
+            mkdir -p dist/assets/translations/NoticeCopy
+            find dist/assets/translations/NoticeCopy -maxdepth 1 -type f -name "*.json" -delete
+            cp -f "$ROOT_DIR"/WebApp/NoticeCopy/*.json dist/assets/translations/NoticeCopy/
+          fi
+
           python - <<'PY'
           import hashlib
           import json
@@ -304,9 +310,9 @@ jobs:
           def hash_translation_files(dir_path: Path) -> str:
               digest = hashlib.sha256()
               for file in sorted(
-                  p for p in dir_path.glob("*.json") if p.name != "manifest.json"
+                  p for p in dir_path.rglob("*.json") if p.name != "manifest.json"
               ):
-                  digest.update(file.name.encode("utf-8"))
+                  digest.update(file.relative_to(dir_path).as_posix().encode("utf-8"))
                   digest.update(b"\0")
                   digest.update(file.read_bytes())
               return digest.hexdigest()[:16]
