@@ -3370,5 +3370,17 @@
   "Er1xSQ1CfXRO": "Jetzt fällig: 0,00 EUR. Zahlungsmethode für spätere Verlängerungen hinterlegen.",
   "gxdeW6r5hMHQ": "Zahlungsmethode für das Abo hinterlegen.",
   "6e8js735ljtG": "Zahlungsmethode auswählen.",
-  "g1F82OZ6oTIM": "{count}-{unit}"
+  "g1F82OZ6oTIM": "{count}-{unit}",
+  "mZ4ZwIa9mxMo": "Invite-Splash",
+  "zFdRcQCTGAMC": "Wird auf der Invite-Seite angezeigt, wenn jemand deinen Invite-Link öffnet.",
+  "B5th94rzc1Rc": "Eigenes Server-Banner",
+  "JQgZMr2HRRfF": "Schalte mit Server Flux ein eigenes Banner für deinen Server frei.",
+  "z4H4NuyFhnFV": "Invite-Splash-Bild",
+  "wKg5Gs9kauYu": "Schalte mit Server Flux einen Invite-Splash frei, damit deine Invite-Seite auffällt.",
+  "evHXfYq5uZKh": "Animiertes Server-Icon",
+  "wVVmpefYEAvw": "Schalte mit Server Flux animierte Icons frei. Statische Bilder funktionieren weiterhin ohne.",
+  "yb2NKesmXC5b": "Eigener Invite-Link",
+  "lrBAdLugvI7T": "Schalte mit Server Flux einen einprägsamen eigenen Invite frei.",
+  "DG9w9pUkxlFX": "Mit Server Flux freischalten",
+  "N1XhGZ7qFmds": "Animierte Icons brauchen Server Flux. Wähle ein statisches Bild oder schalte Flux frei."
 }
