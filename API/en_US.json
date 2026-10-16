@@ -315,6 +315,7 @@
   "400259": "That Flux boost was not found",
   "400260": "That boost is on cooldown. You can move it again in 5 days",
   "400261": "Cannot move Flux away from a server that already unlocked features with it",
+  "400262": "Only unused Flux can be canceled here. Remove it from a server first",
   "400403": "Invalid monthly credits amount",
   "400404": "Product is not eligible for credits subscriptions",
   "401000": "Unauthorized",

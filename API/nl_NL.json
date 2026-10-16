@@ -265,6 +265,7 @@
   "400259": "Die Flux-boost is niet gevonden",
   "400260": "Die boost staat op cooldown. Je kunt hem over 5 dagen opnieuw verplaatsen",
   "400261": "Flux kan niet van een server worden gehaald die er al features mee heeft ontgrendeld",
+  "400262": "Alleen ongebruikte Flux kan hier worden geannuleerd. Verwijder het eerst van een server",
   "400403": "Ongeldig maandelijks creditsbedrag",
   "400404": "Product komt niet in aanmerking voor credits-abonnementen",
   "401000": "Ongeautoriseerd",
