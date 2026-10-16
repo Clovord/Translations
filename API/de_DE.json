@@ -276,7 +276,7 @@
   "400260": "Dieser Boost ist im Cooldown. Du kannst ihn erst in 5 Tagen wieder verschieben",
   "400261": "Flux kann nicht von einem Server entfernt werden, der damit bereits Features freigeschaltet hat",
   "400262": "Nur ungenutztes Flux kann hier gekündigt werden. Entferne es zuerst von einem Server",
-  "400263": "Flux lässt sich mit deinen aktuellen Boost-Größen nicht genau zuweisen. Weise ganze ungenutzte Boosts zu.",
+  "400263": "Diese Flux-Zuweisung konnte nicht abgeschlossen werden. Lade neu und versuche es erneut.",
   "400403": "Ungültiger monatlicher Credits-Betrag",
   "400404": "Produkt ist nicht für Credits-Abos geeignet",
   "401000": "Unbefugt",
