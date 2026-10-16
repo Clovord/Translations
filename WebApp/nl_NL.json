@@ -2925,8 +2925,8 @@
   "o5IaA9CxrRWa": "Annuleren",
   "D8nnro7ibtjB": "Sluiten",
   "0FIXInsQ1r2n": "Boost al {duration}",
-  "quceEgJtIxA2": "Deze Flux gaat terug naar Unused. De huidige server verliest deze boost en mogelijk features die ervan afhangen.",
-  "ufU5unl2ubWF": "Dit beëindigt deze ongebruikte Server Flux meteen. Er is geen restitutie, en een gekoppelde abonnementsverlenging stopt.",
+  "quceEgJtIxA2": "Deze Flux gaat terug naar Unused. De huidige server verliest deze boost en mogelijk afhankelijke features.",
+  "ufU5unl2ubWF": "Dit beëindigt deze Server Flux meteen. Er is geen restitutie, en verlenging van een gekoppeld abonnement stopt.",
   "NpBM9TL2JnUM": "Server Flux-annulering opgeslagen.",
   "wK9nPmR4tX2b": "Er is geen automatische verlengingsafschrijving gepland. Actieve plannen blijven beschikbaar tot ze eindigen of je een abonnement afsluit.",
   "TtAH6T5bdWLi": "Niet beschikbaar",
@@ -2961,5 +2961,7 @@
   "yb2NKesmXC5b": "Aangepaste invite-link",
   "lrBAdLugvI7T": "Ontgrendel met Server Flux een merkbare aangepaste invite.",
   "DG9w9pUkxlFX": "Ontgrendel met Server Flux",
-  "N1XhGZ7qFmds": "Geanimeerde pictogrammen hebben Server Flux nodig. Kies een statische afbeelding of ontgrendel Flux."
+  "N1XhGZ7qFmds": "Geanimeerde pictogrammen hebben Server Flux nodig. Kies een statische afbeelding of ontgrendel Flux.",
+  "soB0VyVcfCgl": "Van server verwijderen",
+  "jKEmkpmUYVjO": "Deze Flux gaat terug naar Unused. De huidige server verliest deze boost en mogelijk afhankelijke features."
 }

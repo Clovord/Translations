@@ -2062,7 +2062,7 @@
   "EHsrxLq2NrMq": "Transfer",
   "H3vbLBx7IQBw": "Cancel Flux",
   "quceEgJtIxA2": "This Flux returns to Unused. The current server loses this boost and may lose features that depend on it.",
-  "ufU5unl2ubWF": "This ends this unused Server Flux immediately. There is no refund, and any linked subscription renewal is stopped.",
+  "ufU5unl2ubWF": "This ends this Server Flux immediately. There is no refund, and any linked subscription renewal is stopped.",
   "NpBM9TL2JnUM": "Server Flux cancellation saved.",
   "C1l1W2YmOhkt": "Transfer this boost",
   "pMAcyboifr77": "The current server will lose this boost and may lose features that depend on it.",
@@ -3831,5 +3831,7 @@
   "yb2NKesmXC5b": "Custom invite link",
   "lrBAdLugvI7T": "Unlock a memorable custom invite with Server Flux.",
   "DG9w9pUkxlFX": "Unlock with Server Flux",
-  "N1XhGZ7qFmds": "Animated icons need Server Flux. Choose a static image, or unlock Flux."
+  "N1XhGZ7qFmds": "Animated icons need Server Flux. Choose a static image, or unlock Flux.",
+  "soB0VyVcfCgl": "Remove from server",
+  "jKEmkpmUYVjO": "This Flux returns to Unused. The current server loses this boost and may lose features that depend on it."
 }
