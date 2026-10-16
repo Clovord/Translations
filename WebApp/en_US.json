@@ -2062,7 +2062,7 @@
   "EHsrxLq2NrMq": "Transfer",
   "H3vbLBx7IQBw": "Cancel Flux",
   "quceEgJtIxA2": "This Flux returns to Unused. The current server loses this boost and may lose features that depend on it.",
-  "ufU5unl2ubWF": "This cancels Server Flux. If you have a subscription, renewal stops at the end of the period. Otherwise this unused Flux is removed.",
+  "ufU5unl2ubWF": "This ends this unused Server Flux immediately. There is no refund, and any linked subscription renewal is stopped.",
   "NpBM9TL2JnUM": "Server Flux cancellation saved.",
   "C1l1W2YmOhkt": "Transfer this boost",
   "pMAcyboifr77": "The current server will lose this boost and may lose features that depend on it.",
