@@ -814,6 +814,8 @@
   "429000": "Rate Limited",
   "429001": "Rate Limited - MultiStatus",
   "429002": "The resource is being rate limited",
+  "429003": "Too many accounts were created from this network. Try again later.",
+  "429004": "Too many accounts with this name were created recently. Try again later.",
   "500000": "Internal Server Error",
   "500001": "Internal Server Error - MultiStatus",
   "500002": "Failed to revoke token",
