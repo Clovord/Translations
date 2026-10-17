@@ -3860,5 +3860,8 @@
   "qR8mKp3Lx7sN": "Create separator",
   "vT2nHc6Bw4qY": "New separator",
   "wL5sYd9Km1aF": "Role separator",
-  "xP4nJx8Rt2uC": "This heading groups the roles listed under it. It has no permissions and cannot be assigned or mentioned."
+  "xP4nJx8Rt2uC": "This heading groups the roles listed under it. It has no permissions and cannot be assigned or mentioned.",
+  "hS6pL2nQw8vR": "Use this role as separator",
+  "cU4mN9tKx1bY": "Unavailable for Separators",
+  "mK8wQ3pLn6sT": "Remove every member from this role before using it as a separator."
 }
