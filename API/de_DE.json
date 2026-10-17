@@ -430,7 +430,7 @@
   "403077": "Sie können diese Aktion nicht selbst ausführen",
   "403078": "Invalid Activity Action",
   "403079": "Invalid OAuth2 redirect uri",
-  "403080": "Invalid API-Version zur Verfügung gestellt",
+  "403080": "Nicht unterstützte API-Version",
   "403081": "Invalid Billing State",
   "403082": "Data Harvest ist anhängig, ein anderer Data Harvest kann nicht gestartet werden",
   "403083": "Data Harvest kann nur alle 30 Tage angefordert werden",

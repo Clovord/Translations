@@ -420,7 +420,7 @@
   "403077": "U kunt deze actie niet zelf uitvoeren",
   "403078": "Ongeldige activiteit",
   "403079": "Ongeldige OAuth2-redirect-URI",
-  "403080": "Ongeldige API-versie beschikbaar",
+  "403080": "Niet-ondersteunde API-versie",
   "403081": "Ongeldige factuurstaat",
   "403082": "Data Harvest is al in behandeling; een nieuwe Data Harvest kan nog niet worden gestart",
   "403083": "Data Harvest kan slechts eenmaal per 30 dagen worden aangevraagd",
