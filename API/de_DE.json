@@ -287,6 +287,7 @@
   "400275": "Antworten im Verifizierungsfragebogen sind unvollständig oder zu kurz",
   "400276": "Dieser OAuth-Handoff wurde bereits abgeschlossen",
   "400277": "Ungültige OAuth-Handoff-Entscheidung",
+  "400278": "Für OAuth ist eine verifizierte E-Mail-Adresse erforderlich",
   "400403": "Ungültiger monatlicher Credits-Betrag",
   "400404": "Produkt ist nicht für Credits-Abos geeignet",
   "401000": "Unbefugt",

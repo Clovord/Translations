@@ -332,6 +332,7 @@
   "400275": "Application verification questionnaire answers are incomplete or too short",
   "400276": "This OAuth handoff was already completed",
   "400277": "Invalid OAuth handoff decision",
+  "400278": "A verified email address is required to use OAuth",
   "400403": "Invalid monthly credits amount",
   "400404": "Product is not eligible for credits subscriptions",
   "401000": "Unauthorized",
