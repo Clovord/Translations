@@ -3880,5 +3880,9 @@
   "WBw5lo2xdveg": "We opened this authorization in the desktop app so you can approve it with your signed-in session. Keep this tab open.",
   "9kmkGTyAgpWV": "Continue in browser",
   "UCbt6J69rFOa": "Waiting for approval in Clovord Desktop…",
-  "m2sm0H4GfnZ1": "If the desktop app did not open, continue in this browser."
+  "m2sm0H4GfnZ1": "If the desktop app did not open, continue in this browser.",
+  "SA4S7A3Qy3r7": "Spark can't let you authorize this yet",
+  "MLw7YHa60HaC": "You need a verified email before apps can use Clovord as a login. Verify your email in account settings, then try again.",
+  "vXvUTBd7QbhV": "Verify email",
+  "1WO7GBz2YUn0": "Spark looking sad next to a red X, blocking this authorization"
 }
