@@ -3415,5 +3415,13 @@
   "m78x4fKLrn3I": "Wir haben den Fehler erfasst und kümmern uns so schnell wie möglich darum.",
   "LW5Yh0XU9UpE": "Verstanden",
   "wez8CYpdSBHjyc": "Spark sieht traurig neben einer kaputten Plattform",
-  "pPdnlrJfjtJM": "Referenz: {id}"
+  "pPdnlrJfjtJM": "Referenz: {id}",
+  "H4nQp8Lm2VxR": "Diese Anwendung ist von Clovord nicht verifiziert. Clovord hat den Entwickler und die Nutzung der unten genannten Berechtigungen nicht geprüft. Lies die Scopes genau und fahre nur fort, wenn du weißt, wer die App gebaut hat, und dem Entwickler vertraust.",
+  "K9mQp4Lx2VnR": "Brauchst du die Anwendung nur für den OAuth2-Login? Deaktiviere den Bot. Die Verifizierung zählt dann Autorisierungen statt Server, und die Bot-Anforderungen entfallen.",
+  "P3nLm8Qx1VtK": "Bot-Einstellungen öffnen",
+  "69pfKEpbz3bh": "In der Clovord-App fortfahren",
+  "WBw5lo2xdveg": "Wir haben diese Autorisierung in der Desktop-App geöffnet, damit du sie mit deiner angemeldeten Sitzung bestätigen kannst. Lass diesen Tab geöffnet.",
+  "9kmkGTyAgpWV": "Im Browser fortfahren",
+  "UCbt6J69rFOa": "Warte auf Bestätigung in Clovord Desktop…",
+  "m2sm0H4GfnZ1": "Falls die Desktop-App nicht geöffnet wurde, fahre in diesem Browser fort."
 }

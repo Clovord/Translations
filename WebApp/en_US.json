@@ -3872,5 +3872,13 @@
   "m78x4fKLrn3I": "We've logged this issue and will look into it as soon as we can.",
   "LW5Yh0XU9UpE": "Got it",
   "wez8CYpdSBHjyc": "Spark looking sad next to a broken platform",
-  "pPdnlrJfjtJM": "Reference: {id}"
+  "pPdnlrJfjtJM": "Reference: {id}",
+  "H4nQp8Lm2VxR": "This application is not verified by Clovord. That means Clovord has not reviewed the developer or how this app uses the permissions below. Check the scopes carefully and continue only if you know and trust who built it.",
+  "K9mQp4Lx2VnR": "Only need this application for OAuth2 login? Disable the bot. Verification then counts authorizations instead of servers, and the bot requirements are removed.",
+  "P3nLm8Qx1VtK": "Open Bot settings",
+  "69pfKEpbz3bh": "Continue in the Clovord app",
+  "WBw5lo2xdveg": "We opened this authorization in the desktop app so you can approve it with your signed-in session. Keep this tab open.",
+  "9kmkGTyAgpWV": "Continue in browser",
+  "UCbt6J69rFOa": "Waiting for approval in Clovord Desktop…",
+  "m2sm0H4GfnZ1": "If the desktop app did not open, continue in this browser."
 }
