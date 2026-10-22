@@ -790,6 +790,8 @@
   "409006": "Friend request already pending",
   "409007": "Only draft news items can be updated",
   "409008": "A flux catalog item with this key already exists",
+  "409009": "Other pending build changes must be published or discarded before staging experiment changes",
+  "409010": "Pending experiment changes must be published before staging other changes",
   "410000": "Gone",
   "410001": "Gone - MultiStatus",
   "410002": "This EndpointBody contains deprecated fields and will be removed in the future",
