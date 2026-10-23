@@ -281,6 +281,7 @@
   "400284": "Ongeldige of verlopen OAuth-autorisatiecode",
   "400285": "OAuth redirect_uri komt niet overeen met de autorisatiecode",
   "400286": "OAuth response_type moet code zijn",
+  "400287": "Ongeldige geo-landinstellingen",
   "400403": "Ongeldig maandelijks creditsbedrag",
   "400404": "Product komt niet in aanmerking voor credits-abonnementen",
   "401000": "Ongeautoriseerd",
@@ -1189,5 +1190,7 @@
   "email_developer_application_activated_title": "Applicatie geactiveerd",
   "email_developer_application_activated_body": "Staff heeft {application} geactiveerd. Je bot kan de API weer gebruiken.",
   "404096": "Onbekende OAuth-autorisatie",
-  "404106": "Onbekende shop-collectible"
+  "404106": "Onbekende shop-collectible",
+  "404113": "Onbekend geo-land",
+  "404114": "Onbekende geo-landvertegenwoordiger"
 }
