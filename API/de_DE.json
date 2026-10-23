@@ -1212,5 +1212,6 @@
   "email_developer_application_activated_subject": "Deine Anwendung {application} wurde aktiviert",
   "email_developer_application_activated_title": "Anwendung aktiviert",
   "email_developer_application_activated_body": "Das Team hat {application} aktiviert. Dein Bot kann die API wieder nutzen.",
-  "404096": "Unbekannte OAuth-Autorisierung"
+  "404096": "Unbekannte OAuth-Autorisierung",
+  "409011": "Ein Konto mit dieser E-Mail-Adresse existiert bereits"
 }

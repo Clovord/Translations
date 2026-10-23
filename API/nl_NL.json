@@ -1192,5 +1192,6 @@
   "404096": "Onbekende OAuth-autorisatie",
   "404106": "Onbekende shop-collectible",
   "404113": "Onbekend geo-land",
-  "404114": "Onbekende geo-landvertegenwoordiger"
+  "404114": "Onbekende geo-landvertegenwoordiger",
+  "409011": "Er bestaat al een account met dit e-mailadres"
 }

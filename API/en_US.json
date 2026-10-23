@@ -799,6 +799,7 @@
   "409008": "A flux catalog item with this key already exists",
   "409009": "Other pending build changes must be published or discarded before staging experiment changes",
   "409010": "Pending experiment changes must be published before staging other changes",
+  "409011": "An account with this email address already exists",
   "410000": "Gone",
   "410001": "Gone - MultiStatus",
   "410002": "This EndpointBody contains deprecated fields and will be removed in the future",
