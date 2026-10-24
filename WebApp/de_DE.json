@@ -3464,5 +3464,9 @@
   "nUEqYoINBbGZ": "Zu schnell",
   "TOO8c5mUQrR9": "Verbindungsproblem",
   "mOlvU9VRfuDp": "Erneut versuchen",
-  "t9FvYItQxEB0": "Nicht gesendet"
+  "t9FvYItQxEB0": "Nicht gesendet",
+  "TjRjAyPXxn6Y": "Dieser Kauf ist für dein Konto noch nicht verfügbar.",
+  "sN1XxGinSZuE": "Kauf-Fenster konnte nicht geöffnet werden.",
+  "1ESQMbqCvQ7T": "Server-Features gefährdet",
+  "E1nCYMzKPl5U": "Dieser Server hat nicht mehr genug Flux für die freigeschalteten Features. Features bleiben noch {time} aktiv. Füge {count} Flux hinzu, um sie zu behalten."
 }

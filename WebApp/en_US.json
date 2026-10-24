@@ -3921,5 +3921,9 @@
   "nUEqYoINBbGZ": "Slow down",
   "TOO8c5mUQrR9": "Connection problem",
   "mOlvU9VRfuDp": "Retry",
-  "t9FvYItQxEB0": "Not sent"
+  "t9FvYItQxEB0": "Not sent",
+  "TjRjAyPXxn6Y": "This purchase is not available for your account yet.",
+  "sN1XxGinSZuE": "Could not open the purchase modal.",
+  "1ESQMbqCvQ7T": "Server features at risk",
+  "E1nCYMzKPl5U": "This server no longer has enough Flux for its unlocked features. Features stay active for {time}. Add {count} more Flux to keep them."
 }
