@@ -2930,6 +2930,7 @@
   "eYCEqHf0sQF5": "❱❱ /guilds/{guild_id}/audit-log",
   "rEbgGaxJHyTl": "QR-Code",
   "jFy9RK9adUnQ": "Scanne diesen Code mit der Clovord-Mobile-App, um dich anzumelden.",
+  "mN4qR8vK2wLx": "Die Anmeldung per QR-Code ist vorerst deaktiviert. Die Clovord-Android-App ist eingestellt, deshalb erzeugen Desktop und Web keinen Login-QR-Code mehr.",
   "UpHGe3Cuauz0": "Warte auf Freigabe auf deinem Handy…",
   "p1v7HyTl44DA": "Dieser QR-Code ist abgelaufen.",
   "8vkK8QtzkDCF": "QR-Code aktualisieren",
