@@ -3926,5 +3926,15 @@
   "TjRjAyPXxn6Y": "This purchase is not available for your account yet.",
   "sN1XxGinSZuE": "Could not open the purchase modal.",
   "1ESQMbqCvQ7T": "Server features at risk",
-  "E1nCYMzKPl5U": "This server no longer has enough Flux for its unlocked features. Features stay active for {time}. Add {count} more Flux to keep them."
+  "E1nCYMzKPl5U": "This server no longer has enough Flux for its unlocked features. Features stay active for {time}. Add {count} more Flux to keep them.",
+  "aB3nKp8mQd2L": "Your account",
+  "cD5pLr9nRe4M": "Deactivate your account if you do not need it right now. It is not deleted. Sign in again later to use it.",
+  "eF7qMs0oSf6N": "Deactivate account",
+  "gH9rNt1pTg8P": "Delete account",
+  "jK2sPv3qUh0R": "Your account will be marked for deletion and permanently removed after 14 days if you do not sign in again. Signing in again cancels the deletion.",
+  "mN4tQw5rVi2S": "You will be signed out. The account stays saved and is not deleted. Sign in again whenever you want to use it.",
+  "wX8yZa1bCb3D": "Deactivate your account?",
+  "yZ0aBc2dDe5F": "Delete your account?",
+  "pQ6uRx7sWj4T": "Continue",
+  "kL8mNq2rSt4U": "Confirm your password"
 }

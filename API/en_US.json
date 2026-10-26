@@ -342,6 +342,8 @@
   "400285": "OAuth redirect_uri does not match the authorization code",
   "400286": "OAuth response_type must be code",
   "400287": "Invalid geo country settings",
+  "400288": "This account cannot be closed",
+  "400289": "Account deletion is already scheduled",
   "400403": "Invalid monthly credits amount",
   "400404": "Product is not eligible for credits subscriptions",
   "401000": "Unauthorized",
