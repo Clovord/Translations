@@ -3045,5 +3045,8 @@
   "TjRjAyPXxn6Y": "Deze aankoop is nog niet beschikbaar voor je account.",
   "sN1XxGinSZuE": "Aankoopvenster kon niet worden geopend.",
   "1ESQMbqCvQ7T": "Serverfuncties lopen gevaar",
-  "E1nCYMzKPl5U": "Deze server heeft niet genoeg Flux meer voor de ontgrendelde functies. Functies blijven {time} actief. Voeg {count} Flux toe om ze te behouden."
+  "E1nCYMzKPl5U": "Deze server heeft niet genoeg Flux meer voor de ontgrendelde functies. Functies blijven {time} actief. Voeg {count} Flux toe om ze te behouden.",
+  "qW7nLp4Hx2Vm": "Deze schermgrootte wordt nog niet ondersteund",
+  "bT9cRk6Ys3Nd": "We ondersteunen deze schermresolutie nog niet. Gebruik een breder liggend scherm, dan gaat Clovord verder.",
+  "hJ5mFw8Qa1Ce": "Spark kijkt verdrietig omdat deze schermgrootte nog niet wordt ondersteund"
 }

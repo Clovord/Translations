@@ -3469,5 +3469,8 @@
   "TjRjAyPXxn6Y": "Dieser Kauf ist für dein Konto noch nicht verfügbar.",
   "sN1XxGinSZuE": "Kauf-Fenster konnte nicht geöffnet werden.",
   "1ESQMbqCvQ7T": "Server-Features gefährdet",
-  "E1nCYMzKPl5U": "Dieser Server hat nicht mehr genug Flux für die freigeschalteten Features. Features bleiben noch {time} aktiv. Füge {count} Flux hinzu, um sie zu behalten."
+  "E1nCYMzKPl5U": "Dieser Server hat nicht mehr genug Flux für die freigeschalteten Features. Features bleiben noch {time} aktiv. Füge {count} Flux hinzu, um sie zu behalten.",
+  "qW7nLp4Hx2Vm": "Diese Bildschirmgröße wird noch nicht unterstützt",
+  "bT9cRk6Ys3Nd": "Wir unterstützen diese Bildschirmauflösung noch nicht. Nutze ein breiteres Querformat, dann geht es direkt weiter.",
+  "hJ5mFw8Qa1Ce": "Spark schaut traurig, weil diese Bildschirmgröße noch nicht unterstützt wird"
 }
