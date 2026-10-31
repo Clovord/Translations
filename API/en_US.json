@@ -344,6 +344,7 @@
   "400287": "Invalid geo country settings",
   "400288": "This account cannot be closed",
   "400289": "Account deletion is already scheduled",
+  "400290": "That app background is not valid",
   "400403": "Invalid monthly credits amount",
   "400404": "Product is not eligible for credits subscriptions",
   "401000": "Unauthorized",
