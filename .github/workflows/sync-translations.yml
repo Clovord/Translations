@@ -251,11 +251,83 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-      - name: Sync WebApp translations
+
+      - name: Prepare WebApp translation payload
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          ROOT_DIR="$PWD"
+          if ! compgen -G "$ROOT_DIR/WebApp/*.json" > /dev/null; then
+            echo "No source translation files found in $ROOT_DIR/WebApp"
+            exit 1
+          fi
+          PAYLOAD="$(mktemp -d)"
+          cp -f "$ROOT_DIR"/WebApp/*.json "$PAYLOAD"/
+          if compgen -G "$ROOT_DIR/WebApp/NoticeCopy/*.json" > /dev/null; then
+            mkdir -p "$PAYLOAD/NoticeCopy"
+            cp -f "$ROOT_DIR"/WebApp/NoticeCopy/*.json "$PAYLOAD/NoticeCopy/"
+          fi
+          export PAYLOAD
+          python - <<'PY'
+          import hashlib
+          import json
+          import os
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          def hash_translation_files(dir_path: Path) -> str:
+              digest = hashlib.sha256()
+              for file in sorted(
+                  p for p in dir_path.rglob("*.json") if p.name != "manifest.json"
+              ):
+                  digest.update(file.relative_to(dir_path).as_posix().encode("utf-8"))
+                  digest.update(b"\0")
+                  digest.update(file.read_bytes())
+              return digest.hexdigest()[:16]
+
+          source_sha = (os.environ.get("SOURCE_SHA") or "").strip()
+          translations_dir = Path(os.environ["PAYLOAD"])
+          version = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
+          payload = {
+              "version": version,
+              "content_hash": hash_translation_files(translations_dir),
+              "source_commit": source_sha,
+              "updated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
+          }
+          out = translations_dir / "manifest.json"
+          out.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+          print("Wrote", out, payload)
+          PY
+          echo "PAYLOAD_DIR=$PAYLOAD" >> "$GITHUB_ENV"
+
+      - name: Publish WebApp translations to shared folder
+        env:
+          SSH_HOST: ${{ secrets.ORG_SERVER_HOST_WEBSITE }}
+          SSH_KEY: ${{ secrets.ORG_SERVER_SSH_KEY_WEBSITE }}
+        run: |
+          set -euo pipefail
+          if [ -z "${SSH_HOST:-}" ] || [ -z "${SSH_KEY:-}" ]; then
+            echo "ORG_SERVER_HOST_WEBSITE or ORG_SERVER_SSH_KEY_WEBSITE missing"
+            exit 1
+          fi
+          install -m 600 /dev/stdin /tmp/deploy_key <<< "$SSH_KEY"
+          REMOTE="/var/www/clovord.com/translations/webapp"
+          ssh -i /tmp/deploy_key -o StrictHostKeyChecking=accept-new "root@${SSH_HOST}" \
+            "mkdir -p '${REMOTE}' '${REMOTE}/NoticeCopy' && find '${REMOTE}' -maxdepth 1 -type f -name '*.json' -delete && find '${REMOTE}/NoticeCopy' -maxdepth 1 -type f -name '*.json' -delete 2>/dev/null || true"
+          scp -i /tmp/deploy_key -o StrictHostKeyChecking=accept-new \
+            "${PAYLOAD_DIR}"/*.json "root@${SSH_HOST}:${REMOTE}/"
+          if [ -d "${PAYLOAD_DIR}/NoticeCopy" ] && compgen -G "${PAYLOAD_DIR}/NoticeCopy/*.json" > /dev/null; then
+            scp -i /tmp/deploy_key -o StrictHostKeyChecking=accept-new \
+              "${PAYLOAD_DIR}/NoticeCopy"/*.json "root@${SSH_HOST}:${REMOTE}/NoticeCopy/"
+          fi
+
+      - name: Mirror WebApp translations into Homepage
         env:
           TOKEN: ${{ secrets.SYNC_WEBAPP_TOKEN }}
           SOURCE_SHA: ${{ github.sha }}
         run: |
+          set -euo pipefail
           ROOT_DIR="$PWD"
           BRANCH="automation/sync-webapp-translations"
           BASE_BRANCH="master"
@@ -281,63 +353,22 @@ jobs:
 
           python "$ROOT_DIR/scripts/require_codeowners.py" --repo-dir "$PWD" --required-path "dist/assets/translations/"
 
-          if ! compgen -G "$ROOT_DIR/WebApp/*.json" > /dev/null; then
-            echo "No source translation files found in $ROOT_DIR/WebApp"
-            exit 1
-          fi
-
-          TMP_TRANSLATIONS_DIR=$(mktemp -d)
-          cp -f "$ROOT_DIR"/WebApp/*.json "$TMP_TRANSLATIONS_DIR"/
-
           mkdir -p dist/assets/translations
           find dist/assets/translations -maxdepth 1 -type f -name "*.json" -delete
-          cp -f "$TMP_TRANSLATIONS_DIR"/*.json dist/assets/translations/
-          rm -rf "$TMP_TRANSLATIONS_DIR"
-
-          if compgen -G "$ROOT_DIR/WebApp/NoticeCopy/*.json" > /dev/null; then
+          cp -f "${PAYLOAD_DIR}"/*.json dist/assets/translations/
+          if [ -d "${PAYLOAD_DIR}/NoticeCopy" ] && compgen -G "${PAYLOAD_DIR}/NoticeCopy/*.json" > /dev/null; then
             mkdir -p dist/assets/translations/NoticeCopy
             find dist/assets/translations/NoticeCopy -maxdepth 1 -type f -name "*.json" -delete
-            cp -f "$ROOT_DIR"/WebApp/NoticeCopy/*.json dist/assets/translations/NoticeCopy/
+            cp -f "${PAYLOAD_DIR}/NoticeCopy"/*.json dist/assets/translations/NoticeCopy/
           fi
-
-          python - <<'PY'
-          import hashlib
-          import json
-          import os
-          from datetime import datetime, timezone
-          from pathlib import Path
-
-          def hash_translation_files(dir_path: Path) -> str:
-              digest = hashlib.sha256()
-              for file in sorted(
-                  p for p in dir_path.rglob("*.json") if p.name != "manifest.json"
-              ):
-                  digest.update(file.relative_to(dir_path).as_posix().encode("utf-8"))
-                  digest.update(b"\0")
-                  digest.update(file.read_bytes())
-              return digest.hexdigest()[:16]
-
-          source_sha = (os.environ.get("SOURCE_SHA") or "").strip()
-          translations_dir = Path("dist/assets/translations")
-          version = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
-          payload = {
-              "version": version,
-              "content_hash": hash_translation_files(translations_dir),
-              "source_commit": source_sha,
-              "updated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
-          }
-          out = translations_dir / "manifest.json"
-          out.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-          print("Wrote", out)
-          PY
 
           git add -A -f dist/assets/translations
           if git diff --cached --quiet; then
-            echo "No changes"
+            echo "No git mirror changes"
             exit 0
           fi
 
-          git commit -m "Sync translations (WebApp)"
+          git commit -m "Sync translations (WebApp) [skip ci]"
           git push origin "${BRANCH}" --force-with-lease
 
           git fetch origin "${BASE_BRANCH}"
@@ -358,8 +389,8 @@ jobs:
               --repo "$REPO" \
               --base "${BASE_BRANCH}" \
               --head "${BRANCH}" \
-              --title "Sync translations (WebApp)" \
-              --body "Automated translation sync from Translations."
+              --title "Sync translations (WebApp) [skip ci]" \
+              --body "Automated translation sync from Translations. Live files are published to the shared translations folder; this PR only mirrors the repo."
 
             PR_NUMBER=$(gh pr list \
               --repo "$REPO" \
@@ -373,6 +404,7 @@ jobs:
           MERGE_OUTPUT=$(gh pr merge \
             --repo "$REPO" \
             --squash \
+            --subject "Sync translations (WebApp) [skip ci]" \
             "${PR_NUMBER}" 2>&1) || MERGE_STATUS=$?
 
           if [ "${MERGE_STATUS:-0}" -ne 0 ]; then
@@ -389,11 +421,82 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-      - name: Sync Downloads translations
+
+      - name: Prepare Downloads translation payload
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          ROOT_DIR="$PWD"
+          if ! compgen -G "$ROOT_DIR/DownloadPage/*.json" > /dev/null; then
+            echo "No source translation files found in $ROOT_DIR/DownloadPage"
+            exit 1
+          fi
+          PAYLOAD="$(mktemp -d)"
+          cp -f "$ROOT_DIR"/DownloadPage/*.json "$PAYLOAD"/
+          export PAYLOAD
+          python - <<'PY'
+          import hashlib
+          import json
+          import os
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          def hash_translation_files(dir_path: Path) -> str:
+              digest = hashlib.sha256()
+              for file in sorted(
+                  p for p in dir_path.glob("*.json") if p.name != "manifest.json"
+              ):
+                  digest.update(file.name.encode("utf-8"))
+                  digest.update(b"\0")
+                  digest.update(file.read_bytes())
+              return digest.hexdigest()[:16]
+
+          source_sha = (os.environ.get("SOURCE_SHA") or "").strip()
+          translations_dir = Path(os.environ["PAYLOAD"])
+          version = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
+          payload = {
+              "version": version,
+              "content_hash": hash_translation_files(translations_dir),
+              "source_commit": source_sha,
+              "updated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
+          }
+          out = translations_dir / "manifest.json"
+          out.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+          print("Wrote", out, payload)
+          PY
+          echo "PAYLOAD_DIR=$PAYLOAD" >> "$GITHUB_ENV"
+
+      - name: Publish Downloads translations to shared folder
+        env:
+          SSH_HOST: ${{ secrets.ORG_SERVER_HOST_WEBSITE }}
+          SSH_KEY: ${{ secrets.ORG_SERVER_SSH_KEY_WEBSITE }}
+        run: |
+          set -euo pipefail
+          if [ -z "${SSH_HOST:-}" ] || [ -z "${SSH_KEY:-}" ]; then
+            echo "ORG_SERVER_HOST_WEBSITE or ORG_SERVER_SSH_KEY_WEBSITE missing"
+            exit 1
+          fi
+          install -m 600 /dev/stdin /tmp/deploy_key <<< "$SSH_KEY"
+          REMOTE="/var/www/clovord.com/translations/downloads"
+          ssh -i /tmp/deploy_key -o StrictHostKeyChecking=accept-new "root@${SSH_HOST}" bash -s <<EOF
+          set -euo pipefail
+          mkdir -p '${REMOTE}' /var/www/downloads.clovord.com/assets
+          find '${REMOTE}' -maxdepth 1 -type f -name '*.json' -delete
+          if [ -d /var/www/downloads.clovord.com/assets/translations ] && [ ! -L /var/www/downloads.clovord.com/assets/translations ]; then
+            rm -rf /var/www/downloads.clovord.com/assets/translations
+          fi
+          ln -sfn '${REMOTE}' /var/www/downloads.clovord.com/assets/translations
+          EOF
+          scp -i /tmp/deploy_key -o StrictHostKeyChecking=accept-new \
+            "${PAYLOAD_DIR}"/*.json "root@${SSH_HOST}:${REMOTE}/"
+
+      - name: Mirror Downloads translations into DownloadPage
         env:
           TOKEN: ${{ secrets.SYNC_DOWNLOADS_TOKEN }}
           SOURCE_SHA: ${{ github.sha }}
         run: |
+          set -euo pipefail
           ROOT_DIR="$PWD"
           BRANCH="automation/sync-downloads-translations"
           BASE_BRANCH="master"
@@ -419,57 +522,17 @@ jobs:
 
           python "$ROOT_DIR/scripts/require_codeowners.py" --repo-dir "$PWD" --required-path "assets/translations/"
 
-          if ! compgen -G "$ROOT_DIR/DownloadPage/*.json" > /dev/null; then
-            echo "No source translation files found in $ROOT_DIR/DownloadPage"
-            exit 1
-          fi
-
-          TMP_TRANSLATIONS_DIR=$(mktemp -d)
-          cp -f "$ROOT_DIR"/DownloadPage/*.json "$TMP_TRANSLATIONS_DIR"/
-
           mkdir -p assets/translations
-          find assets/translations -maxdepth 1 -type f -name "*.json" ! -name "manifest.json" -delete
-          cp -f "$TMP_TRANSLATIONS_DIR"/*.json assets/translations/
-          rm -rf "$TMP_TRANSLATIONS_DIR"
-
-          python - <<'PY'
-          import hashlib
-          import json
-          import os
-          from datetime import datetime, timezone
-          from pathlib import Path
-
-          def hash_translation_files(dir_path: Path) -> str:
-              digest = hashlib.sha256()
-              for file in sorted(
-                  p for p in dir_path.glob("*.json") if p.name != "manifest.json"
-              ):
-                  digest.update(file.name.encode("utf-8"))
-                  digest.update(b"\0")
-                  digest.update(file.read_bytes())
-              return digest.hexdigest()[:16]
-
-          source_sha = (os.environ.get("SOURCE_SHA") or "").strip()
-          translations_dir = Path("assets/translations")
-          version = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
-          payload = {
-              "version": version,
-              "content_hash": hash_translation_files(translations_dir),
-              "source_commit": source_sha,
-              "updated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
-          }
-          out = translations_dir / "manifest.json"
-          out.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-          print("Wrote", out)
-          PY
+          find assets/translations -maxdepth 1 -type f -name "*.json" -delete
+          cp -f "${PAYLOAD_DIR}"/*.json assets/translations/
 
           git add -A -f assets/translations
           if git diff --cached --quiet; then
-            echo "No changes"
+            echo "No git mirror changes"
             exit 0
           fi
 
-          git commit -m "Sync translations (Downloads)"
+          git commit -m "Sync translations (Downloads) [skip ci]"
           git push origin "${BRANCH}" --force-with-lease
 
           git fetch origin "${BASE_BRANCH}"
@@ -490,8 +553,8 @@ jobs:
               --repo "$REPO" \
               --base "${BASE_BRANCH}" \
               --head "${BRANCH}" \
-              --title "Sync translations (Downloads)" \
-              --body "Automated translation sync from Translations."
+              --title "Sync translations (Downloads) [skip ci]" \
+              --body "Automated translation sync from Translations. Live files are published to the shared translations folder; this PR only mirrors the repo."
 
             PR_NUMBER=$(gh pr list \
               --repo "$REPO" \
@@ -505,6 +568,7 @@ jobs:
           MERGE_OUTPUT=$(gh pr merge \
             --repo "$REPO" \
             --squash \
+            --subject "Sync translations (Downloads) [skip ci]" \
             "${PR_NUMBER}" 2>&1) || MERGE_STATUS=$?
 
           if [ "${MERGE_STATUS:-0}" -ne 0 ]; then
@@ -521,11 +585,75 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-      - name: Sync SupportPortal translations
+
+      - name: Prepare SupportPortal translation payload
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          ROOT_DIR="$PWD"
+          if ! compgen -G "$ROOT_DIR/SupportPortal/*.json" > /dev/null; then
+            echo "No source translation files found in $ROOT_DIR/SupportPortal"
+            exit 1
+          fi
+          PAYLOAD="$(mktemp -d)"
+          cp -f "$ROOT_DIR"/SupportPortal/*.json "$PAYLOAD"/
+          export PAYLOAD
+          python - <<'PY'
+          import hashlib
+          import json
+          import os
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          def hash_translation_files(dir_path: Path) -> str:
+              digest = hashlib.sha256()
+              for file in sorted(
+                  p for p in dir_path.glob("*.json") if p.name != "manifest.json"
+              ):
+                  digest.update(file.name.encode("utf-8"))
+                  digest.update(b"\0")
+                  digest.update(file.read_bytes())
+              return digest.hexdigest()[:16]
+
+          source_sha = (os.environ.get("SOURCE_SHA") or "").strip()
+          translations_dir = Path(os.environ["PAYLOAD"])
+          version = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
+          payload = {
+              "version": version,
+              "content_hash": hash_translation_files(translations_dir),
+              "source_commit": source_sha,
+              "updated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
+          }
+          out = translations_dir / "manifest.json"
+          out.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+          print("Wrote", out, payload)
+          PY
+          echo "PAYLOAD_DIR=$PAYLOAD" >> "$GITHUB_ENV"
+
+      - name: Publish Support translations to shared folder
+        env:
+          SSH_HOST: ${{ secrets.ORG_SERVER_HOST_WEBSITE }}
+          SSH_KEY: ${{ secrets.ORG_SERVER_SSH_KEY_WEBSITE }}
+        run: |
+          set -euo pipefail
+          if [ -z "${SSH_HOST:-}" ] || [ -z "${SSH_KEY:-}" ]; then
+            echo "ORG_SERVER_HOST_WEBSITE or ORG_SERVER_SSH_KEY_WEBSITE missing"
+            exit 1
+          fi
+          install -m 600 /dev/stdin /tmp/deploy_key <<< "$SSH_KEY"
+          REMOTE="/var/www/clovord.com/translations/support"
+          ssh -i /tmp/deploy_key -o StrictHostKeyChecking=accept-new "root@${SSH_HOST}" \
+            "mkdir -p '${REMOTE}' && find '${REMOTE}' -maxdepth 1 -type f -name '*.json' -delete"
+          scp -i /tmp/deploy_key -o StrictHostKeyChecking=accept-new \
+            "${PAYLOAD_DIR}"/*.json "root@${SSH_HOST}:${REMOTE}/"
+
+      - name: Mirror Support translations into SupportPortal
         env:
           TOKEN: ${{ secrets.SYNC_SUPPORTPORTAL_TOKEN }}
           SOURCE_SHA: ${{ github.sha }}
         run: |
+          set -euo pipefail
           ROOT_DIR="$PWD"
           BRANCH="automation/sync-support-translations"
           BASE_BRANCH="main"
@@ -551,57 +679,17 @@ jobs:
 
           python "$ROOT_DIR/scripts/require_codeowners.py" --repo-dir "$PWD" --required-path "dist/assets/translations/"
 
-          if ! compgen -G "$ROOT_DIR/SupportPortal/*.json" > /dev/null; then
-            echo "No source translation files found in $ROOT_DIR/SupportPortal"
-            exit 1
-          fi
-
-          TMP_TRANSLATIONS_DIR=$(mktemp -d)
-          cp -f "$ROOT_DIR"/SupportPortal/*.json "$TMP_TRANSLATIONS_DIR"/
-
           mkdir -p dist/assets/translations
           find dist/assets/translations -maxdepth 1 -type f -name "*.json" -delete
-          cp -f "$TMP_TRANSLATIONS_DIR"/*.json dist/assets/translations/
-          rm -rf "$TMP_TRANSLATIONS_DIR"
-
-          python - <<'PY'
-          import hashlib
-          import json
-          import os
-          from datetime import datetime, timezone
-          from pathlib import Path
-
-          def hash_translation_files(dir_path: Path) -> str:
-              digest = hashlib.sha256()
-              for file in sorted(
-                  p for p in dir_path.glob("*.json") if p.name != "manifest.json"
-              ):
-                  digest.update(file.name.encode("utf-8"))
-                  digest.update(b"\0")
-                  digest.update(file.read_bytes())
-              return digest.hexdigest()[:16]
-
-          source_sha = (os.environ.get("SOURCE_SHA") or "").strip()
-          translations_dir = Path("dist/assets/translations")
-          version = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
-          payload = {
-              "version": version,
-              "content_hash": hash_translation_files(translations_dir),
-              "source_commit": source_sha,
-              "updated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
-          }
-          out = translations_dir / "manifest.json"
-          out.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-          print("Wrote", out)
-          PY
+          cp -f "${PAYLOAD_DIR}"/*.json dist/assets/translations/
 
           git add -A -f dist/assets/translations
           if git diff --cached --quiet; then
-            echo "No changes"
+            echo "No git mirror changes"
             exit 0
           fi
 
-          git commit -m "Sync translations (SupportPortal)"
+          git commit -m "Sync translations (SupportPortal) [skip ci]"
           git push origin "${BRANCH}" --force-with-lease
 
           git fetch origin "${BASE_BRANCH}"
@@ -622,8 +710,8 @@ jobs:
               --repo "$REPO" \
               --base "${BASE_BRANCH}" \
               --head "${BRANCH}" \
-              --title "Sync translations (SupportPortal)" \
-              --body "Automated translation sync from Translations."
+              --title "Sync translations (SupportPortal) [skip ci]" \
+              --body "Automated translation sync from Translations. Live files are published to the shared translations folder; this PR only mirrors the repo."
 
             PR_NUMBER=$(gh pr list \
               --repo "$REPO" \
@@ -637,6 +725,7 @@ jobs:
           MERGE_OUTPUT=$(gh pr merge \
             --repo "$REPO" \
             --squash \
+            --subject "Sync translations (SupportPortal) [skip ci]" \
             "${PR_NUMBER}" 2>&1) || MERGE_STATUS=$?
 
           if [ "${MERGE_STATUS:-0}" -ne 0 ]; then
@@ -698,7 +787,7 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Sync translations (Desktop)"
+          git commit -m "Sync translations (Desktop) [skip ci]"
           git push origin "${BRANCH}" --force-with-lease
 
           git fetch origin "${BASE_BRANCH}"
@@ -719,7 +808,7 @@ jobs:
               --repo "$REPO" \
               --base "${BASE_BRANCH}" \
               --head "${BRANCH}" \
-              --title "Sync translations (Desktop)" \
+              --title "Sync translations (Desktop) [skip ci]" \
               --body "Automated translation sync from Translations."
 
             PR_NUMBER=$(gh pr list \
@@ -734,6 +823,7 @@ jobs:
           MERGE_OUTPUT=$(gh pr merge \
             --repo "$REPO" \
             --squash \
+            --subject "Sync translations (Desktop) [skip ci]" \
             "${PR_NUMBER}" 2>&1) || MERGE_STATUS=$?
 
           if [ "${MERGE_STATUS:-0}" -ne 0 ]; then
@@ -842,7 +932,7 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Sync translations (Mobile)"
+          git commit -m "Sync translations (Mobile) [skip ci]"
           git push origin "${BRANCH}" --force-with-lease
 
           git fetch origin "${BASE_BRANCH}"
@@ -863,7 +953,7 @@ jobs:
               --repo "$REPO" \
               --base "${BASE_BRANCH}" \
               --head "${BRANCH}" \
-              --title "Sync translations (Mobile)" \
+              --title "Sync translations (Mobile) [skip ci]" \
               --body "Automated translation sync from Translations."
 
             PR_NUMBER=$(gh pr list \
@@ -878,6 +968,7 @@ jobs:
           MERGE_OUTPUT=$(gh pr merge \
             --repo "$REPO" \
             --squash \
+            --subject "Sync translations (Mobile) [skip ci]" \
             "${PR_NUMBER}" 2>&1) || MERGE_STATUS=$?
 
           if [ "${MERGE_STATUS:-0}" -ne 0 ]; then
