@@ -3368,7 +3368,7 @@
   "JGQwHCWepkFXkPwg": "Attributes",
   "rEbgGaxJHyTl": "QR code",
   "jFy9RK9adUnQ": "Scan this code with the Clovord mobile app to sign in.",
-  "mN4qR8vK2wLx": "QR code sign-in is turned off for now. The Clovord Android app is discontinued, so desktop and web no longer generate a login QR code.",
+  "mN4qR8vK2wLx": "Scan this code with the Clovord mobile app to sign in.",
   "UpHGe3Cuauz0": "Waiting for approval on your phone…",
   "p1v7HyTl44DA": "This QR code expired.",
   "8vkK8QtzkDCF": "Refresh QR code",
@@ -3963,5 +3963,8 @@
   "oY5uF8qAhG4p": "Remove image",
   "pZ9vG1rBiH6q": "Custom images are part of Turbo.",
   "rB6xI3sDkJ0t": "See Turbo",
-  "vN4cQ8mLxR2p": "A picture sits behind the server list and chats."
+  "vN4cQ8mLxR2p": "A picture sits behind the server list and chats.",
+  "sFkM2wQx7LpN": "Server Flux is not available on Mobile",
+  "nR4vH8cY1tBd": "Buying and managing Server Flux is not supported on Mobile. Open Clovord on desktop or web to use Server Flux.",
+  "aP6jL3mZ0kWf": "Spark explaining that Server Flux is not available on Mobile"
 }

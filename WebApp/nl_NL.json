@@ -2539,7 +2539,7 @@
   "eYCEqHf0sQF5": "❱❱ /guilds/{guild_id}/audit-log",
   "rEbgGaxJHyTl": "QR-code",
   "jFy9RK9adUnQ": "Scan deze code met de Clovord-mobielapp om in te loggen.",
-  "mN4qR8vK2wLx": "Inloggen met een QR-code staat voorlopig uit. De Clovord-Android-app is stopgezet, daarom maken desktop en web geen login-QR-code meer aan.",
+  "mN4qR8vK2wLx": "Scan deze code met de Clovord-mobielapp om in te loggen.",
   "UpHGe3Cuauz0": "Wachten op goedkeuring op je telefoon…",
   "p1v7HyTl44DA": "Deze QR-code is verlopen.",
   "8vkK8QtzkDCF": "QR-code vernieuwen",
@@ -3054,5 +3054,8 @@
   "E1nCYMzKPl5U": "Deze server heeft niet genoeg Flux meer voor de ontgrendelde functies. Functies blijven {time} actief. Voeg {count} Flux toe om ze te behouden.",
   "qW7nLp4Hx2Vm": "Deze schermgrootte wordt nog niet ondersteund",
   "bT9cRk6Ys3Nd": "We ondersteunen deze schermresolutie nog niet. Gebruik een breder liggend scherm, dan gaat Clovord verder.",
-  "hJ5mFw8Qa1Ce": "Spark kijkt verdrietig omdat deze schermgrootte nog niet wordt ondersteund"
+  "hJ5mFw8Qa1Ce": "Spark kijkt verdrietig omdat deze schermgrootte nog niet wordt ondersteund",
+  "sFkM2wQx7LpN": "Server Flux is niet beschikbaar op Mobile",
+  "nR4vH8cY1tBd": "Server Flux kopen en beheren wordt op Mobile niet ondersteund. Open Clovord op desktop of web om Server Flux te gebruiken.",
+  "aP6jL3mZ0kWf": "Spark legt uit dat Server Flux niet beschikbaar is op Mobile"
 }
