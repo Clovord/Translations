@@ -346,6 +346,8 @@
   "400289": "Account deletion is already scheduled",
   "400290": "That app background is not valid",
   "400291": "Invalid activity",
+  "400292": "New password must be different from the current password",
+  "400293": "New password confirmation does not match",
   "400403": "Invalid monthly credits amount",
   "400404": "Product is not eligible for credits subscriptions",
   "401000": "Unauthorized",
