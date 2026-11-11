@@ -2763,7 +2763,7 @@
   "qWs3HkEndIntroY8uM": "Create, list, modify, execute, and manage webhook messages.",
   "n7Ro24UKgUPu7cwZxT": "Components",
   "nRbCCgN0ERhYQwSmEz": "Component objects",
-  "mbeIVriNY68Dp8wUlz": "Clovord message components use a container-first layout tree (same type IDs as Discord Components V2). Send them on messages via the <code>components</code> field. No special message flag is required — components are the default component system.",
+  "mbeIVriNY68Dp8wUlz": "Clovord message components use a container-first layout tree. Send them on messages via the <code>components</code> field. No special message flag is required — components are the default component system.",
   "GLZS10H9X7GkPwBzK8": "Component Types",
   "5ofZwoAwx5Hnv10uqt": "Holds buttons or one string select",
   "wBofG67cyp7dEzxMWR": "Clickable button (or link button with style 5)",
@@ -2842,7 +2842,7 @@
   "xA7Nf1JAGBtuS9c6TH": "Component type (e.g. button or string select)",
   "sRne0eT4SKKuxHKz9i": "Selected values for select menus",
   "WGvvVpOKZfA7Zarg9f": "Callback type: <code>4</code> channel message, <code>5</code>/<code>6</code> deferred, <code>7</code> update message",
-  "h1GncEvCba8jsJYGgo": "Response payload (content, embeds, components, flags, …)",
+  "h1GncEvCba8jsJYGgo": "Response payload (content, components, flags, …)",
   "zTIQbaFiiVWFe": "Support Clovord development with a monthly credits plan",
   "9AMF9crJWTsscQ": "Turbo unlocks premium features. Subscribe with credits from Turbo Home or this page.",
   "JeG7Zq29o": "Subscribe to Turbo",
@@ -3059,7 +3059,7 @@
   "e5mVxA2rCdP4": "<code>MESSAGE_CREATE</code> arrives as a <code>Message</code> model. Reply through <code>message.channel.send</code>.",
   "f8nWyB5sDeQ7": "Message model",
   "g1oXzC8tEfR0": "Sending messages",
-  "h4pYaD1uFgS3": "<code>Channel.send</code> posts to <code>/channels/{id}/messages</code>. Pass content, embeds, components, attachments, and reply metadata.",
+  "h4pYaD1uFgS3": "<code>Channel.send</code> posts to <code>/channels/{id}/messages</code>. Pass content, components, attachments, and reply metadata.",
   "i7qZbE4vGhT6": "Skip messages from the connected bot so it does not reply to itself.",
   "j0rAcF7wHiU9": "Containers",
   "k3sBdG0xIjV2": "clovord.py ships Components V2 helpers so you can build layout messages without writing raw component dicts.",
@@ -4182,5 +4182,8 @@
   "q2WsN9cHdL6m": "Large profile card",
   "r6YpL3nTkB8s": "Matches the Activity tab on the full profile modal.",
   "m2KpL9cVnT4e": "Player",
-  "zOpankOLQXGC": "+ {count} more..."
+  "zOpankOLQXGC": "+ {count} more...",
+  "nQSHxgelXnMdBOxqVk": "Array of component objects. Use a Container (type 17) for rich layout cards with nested text, media, and buttons.",
+  "1uLXrJRMbcba0se1G6": "Using containers",
+  "uc3cit9SJPD2HqZGm0": "Containers are the rich message layout system. Put a type <code>17</code> Container in <code>components</code> with nested Text Display, Separator, Action Row, and Button children. This is how you build card-style messages."
 }

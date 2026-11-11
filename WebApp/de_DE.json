@@ -2543,7 +2543,7 @@
   "CulVlDFardUsIfFazG": "Resolved option values for the invocation",
   "n7Ro24UKgUPu7cwZxT": "Components",
   "nRbCCgN0ERhYQwSmEz": "Component objects",
-  "mbeIVriNY68Dp8wUlz": "Clovord message components use a container-first layout tree (same type IDs as Discord Components V2). Send them on messages via the <code>components</code> field. No special message flag is required — components are the default component system.",
+  "mbeIVriNY68Dp8wUlz": "Clovord-Nachrichtenkomponenten nutzen einen containerbasierten Layout-Baum. Sende sie über das Feld <code>components</code>. Es ist kein spezielles Message-Flag nötig — Components sind das Standard-System.",
   "GLZS10H9X7GkPwBzK8": "Component Types",
   "5ofZwoAwx5Hnv10uqt": "Holds buttons or one string select",
   "wBofG67cyp7dEzxMWR": "Clickable button (or link button with style 5)",
@@ -2566,7 +2566,7 @@
   "xA7Nf1JAGBtuS9c6TH": "Component type (e.g. button or string select)",
   "sRne0eT4SKKuxHKz9i": "Selected values for select menus",
   "WGvvVpOKZfA7Zarg9f": "Callback type: <code>4</code> channel message, <code>5</code>/<code>6</code> deferred, <code>7</code> update message",
-  "h1GncEvCba8jsJYGgo": "Response payload (content, embeds, components, flags, …)",
+  "h1GncEvCba8jsJYGgo": "Antwort-Payload (content, components, flags, …)",
   "zTIQbaFiiVWFe": "Unterstütze Clovord mit einem monatlichen Credits-Abo",
   "9AMF9crJWTsscQ": "Turbo schaltet Premium-Features frei. Abonniere mit Credits über Turbo Home oder diese Seite.",
   "3hkQSQ6iZOkuX": "Turbo abonnieren",
@@ -2761,7 +2761,7 @@
   "e5mVxA2rCdP4": "<code>MESSAGE_CREATE</code> kommt als <code>Message</code>-Modell. Antworten über <code>message.channel.send</code>.",
   "f8nWyB5sDeQ7": "Message-Modell",
   "g1oXzC8tEfR0": "Nachrichten senden",
-  "h4pYaD1uFgS3": "<code>Channel.send</code> postet nach <code>/channels/{id}/messages</code>. Inhalt, Embeds, Components, Attachments und Reply-Metadaten sind möglich.",
+  "h4pYaD1uFgS3": "<code>Channel.send</code> postet nach <code>/channels/{id}/messages</code>. Inhalt, Components, Attachments und Reply-Metadaten sind möglich.",
   "i7qZbE4vGhT6": "Ignoriere Nachrichten des eigenen Bots, damit er nicht auf sich selbst antwortet.",
   "j0rAcF7wHiU9": "Container",
   "k3sBdG0xIjV2": "clovord.py bringt Components-V2-Helfer mit, damit Layout-Nachrichten ohne rohe Component-Dicts gebaut werden können.",
@@ -3593,5 +3593,8 @@
   "q2WsN9cHdL6m": "Große Profilkarte",
   "r6YpL3nTkB8s": "Entspricht dem Activity-Tab im großen Profilmodal.",
   "m2KpL9cVnT4e": "Spieler",
-  "zOpankOLQXGC": "+ {count} more..."
+  "zOpankOLQXGC": "+ {count} more...",
+  "nQSHxgelXnMdBOxqVk": "Array von Component-Objekten. Nutze einen Container (Typ 17) für Layout-Karten mit Text, Medien und Buttons.",
+  "1uLXrJRMbcba0se1G6": "Container verwenden",
+  "uc3cit9SJPD2HqZGm0": "Container sind das Layout-System für reichhaltige Nachrichten. Lege einen Container vom Typ <code>17</code> in <code>components</code> mit verschachtelten Text Display-, Separator-, Action Row- und Button-Kindern. So baust du kartenartige Nachrichten."
 }

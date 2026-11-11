@@ -2314,7 +2314,7 @@
   "e5mVxA2rCdP4": "<code>MESSAGE_CREATE</code> komt binnen als een <code>Message</code>-model. Antwoord via <code>message.channel.send</code>.",
   "f8nWyB5sDeQ7": "Message-model",
   "g1oXzC8tEfR0": "Berichten versturen",
-  "h4pYaD1uFgS3": "<code>Channel.send</code> post naar <code>/channels/{id}/messages</code>. Je kunt content, embeds, components, attachments en reply-metadata meegeven.",
+  "h4pYaD1uFgS3": "<code>Channel.send</code> post naar <code>/channels/{id}/messages</code>. Je kunt content, components, attachments en reply-metadata meegeven.",
   "i7qZbE4vGhT6": "Sla berichten van de verbonden bot over zodat hij niet op zichzelf reageert.",
   "j0rAcF7wHiU9": "Containers",
   "k3sBdG0xIjV2": "clovord.py bevat Components V2-helpers zodat je layoutberichten kunt bouwen zonder ruwe component-dicts.",
@@ -3170,5 +3170,8 @@
   "q2WsN9cHdL6m": "Grote profielkaart",
   "r6YpL3nTkB8s": "Komt overeen met het Activity-tabblad op het grote profielmodal.",
   "m2KpL9cVnT4e": "Speler",
-  "zOpankOLQXGC": "+ {count} more..."
+  "zOpankOLQXGC": "+ {count} more...",
+  "nQSHxgelXnMdBOxqVk": "Array van componentobjecten. Gebruik een Container (type 17) voor layoutkaarten met tekst, media en knoppen.",
+  "1uLXrJRMbcba0se1G6": "Containers gebruiken",
+  "uc3cit9SJPD2HqZGm0": "Containers zijn het layoutsysteem voor rijke berichten. Plaats een Container van type <code>17</code> in <code>components</code> met geneste Text Display-, Separator-, Action Row- en Button-kinderen. Zo bouw je kaartachtige berichten."
 }
