@@ -559,10 +559,10 @@
   "HZ1Iqxp6N3zy": "Sicherheit",
   "HgAghdrnHGD": "Online",
   "HgIdLMqWudD": "Status",
-  "HhIiJjKkLlMmNnOoPpQq": "Gibt eine Liste von Emoji-Objekteinträgen zurück.",
+  "HhIiJjKkLlMmNnOoPpQq": "Gibt eine Liste von <a href=\"/developers/docs/resources/emojis#object-emoji\">Emoji Objects</a> zurück.",
   "k4WpN8cHdR2m": "Emoji abrufen",
   "m7XsB2nJdL5f": "Lädt öffentliche Metadaten zu einem Custom-Emoji anhand der ID, damit Clients es in Nachrichten anzeigen können. Turbo ist zum Ansehen nicht nötig.",
-  "p9HcV4wPkT6d": "Gibt ein Emoji-Objekt zurück.",
+  "p9HcV4wPkT6d": "Gibt ein <a href=\"/developers/docs/resources/emojis#object-emoji\">Emoji Object</a> zurück.",
   "HiJkLmNoPq": "Bitte gib eine gültige E-Mail-Adresse ein.",
   "HjvN45kLKx3": "Bitte warten.",
   "Hn4Ts8Kq1pR": "🗑️ Kategorie loeschen",
@@ -599,7 +599,7 @@
   "IdcZ1LqgX8TI3E": "<p>Custom HTML...</p>",
   "IeBxdRz6Eek8": "Verhältnis zu den Gemeinschaftsrichtlinien",
   "Ifw1dPUsqa0Z": "Dein Benutzername darf höchstens 32 Zeichen lang sein",
-  "IiJjKkLlMmNnOoPpQqRr": "Gibt bei Erfolg ein Emoji-Objekt zurück.",
+  "IiJjKkLlMmNnOoPpQqRr": "Gibt bei Erfolg ein <a href=\"/developers/docs/resources/emojis#object-emoji\">Emoji Object</a> zurück.",
   "IiMUpMcMzU": "Löschen",
   "IiWbaLdqXbTJLu": "Der letzte Update-Zeitstempel einer Ressource.",
   "IjKlMnOpQr": "Maximal 512 Zeichen",
@@ -1694,7 +1694,7 @@
   "jMPqAqHb": "Mitglieder der Fetch",
   "jNQ4xjUnozU3h": "No-SLA",
   "jPaDVT4YDEufKp": "Benutzer-Agent",
-  "jQo5ZJHBCAm": "Zeigen Sie eine Liste von Mitgliedern in der bereitgestellten Gilde, gibt eine Reihe von Benutzerobjekten auf Erfolg",
+  "jQo5ZJHBCAm": "Gibt bei Erfolg ein Array von <a href=\"/developers/docs/resources/guilds#guild-objects--guild-member-object\">Guild Member Objects</a> zurück.",
   "jSdMoQTkc7njwU": "Fehlerberechtigungen (@everyone)",
   "jVXLfzIDgUIeK": "Aussehen — Clovord Einstellungen",
   "jY6YtIs9Ti": "Mitglied",
@@ -3596,5 +3596,6 @@
   "zOpankOLQXGC": "+ {count} more...",
   "nQSHxgelXnMdBOxqVk": "Array von Component-Objekten. Nutze einen Container (Typ 17) für Layout-Karten mit Text, Medien und Buttons.",
   "1uLXrJRMbcba0se1G6": "Container verwenden",
-  "uc3cit9SJPD2HqZGm0": "Container sind das Layout-System für reichhaltige Nachrichten. Lege einen Container vom Typ <code>17</code> in <code>components</code> mit verschachtelten Text Display-, Separator-, Action Row- und Button-Kindern. So baust du kartenartige Nachrichten."
+  "uc3cit9SJPD2HqZGm0": "Container sind das Layout-System für reichhaltige Nachrichten. Lege einen Container vom Typ <code>17</code> in <code>components</code> mit verschachtelten Text Display-, Separator-, Action Row- und Button-Kindern. So baust du kartenartige Nachrichten.",
+  "Bn8cDf3kLs": "Gibt ein einzelnes <a href=\"/developers/docs/resources/guilds#guild-objects--guild-member-object\">Guild Member Object</a> für den angegebenen User in der Guild zurück. Antwortet mit <code>404007</code>, wenn der User kein Mitglied der Guild ist."
 }
