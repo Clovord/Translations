@@ -2048,7 +2048,7 @@
   "c4sGWFMWUZh0": "Known networks",
   "Qn1Tu5tuxroY": "No known networks yet",
   "OSMq6ZtmS14K": "Trusted network",
-  "KcHmTCbLQdus": "Networks you approved for sign-in. New IPs must be confirmed by email first.",
+  "KcHmTCbLQdus": "IPs from your active sessions. A new IP only needs email approval when you sign in, not while you stay logged in.",
   "j1Bh2g9b9229": "New sign-in attempt",
   "JkiEauamraFE": "A sign-in from {detail} needs email approval. If that was not you, change your password and end other sessions.",
   "wJoy9GypVEN1": "Approving this network…",
