@@ -357,6 +357,7 @@
   "400299": "An email address is required to verify this login from a new IP",
   "400403": "Invalid monthly credits amount",
   "400404": "Product is not eligible for credits subscriptions",
+  "400405": "Username contains invalid characters",
   "401000": "Unauthorized",
   "401001": "Unauthorized - MultiStatus",
   "401002": "Invalid MFA token",
