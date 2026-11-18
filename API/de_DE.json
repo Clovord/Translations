@@ -144,7 +144,7 @@
   "400094": "Antragsprüfung bereits eingereicht",
   "400095": "Antragsprüfung bereits genehmigt",
   "400096": "Ein Anwendungsbefehl mit diesem Namen existiert bereits",
-  "400097": "Anwendungsinteraktion konnte nicht senden",
+  "400097": "Die Anwendung hat nicht geantwortet",
   "400098": "Entry existiert bereits in diesem Verzeichniskanal",
   "400099": "Es gibt keinen Outbound Promotion-Code zu behaupten",
   "400100": "Die Anwendung muss überprüft werden, um Absichten zu verlangen",
