@@ -1767,6 +1767,8 @@
   "jqTHoQhOut21": "Tag-Änderungen sind gesperrt",
   "iAUPi2n39YDz": "Kostenlos mit Turbo",
   "kBHKngUymVZQ": "Unbegrenzte Tag-Änderungen freischalten",
+  "SLtJMT3Crjuw": "Nicht genug Credits",
+  "jUlFR5S2r376": "Du brauchst {cost} Credits, hast aber nur {balance}.",
   "z6LmQ2xNpR7": "<code>true</code>, wenn für diesen Hash noch kein Network-Snapshot in <code>domain_data.metadata</code> existiert.",
   "v7LmQ2xNpR8": "<a href=\"#domain-objects--domain-history-object\">Domain-History-Objekt</a>, abgeleitet aus DNS/TLD-History plus Listing-Flags. Für Kauf-/Verkauf-Risikochecks. Gleiche Intent-Regel wie <code>history</code>: voller <code>DOMAINLIST</code> Intent, sonst <code>domain_search_history_missing_intent</code>.",
   "k9QxM4pLvW2": "Domain-History-Objekt",
