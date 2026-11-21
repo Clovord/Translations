@@ -1400,7 +1400,7 @@
   "email_ticket_created_body": "Thanks for contacting Clovord Support. We created a ticket and will reply as soon as we can.",
   "email_ticket_reply_subject": "New reply on your support request: {subject}",
   "email_ticket_reply_title": "New reply from Support",
-  "email_ticket_reply_body": "Our team replied to your support request.",
+  "email_ticket_reply_body": "Our team replied to your support request. You can reply to this email, or open the request on the support page.",
   "email_ticket_status_subject": "Your support request was updated: {subject}",
   "email_ticket_status_title": "Support request status updated",
   "email_ticket_status_body": "The status of your support request has changed.",
