@@ -1173,7 +1173,7 @@
   "email_ticket_created_body": "Bedankt dat je contact hebt opgenomen met Clovord Support. We hebben een ticket aangemaakt en reageren zo snel mogelijk.",
   "email_ticket_reply_subject": "Nieuw antwoord op je supportverzoek: {subject}",
   "email_ticket_reply_title": "Nieuw antwoord van Support",
-  "email_ticket_reply_body": "Ons team heeft geantwoord op je supportverzoek.",
+  "email_ticket_reply_body": "Ons team heeft geantwoord op je supportverzoek. Je kunt op deze e-mail antwoorden of het verzoek op de supportpagina openen.",
   "email_ticket_status_subject": "Je supportverzoek is bijgewerkt: {subject}",
   "email_ticket_status_title": "Status van supportverzoek bijgewerkt",
   "email_ticket_status_body": "De status van je supportverzoek is gewijzigd.",
